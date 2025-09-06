@@ -5,3 +5,7 @@ pub
 phpserver
 setup
 vendor
+dev
+lib
+opt
+auth.json
