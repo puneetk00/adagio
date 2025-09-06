@@ -1,0 +1,161 @@
+{
+    "name": "magento/project-community-edition",
+    "description": "eCommerce Platform for Growth (Community Edition)",
+    "type": "project",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "laminas/laminas-dependency-plugin": true,
+            "magento/*": true,
+            "php-http/discovery": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "version": "2.4.8-p1",
+    "require": {
+        "magento/composer-dependency-version-audit-plugin": "~0.1",
+        "magento/composer-root-update-plugin": "^2.0.4",
+        "magento/module-bundle-sample-data": "100.4.*",
+        "magento/module-catalog-rule-sample-data": "100.4.*",
+        "magento/module-catalog-sample-data": "100.4.*",
+        "magento/module-cms-sample-data": "100.4.*",
+        "magento/module-configurable-sample-data": "100.4.*",
+        "magento/module-customer-sample-data": "100.4.*",
+        "magento/module-downloadable-sample-data": "100.4.*",
+        "magento/module-grouped-product-sample-data": "100.4.*",
+        "magento/module-msrp-sample-data": "100.4.*",
+        "magento/module-offline-shipping-sample-data": "100.4.*",
+        "magento/module-product-links-sample-data": "100.4.*",
+        "magento/module-review-sample-data": "100.4.*",
+        "magento/module-sales-rule-sample-data": "100.4.*",
+        "magento/module-sales-sample-data": "100.4.*",
+        "magento/module-swatches-sample-data": "100.4.*",
+        "magento/module-tax-sample-data": "100.4.*",
+        "magento/module-theme-sample-data": "100.4.*",
+        "magento/module-widget-sample-data": "100.4.*",
+        "magento/module-wishlist-sample-data": "100.4.*",
+        "magento/product-community-edition": "2.4.8-p1",
+        "magento/sample-data-media": "100.4.*",
+        "mageplaza/module-configurable-preselect": "^4.0",
+        "mageplaza/module-core": "^1.5",
+        "mageplaza/module-smtp": "1.7.0",
+        "mageworx/module-advancedproductoptions": "^2.39",
+        "mageworx/module-searchsuiteautocomplete": "^2.2",
+        "mageworx/module-seosuiteultimate": "^2.40",
+        "maxmind-db/reader": "^1.12",
+        "maxmind/web-service-common": "^0.10.0",
+        "mexbs/fbshop": "^1.1",
+        "mikey179/vfsstream": "^1.6",
+        "mirasvit/module-cache-warmer": "^1.11",
+        "mirasvit/module-search-ultimate": "^2.6",
+        "stripe/stripe-php": "^17.6",
+        "swissup/firecheckout": "1.33.9",
+        "swissup/module-marketplace": "^1.10",
+        "temando/module-shipping": "^2.0",
+        "temando/module-shipping-remover": "^1.0",
+        "thecodingmachine/safe": "^3.3",
+        "theseer/fdomdocument": "^1.6",
+        "true/punycode": "^2.1",
+        "vlucas/phpdotenv": "^5.6",
+        "webbytroops/module-custom-order-invoice-number": "^1.1",
+        "webbytroopstechnologies/magento2-module-core": "^1.0",
+        "webmozart/assert": "^1.11"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "*/*/Test/**/*Test"
+        ],
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "psr-0": {
+            "": [
+                "app/code/",
+                "generated/code/"
+            ]
+        },
+        "psr-4": {
+            "Magento\\Setup\\": "setup/src/Magento/Setup/"
+        }
+    },
+    "require-dev": {
+        "allure-framework/allure-phpunit": "^3.1",
+        "carlos-mg89/oauth": "^0.8.17",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
+        "dg/bypass-finals": "^1.4",
+        "friendsofphp/php-cs-fixer": "^3.22",
+        "magento/magento-coding-standard": "*",
+        "magento/magento2-functional-testing-framework": "^5.0",
+        "pdepend/pdepend": "3.x-dev",
+        "phpmd/phpmd": "3.x-dev",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^10.5",
+        "symfony/finder": "^6.4",
+        "magento/magento-allure-phpunit": "^3.0.2"
+    },
+    "conflict": {
+        "gene/bluefoot": "*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magento\\PhpStan\\": "dev/tests/static/framework/Magento/PhpStan/",
+            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/",
+            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": {
+        "hs-module-image-clean": {
+            "type": "vcs",
+            "url": "https://github.com/hungersoft/magento2-image-clean.git"
+        },
+        "hs-module-all": {
+            "type": "vcs",
+            "url": "https://github.com/hungersoft/module-all.git"
+        },
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        "1": {
+            "type": "composer",
+            "url": "https://packages.mageworx.com/"
+        },
+        "2": {
+            "type": "composer",
+            "url": "https://23561:02948DC15K@packages.mirasvit.com/23561:02948DC15K/"
+        },
+        "3": {
+            "type": "composer",
+            "url": "https://ci.swissuplabs.com/api/packages.json",
+            "canonical": false,
+	    "exclude":["swissup/module-core"]
+	},
+        "4": {
+            "type": "composer",
+            "url": "https://53622:MBQSFAJKTP@packages.mirasvit.com/53622:MBQSFAJKTP/"
+        },
+        "5": {
+            "type": "vcs",
+            "url": "https://github.com/hungersoft/magento2-image-clean.git"
+        },
+        "6": {
+            "type": "vcs",
+            "url": "https://github.com/hungersoft/module-all.git"
+        }
+    },
+    "extra": {
+        "magento-force": "override"
+    }
+}
