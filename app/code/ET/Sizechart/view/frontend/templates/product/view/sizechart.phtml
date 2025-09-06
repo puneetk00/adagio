@@ -1,0 +1,35 @@
+<?php
+$_product = $block->getProduct();
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('sizechartsection/generalgroup/enabled');
+if ($enabled == 1) {
+    $_product = $block->getProduct();
+    $sizeChartContent = $_product->getSizechartContent();
+    if ($sizeChartContent != '') {
+        $displayMode = $baseHelper->getConfigValue('sizechartsection/generalgroup/display_mode');
+        $title = $baseHelper->getConfigValue('sizechartsection/generalgroup/title');
+        $btnText = $baseHelper->getConfigValue('sizechartsection/generalgroup/btn_text');
+        if ($displayMode == 1) {
+            ?>
+            <div class="sizechart-wrapper">
+                <span class="action primary" id="view-sizechart">
+                    <?php echo __($btnText); ?>
+                </span>
+                <div style="display: none;">
+                    <div id="sizechart-modal">
+                        <?= /* @escapeNotVerified */ $this->helper('Magento\Catalog\Helper\Output')->productAttribute($block->getProduct(), $block->getProduct()->getSizechartContent(), 'sizechart_content') ?>
+                    </div>
+                </div>
+            </div>
+        <?php } else { ?>
+            <div class="sizechart-wrapper">
+                <strong class="title">
+                    <?php echo __($title); ?>
+                </strong>
+                <div class="content-main">
+                    <?= /* @escapeNotVerified */ $this->helper('Magento\Catalog\Helper\Output')->productAttribute($block->getProduct(), $block->getProduct()->getSizechartContent(), 'sizechart_content') ?>
+                </div>
+            </div>
+        <?php } ?>
+    <?php } ?>
+<?php } ?>

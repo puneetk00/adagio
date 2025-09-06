@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="ET\Categorywidget\Block\Categorywidget" id="et_categorywidget">
+        <label>Category Widget</label>
+        <description>Category Slider Widget</description>
+        <parameters>
+            <parameter name="title" sort_order="10" visible="true" xsi:type="text">
+                <label>Title</label>
+            </parameter>
+            <parameter name="demo_version" xsi:type="select" required="true" source_model="ET\Categorywidget\Model\Config\Demoversion" visible="true" sort_order="11" >
+                <label translate="true">Demo Version</label>
+            </parameter>
+            <parameter name="category_ids" xsi:type="multiselect" required="true" source_model="ET\Categorywidget\Model\Config\Categorylist" visible="true" sort_order="15" >
+                <label translate="true">Select Categories</label>
+            </parameter>
+            <parameter name="show_actual_name" sort_order="20" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Actual Category Name ?</label>
+            </parameter>
+            <parameter name="display_subcat" sort_order="25" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Display Sub Categories ?</label>
+            </parameter>
+            <parameter name="subcat_count" sort_order="30" visible="true" xsi:type="text">
+                <label>Sub Category Count</label>
+                <depends>
+                    <parameter name="display_subcat" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="img_width" sort_order="31" visible="true" xsi:type="text">
+                <label>Image Width</label>
+                <description translate="true"><![CDATA[ex. 300 or leave blank for auto]]></description>
+            </parameter>
+            <parameter name="img_height" sort_order="32" visible="true" xsi:type="text">
+                <label>Image Height</label>
+                <description translate="true"><![CDATA[ex. 300 or leave blank for auto]]></description>
+            </parameter>
+            <parameter name="custom_class" sort_order="41" visible="true" xsi:type="text">
+                <label>Custom Class</label>
+            </parameter>
+            <parameter name="enable_slider" sort_order="45" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Enable Slider ?</label>
+            </parameter>
+            <parameter name="nav" sort_order="50" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Navigation Buttons ?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="dots" sort_order="55" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Dots?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="autoplay" sort_order="60" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Autoplay?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="stoponhover" sort_order="65" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Stop on Hover?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="loop" sort_order="70" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Enable Loop?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="mousedrag" sort_order="75" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Mouse Drag?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="touchdrag" sort_order="80" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Touch Drag?</label>
+                <depends>
+                    <parameter name="enable_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="item_desktop" sort_order="85" visible="true" xsi:type="text">
+                <label>Items (1200px - Above)</label>
+            </parameter>
+            <parameter name="item_small_desktop" sort_order="90" visible="true" xsi:type="text">
+                <label>Items (992px - 1199px)</label>
+            </parameter>
+            <parameter name="item_tablet" sort_order="95" visible="true" xsi:type="text">
+                <label>Items (768px - 991px)</label>
+            </parameter>
+            <parameter name="item_small_tablet" sort_order="100" visible="true" xsi:type="text">
+                <label>Items (639px - 767px)</label>
+            </parameter>
+            <parameter name="item_mobile" sort_order="105" visible="true" xsi:type="text">
+                <label>Items (480px - 640px)</label>
+            </parameter>
+            <parameter name="item_small_mobile" sort_order="110" visible="true" xsi:type="text">
+                <label>Items (479px - Below)</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

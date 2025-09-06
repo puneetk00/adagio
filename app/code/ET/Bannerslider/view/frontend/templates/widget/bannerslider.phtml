@@ -1,0 +1,104 @@
+<?php
+$layoutType = $this->getData('layout');
+$mediaUrl = $block->getMediaUrl();
+
+$bannerData = $block->getBannerCollection();
+
+$randomNum = rand(10, 1000);
+$counter = 1;
+?>
+<?php if ($bannerData && count($bannerData) > 0) { ?>
+    <?php
+    $nav = $this->getData('nav');
+    $dots = $this->getData('dots');
+    $autoplay = $this->getData('autoplay');
+    $stoponhover = $this->getData('stoponhover');
+    $loop = $this->getData('loop');
+    $mousedrag = $this->getData('mousedrag');
+    $touchdrag = $this->getData('touchdrag');
+    ?>
+    <div class="slider-wrapper">
+        <div class="content-main <?php if ($layoutType == 'box') { ?> page-main <?php } ?>">
+            <div id="slider-<?php echo $randomNum; ?>" class="slides owl-carousel owl-theme">
+                <?php
+                foreach ($bannerData AS $banner) {
+                    $disableMobile = $banner->getDisableMobile();
+                    $name = $banner->getName();
+                    $img = $banner->getImg();
+                    $link = $banner->getLink();
+                    $target = $banner->getTarget();
+                    $content = $banner->getContent();
+                    $contentPosition = $banner->getContentPosition();
+                    $contentPositionClass = 'left';
+                    if ($contentPosition == 1) {
+                        $contentPositionClass = 'left';
+                    } else if ($contentPosition == 2) {
+                        $contentPositionClass = 'center';
+                    } else if ($contentPosition == 3) {
+                        $contentPositionClass = 'right';
+                    }
+                    ?>
+                    <div class="item <?php if ($disableMobile == 1) { ?> mobile-disabled <?php } ?>" style="<?php if ($counter != 1) { ?> display: none; <?php } ?> background: url(<?php echo $mediaUrl . 'bannerslider/image/' . $img; ?>) center center no-repeat; background-size: cover; background-repeat: no-repeat;">
+                        <?php if ($link != '' && $link != '#') { ?>
+                            <a class="banner-link" href="<?php echo $link; ?>" title="<?php echo $name; ?>" <?php if ($target == 1) { ?> target="_blank" <?php } ?>></a>
+                        <?php } ?>
+                        <img class="slide-hidden-img" src="<?php echo $mediaUrl . 'bannerslider/image/' . $img; ?>" alt="<?php echo $name; ?>"/>
+                        <?php if ($content != '') { ?>
+                            <div class="slide-content <?php if ($layoutType == 'full') { ?> page-main <?php } ?>">
+                                <div class="text-content <?php echo $contentPositionClass ?>">
+                                    <?php echo $block->getCmsFilterContent($content); ?>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <?php
+                    $counter++;
+                }
+                ?>
+            </div>
+            <script>
+                require(['jquery', 'baseowlcarousel'], function () {
+                    jQuery(document).ready(function () {
+                        var win_width = jQuery(window).width();
+                        var mobile_width = 767;
+                        if (win_width < mobile_width) {
+                            jQuery('#slider-<?php echo $randomNum; ?> .item.mobile-disabled').remove();
+                        }
+                        jQuery('#slider-<?php echo $randomNum; ?>').owlCarousel({
+                            items: 1,
+                            responsive: {
+                                0: {
+                                    items: 1
+                                },
+                                479: {
+                                    items: 1
+                                },
+                                639: {
+                                    items: 1
+                                },
+                                767: {
+                                    items: 1
+                                },
+                                991: {
+                                    items: 1
+                                },
+                                1199: {
+                                    items: 1
+                                }
+                            },
+                            loop: <?php echo ($loop) ? 'true' : 'false'; ?>,
+                            autoplay: <?php echo ($autoplay) ? 'true' : 'false'; ?>,
+                            autoplayHoverPause: <?php echo ($stoponhover) ? 'true' : 'false'; ?>,
+                            mouseDrag: <?php echo ($mousedrag) ? 'true' : 'false'; ?>,
+                            touchDrag: <?php echo ($touchdrag) ? 'true' : 'false'; ?>,
+                            dots: <?php echo ($dots) ? 'true' : 'false'; ?>,
+                            nav: <?php echo ($nav) ? 'true' : 'false'; ?>,
+                            navText: ['<div class="prev-arrow"></div>', '<div class="next-arrow"></div>']
+                        });
+                        jQuery('#slider-<?php echo $randomNum; ?> .item').show();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+<?php } ?>

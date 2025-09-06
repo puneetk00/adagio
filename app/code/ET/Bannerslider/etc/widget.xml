@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="et_bannerslider" class="ET\Bannerslider\Block\Bannerslider">
+        <label translate="true">Banner Slider</label>
+        <description>Banner Slider</description>
+        <parameters>
+            <parameter name="layout" xsi:type="select" required="true" source_model="ET\Bannerslider\Model\Config\Layout" visible="true" sort_order="10" >
+                <label translate="true">Slider Layout</label>
+            </parameter>
+            <parameter name="nav" sort_order="20" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Navigation Buttons ?</label>
+            </parameter>
+            <parameter name="dots" sort_order="30" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Pagination(Dots) ?</label>
+            </parameter>
+            <parameter name="autoplay" sort_order="40" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Autoplay ?</label>
+            </parameter>
+            <parameter name="stoponhover" sort_order="50" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Stop on Hover ?</label>
+            </parameter>
+            <parameter name="loop" sort_order="60" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Enable Loop ?</label>
+            </parameter>
+            <parameter name="mousedrag" sort_order="70" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Mouse Drag ?</label>
+            </parameter>
+            <parameter name="touchdrag" sort_order="80" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Touch Drag ?</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

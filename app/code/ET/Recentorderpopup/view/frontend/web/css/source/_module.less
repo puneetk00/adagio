@@ -1,0 +1,99 @@
+& when (@media-common = true) {
+    .recent-order {
+        display: none;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #333333;
+        width: 310px;
+        position: fixed;
+        z-index: 999;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+        -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+        -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+        border: 1px solid rgba(0,0,0, .1);
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .recent-order a {
+        color: #333333;
+        text-decoration: none;
+    }
+    .recent-order a:visited,
+    .recent-order a:active,
+    .recent-order a:focus {
+        color: #333333;
+        text-decoration: none;
+    }
+    .recent-order a:hover {
+        color: #333333;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    .recent-order .content-block {
+        display: table;
+        width: 100%;
+    }
+    .recent-order .icon-span {
+        width: 50px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .recent-order .icon-span img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .recent-order .img-span {
+        width: 50px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .recent-order .img-span img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .recent-order .text-span {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        padding-left: 12px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .recent-order.botton-left {
+        bottom: 15px;
+        left: 15px;
+    }
+    .recent-order.bottom-right {
+        bottom: 15px;
+        right: 15px;
+    }
+    .recent-order.top-left {
+        top: 15px;
+        left: 15px;
+    }
+    .recent-order.top-right {
+        top: 15px;
+        right: 15px
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .recent-order {
+        width: 300px;
+    }
+    .recent-order.mobile-hide {
+        display: none !important;
+    }
+    .recent-order .icon-span {
+        width: 40px;
+    }
+    .recent-order .img-span {
+        width: 40px;
+    }
+    .recent-order .text-span {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}

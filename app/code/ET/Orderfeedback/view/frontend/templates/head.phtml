@@ -1,0 +1,95 @@
+<?php
+$orderId = $block->getOrderId();
+
+$feedbackHelper = $this->helper('ET\Orderfeedback\Helper\Data');
+$enabled = $feedbackHelper->getConfigValue('orderfeedback/settings/enabled');
+$successMessage = $feedbackHelper->getConfigValue('orderfeedback/settings/success_message');
+
+if ($enabled == 1) {
+    if ($orderId != '') {
+        ?>
+        <script>
+            require(['jquery'], function() {
+                jQuery(document).ready(function() {
+                    /* 1. Visualizing things on Hover - See next part for action on click */
+                    jQuery('#order_rating li').on('mouseover', function() {
+                        var onStar = parseInt(jQuery(this).data('value'), 10); // The star currently mouse on
+
+                        // Now highlight all the stars that's not after the current hovered star
+                        jQuery(this).parent().children('li.star').each(function(e) {
+                            if (e < onStar) {
+                                jQuery(this).addClass('hover');
+                            }
+                            else {
+                                jQuery(this).removeClass('hover');
+                            }
+                        });
+
+                    }).on('mouseout', function() {
+                        jQuery(this).parent().children('li.star').each(function(e) {
+                            jQuery(this).removeClass('hover');
+                        });
+                    });
+
+
+                    /* 2. Action to perform on click */
+                    jQuery('#order_rating li').on('click', function() {
+                        var onStar = parseInt(jQuery(this).data('value'), 10); // The star currently selected
+                        var order_rating = jQuery(this).parent().children('li.star');
+
+                        for (i = 0; i < order_rating.length; i++) {
+                            jQuery(order_rating[i]).removeClass('selected');
+                        }
+
+                        for (i = 0; i < onStar; i++) {
+                            jQuery(order_rating[i]).addClass('selected');
+                        }
+
+                        // JUST RESPONSE (Not needed)
+                        var ratingValue = parseInt(jQuery('#order_rating li.selected').last().data('value'), 10);
+
+                        var ratingText = '';
+                        if (ratingValue == '1') {
+                            ratingText = 'Awful';
+                        } else if (ratingValue == '2') {
+                            ratingText = 'Poor';
+                        } else if (ratingValue == '3') {
+                            ratingText = 'Okay';
+                        } else if (ratingValue == '4') {
+                            ratingText = 'Good';
+                        } else if (ratingValue == '5') {
+                            ratingText = 'Excellent';
+                        }
+
+                        jQuery('.success-box div.text-message').html("<span>" + ratingText + "</span>");
+                        jQuery('#order_rating_val').val(ratingText);
+                    });
+
+                    jQuery('#submit-feedback').click('click', function() {
+                        var order_id = '<?php echo $orderId; ?>';
+                        var order_rating = jQuery.trim(jQuery("#order_rating_val").val());
+                        var order_comment = jQuery.trim(jQuery("#order_comment").val());
+
+                        if (order_rating != '') {
+                            jQuery.ajax({
+                                url: '<?php echo $this->getUrl('orderfeedback/index/index') ?>',
+                                type: 'post',
+                                dataType: 'json',
+                                data: {order_id: order_id, order_rating: order_rating, order_comment: order_comment},
+                                success: function(data) {
+                                    if (data.result == 'success') {
+                                        jQuery('#feedback-form').hide();
+                                        jQuery('.rating-error').hide();
+                                        jQuery('#feedback-success > span').html('<?php echo $successMessage; ?>');
+                                    }
+                                }
+                            });
+                        } else {
+                            jQuery('.rating-error').show();
+                        }
+                    });
+                });
+            });
+        </script>
+    <?php } ?>
+<?php } ?>

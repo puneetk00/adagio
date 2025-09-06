@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <shippingtimesection>
+            <generalgroup>
+                <enabled>0</enabled>
+                <enable_general_time>0</enable_general_time>
+                <general_time>3-4</general_time>
+                <days_message><![CDATA[Delivery: %1 Working Days]]></days_message>
+                <display_delivery_date>1</display_delivery_date>
+                <working_days>5</working_days>
+                <date_message><![CDATA[Expected Delivery Date is %1]]></date_message>
+                <date_format><![CDATA[jS F, Y]]></date_format>
+            </generalgroup>
+        </shippingtimesection>
+    </default>
+</config>

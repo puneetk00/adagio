@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="addonnewspopup" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Newsletter Popup</label>
+            <tab>etextensions</tab>
+            <resource>Magento_Config::config_admin</resource>
+            <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enable Extension</label>
+                <field id="enabled" translate="label" type="select" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Extension</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_ajax" translate="label" type="select" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Ajax</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_homepage" translate="label" type="select" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Homepage Only ?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="popup_delay" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Delay</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="popup_title" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Title</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="template_mode" translate="label" type="select" sortOrder="410" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Template Mode</label>
+                    <source_model>ET\NewsletterPopup\Model\Config\Source\TemplateMode</source_model>
+                </field>
+                <field id="popup_custom_text" translate="label comment" sortOrder="420" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Popup Custom HTML</label>
+                    <frontend_model>ET\NewsletterPopup\Block\Adminhtml\System\Config\Editor</frontend_model>
+                    <comment><![CDATA[To add newsletter form use below code:<br/> {{block class="ET\NewsletterPopup\Block\Subscribe" name="newsletter-form" template="ET_NewsletterPopup::newsletter/form.phtml"}}]]></comment>
+                    <depends>
+                        <field id="template_mode">1</field>
+                    </depends>
+                </field>
+                <field id="demo_layout" translate="label" type="select" sortOrder="430" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Demo Layout</label>
+                    <source_model>ET\NewsletterPopup\Model\Config\Source\DemoType</source_model>
+                    <depends>
+                        <field id="template_mode">0</field>
+                    </depends>
+                    <comment><![CDATA[You change the demo layout from the demo import section.]]></comment>
+                </field>
+                <field id="popup_text" translate="label comment" sortOrder="440" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Popup HTML</label>
+                    <frontend_model>ET\NewsletterPopup\Block\Adminhtml\System\Config\Editor</frontend_model>
+                    <comment><![CDATA[To add newsletter form use below code:<br/> {{block class="ET\NewsletterPopup\Block\Subscribe" name="newsletter-form" template="ET_NewsletterPopup::newsletter/form.phtml"}}]]></comment>
+                    <depends>
+                        <field id="template_mode">0</field>
+                    </depends>
+                </field>
+                <field id="popup_dimension" translate="label" type="select" sortOrder="600" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Dimension</label>
+                    <source_model>ET\NewsletterPopup\Model\Config\Source\DimensionMode</source_model>
+                </field>
+                <field id="popup_width" translate="label" type="text" sortOrder="610" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Width</label>
+                    <depends>
+                        <field id="popup_dimension">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g: 520px]]></comment>
+                </field>
+                <field id="popup_height" translate="label" type="text" sortOrder="620" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Height</label>
+                    <depends>
+                        <field id="popup_dimension">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g: 320px]]></comment>
+                </field>
+            </group>
+            <group id="install" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Demo Installation</label>
+                <field id="import_demo1" translate="button_label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <button_label>Demo 1</button_label>
+                    <attribute type="action_url">et_newsletterPopup/system_config_demo/import</attribute>
+                    <attribute type="demo_version">demo01</attribute>
+                    <frontend_model>ET\NewsletterPopup\Block\System\Config\Form\Button\Import\Demo</frontend_model>
+                </field>
+                <field id="import_demo2" translate="button_label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <button_label>Demo 2</button_label>
+                    <attribute type="action_url">et_newsletterPopup/system_config_demo/import</attribute>
+                    <attribute type="demo_version">demo02</attribute>
+                    <frontend_model>ET\NewsletterPopup\Block\System\Config\Form\Button\Import\Demo</frontend_model>
+                </field>
+                <field id="import_demo3" translate="button_label" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <button_label>Demo 3</button_label>
+                    <attribute type="action_url">et_newsletterPopup/system_config_demo/import</attribute>
+                    <attribute type="demo_version">demo03</attribute>
+                    <frontend_model>ET\NewsletterPopup\Block\System\Config\Form\Button\Import\Demo</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

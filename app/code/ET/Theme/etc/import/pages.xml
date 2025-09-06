@@ -1,0 +1,1158 @@
+<root>
+    <pages>
+        <cms_item>
+            <title>Home page</title>
+            <identifier>et_home</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" subcat_count="0" custom_class="cat-custom" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_one"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_two"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="1" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 2</title>
+            <identifier>et_home_2</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="2" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="7" item_small_desktop="6" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_three"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_four"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 3</title>
+            <identifier>et_home_3</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="3" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="5" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_five"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_six"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 4</title>
+            <identifier>et_home_4</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="4" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_seven"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_eight"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 5</title>
+            <identifier>et_home_5</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="5" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_nine"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_ten"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 6</title>
+            <identifier>et_home_6</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="6" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="3" item_small_desktop="3" item_tablet="2" item_small_tablet="2" item_mobile="2" item_small_mobile="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_eleven"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twelve"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 7</title>
+            <identifier>et_home_7</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="7" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirteen"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fourteen"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 8</title>
+            <identifier>et_home_8</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="8" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="4" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fifteen"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_sixteen"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_two"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 9</title>
+            <identifier>et_home_9</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_three"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="9" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_seventeen"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_eighteen"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 10</title>
+            <identifier>et_home_10</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_four"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="10" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_nineteen"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twenty"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="2" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="1" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 11</title>
+            <identifier>et_home_11</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="11" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="5" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentyone"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentytwo"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="3" title="Testimonials" reviews_count="5" designation="0" location="1" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 12</title>
+            <identifier>et_home_12</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_six"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="12" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="0" stoponhover="0" loop="0" mousedrag="0" touchdrag="0" item_desktop="5" item_small_desktop="4" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentythree"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentyfour"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="8" title="Testimonial" reviews_count="3" designation="1" location="0" socials="0" autoplay="0" dots="1" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 13</title>
+            <identifier>et_home_13</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="13" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="0" stoponhover="0" loop="0" mousedrag="0" touchdrag="0" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentyfive"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentysix"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="4" title="Our &lt;i&gt;Client Says&lt;/i&gt;" reviews_count="5" designation="1" location="0" socials="0" autoplay="0" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 14</title>
+            <identifier>et_home_14</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_eight"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="14" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="5" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentyseven"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentyeight"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="5" title="Testimonial" reviews_count="5" designation="1" location="0" socials="0" autoplay="0" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 15</title>
+            <identifier>et_home_15</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_nine"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Dive &lt;i&gt;in&lt;/i&gt;" demo_version="15" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="5" item_small_desktop="4" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentynine"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_twentythirty"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="6" title="Testimonial" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 16</title>
+            <identifier>et_home_16</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="16" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="6" item_small_desktop="6" item_tablet="5" item_small_tablet="4" item_mobile="3" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtyone"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtytwo"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="7" title="Our &lt;i&gt;Client Says&lt;/i&gt;" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 17</title>
+            <identifier>et_home_17</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_eleven"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="17" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="5" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtythree"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtyfour"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="9" title="Our &lt;i&gt;Client Says&lt;/i&gt;" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_instagram_images"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 18</title>
+            <identifier>et_home_18</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_twelve"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="18" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="4" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtyfive"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtysix"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="10" title="Testimonial" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 19</title>
+            <identifier>et_home_19</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_thirteen"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Choose Your &lt;i&gt;Category&lt;/i&gt;" demo_version="19" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="0" touchdrag="0" item_desktop="4" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtyseven"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtyeight"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="11" title="Our Happy &lt;i&gt;Customers&lt;/i&gt;" reviews_count="3" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 20</title>
+            <identifier>et_home_20</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_thirtynine"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Finds Things &lt;i&gt;You'll Love&lt;/i&gt;" demo_version="20" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="6" item_small_desktop="5" item_tablet="4" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_forty"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="12" title="Testimonial" reviews_count="4" designation="1" location="0" socials="0" autoplay="1" dots="1" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_fourteen"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 21</title>
+            <identifier>et_home_21</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop By &lt;i&gt;Category&lt;/i&gt;" demo_version="21" category_ids="14,20,16,18,13,15,22,17" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="5" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fortyone"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fortytwo"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="13" title="Our &lt;i&gt;Testimonials&lt;/i&gt;" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Home page - Demo 22</title>
+            <identifier>et_home_22</identifier>
+            <content><![CDATA[{{widget type="ET\Bannerslider\Block\Bannerslider" layout="full" nav="0" dots="1" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="ET\Categorywidget\Block\Categorywidget" title="Shop &lt;i&gt;Flowers&lt;/i&gt;" demo_version="22" category_ids="16,17,18,20,22,13,14,15" show_actual_name="1" display_subcat="0" enable_slider="1" nav="1" dots="0" autoplay="1" stoponhover="1" loop="1" mousedrag="1" touchdrag="1" item_desktop="5" item_small_desktop="4" item_tablet="3" item_small_tablet="3" item_mobile="2" item_small_mobile="2"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fortythree"}}
+<div class="page-main">
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="Featured &lt;i&gt;Collection&lt;/i&gt;" show_pager="0" products_count="10" template="Magento_CatalogWidget::product/widget/content/grid.phtml" cache_lifetime="0" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`is_featured`,`operator`:`==`,`value`:`1`^]^]"}}
+</div>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_promotion_fortyfour"}}
+<div class="page-main">
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="10" template="product/widget/new/content/new_grid.phtml" cache_lifetime="0"}}
+</div>
+{{widget type="ET\Clientreviews\Block\Clientreviews" demo_version="14" title="Testimonial" reviews_count="5" designation="1" location="0" socials="0" autoplay="1" dots="0" nav="0" stoponhover="1" loop="1" mousedrag="1" touchdrag="1"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_blogs"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_brand_slider"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_sixteen"}}]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>About Us</title>
+            <identifier>et-about</identifier>
+            <content><![CDATA[<div class="about-outer-main">
+    <div class="about-wrapper">
+        <div class="about-main">
+            <div class="image-block">
+                <img src="{{media url="etrend/cms/about-1.png"}}" alt="aboutus" />
+            </div>
+            <div class="text-block">
+                <div class="heading-main">
+                    <h1>What we do</h1>
+                </div>
+                <div class="content-main">
+                    <p>Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry. Lorem 
+                        Ipsum industry's standard dummy text. Lorem 
+                        Ipsum industry's standard dummy text.</p>
+                    <p>Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry. Lorem 
+                        Ipsum industry's standard dummy text. Lorem 
+                        Ipsum industry's standard dummy text.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-wrapper">
+        <div class="content-row">
+            <div class="service-main">
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block"> Web ui</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block"> Graphics</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-print" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block"> Identity</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block"> Branding</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-flag-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block"> UX Design</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="icon-block">
+                            <i class="fa fa-building-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-block">
+                            <p class="heading-block">Statistics</p>
+                            <p class="info-block">Lorem Ipsum is 
+                                simply dummy text of the 
+                                printing and typesetting industry. Lorem 
+                                Ipsum industry's standard dummy text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="facts-wrapper">
+        <div class="content-row">
+            <div class="facts-main">
+                <div class="item-wrapper">
+                    <div class="item">
+                        <span class="numbers">350</span>
+                        <span class="text">projects</span>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <span class="numbers">455</span>
+                        <span class="text">coffee</span>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <span class="numbers">235</span>
+                        <span class="text">clients</span>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <span class="numbers">525</span>
+                        <span class="text">comments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ab-review-wrapper">
+        <div class="ab-review-main">
+            <div class="item-wrapper">
+                <div class="item">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p> Sed ut perspiciatis unde omnis iste natus error 
+                        sit voluptatem accusantium doloremque laudantium, 
+                        totam rem aperiam, eaque ipsa quae ab illo inventore 
+                        veritatis et quasi architecto beatae vitae dicta 
+                        sunt explicabo. Nemo enim ipsam voluptatem quia.
+                    </p>
+                    <span>John Doe - Giftshop</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="team-wrapper">
+        <div class="team-main">
+            <div class="section-title">
+                <span>Our Team</span>
+            </div>
+            <div class="content-block">
+                <div class="content-row">
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="image-block">
+                                <img src="{{media url="etrend/cms/about-2.png"}}" alt="Team Member" />
+                            </div>
+                            <div class="text-block">
+                                <span class="member-name"> John Doe </span>
+                                <span class="member-desc"> Co Founder / CEO </span>
+                                <div class="social-main">
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="social-icon" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team-details">
+                                <span>I am Punctual</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing 
+                                    and typesetting industry. Lorem Ipsum has been.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>FAQs</title>
+            <identifier>et-faq</identifier>
+            <content><![CDATA[<div class="faq-outer-main">
+    <div id="faqElement" class="collapsibleContainer">
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, consect consectetur adipiscingetur adipiscing elit, sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor sitelit, sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisciipsum dolor sitng dolor sitit, sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+        <div class="collapsibleTab" data-role="collapsible">
+            <div class="tab-title-block" data-role="trigger">
+                <span>Lorem ipsum dolor sit amet, cipsum dolor sitonsectetur adipiscing elit, sed do?</span>
+            </div>
+        </div>
+        <div class="collapsibleContent" data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Curabitur vehicula porttitor rutrum. Ut laoreet sodales rutrum. 
+                Ut eget tristique nibh. Cras mattis est eget lacus dignissim, non 
+                consectetur velit pellentesque. Ut sit amet placerat eros, id gravida arcu. 
+                Sed felis purus, tempor ac vestibulum nec, consectetur at purus.
+            </p>
+        </div>
+    </div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>404 Not Found</title>
+            <identifier>et-no-route</identifier>
+            <content><![CDATA[<div class="error-wrapper">
+    <div class="error-main">
+        <div class="error-content">
+            <span class="error-number">404</span>
+            <span class="error-text">
+                we are sorry, but the page you requested was not found
+            </span>
+        </div>
+        <div class="error-btn">
+            <a class="action primary" href="#">
+                Go Home
+            </a>
+            <a class="action primary" href="#">
+                Contact Us
+            </a>
+        </div>
+        <div class="error-social">
+            <a href="#" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+        <cms_item>
+            <title>Pricing</title>
+            <identifier>et-pricing</identifier>
+            <content><![CDATA[<div class="pricing-wrapper">
+    <div class="pricing-main">
+        <div class="content-row">
+            <div class="item-wrapper">
+                <div class="item-main">
+                    <div class="item">
+                        <div class="item-price">
+                            <span>Monthly</span>
+                            <div class="price-main">
+                                <sup>$</sup>
+                                <span>15</span>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <span>Basic</span>
+                        </div>
+                        <div class="item-content">
+                            <ul>
+                                <li>Aenean a neque.</li>
+                                <li>Ut eu lectus consequat.</li>
+                                <li>Aenean lacinia porttitor.</li>
+                                <li>Praesent vitae.</li>
+                            </ul>
+                        </div>
+                        <div class="item-btn">
+                            <a class="action primary" href="#">Read More</a>
+                        </div>     
+
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-main premium">
+                    <div class="item">
+                        <div class="item-price">
+                            <span>Yearly</span>
+                            <div class="price-main">
+                                <sup>$</sup>
+                                <span>45</span>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <span>Premium</span>
+                        </div>
+                        <div class="item-content">
+                            <ul>
+                                <li>Aenean a neque.</li>
+                                <li>Ut eu lectus consequat.</li>
+                                <li>Aenean lacinia porttitor.</li>
+                                <li>Praesent vitae.</li>
+                            </ul>
+                        </div>
+                        <div class="item-btn">
+                            <a class="action primary" href="#">Read More</a>
+                        </div>     
+
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item-main">
+                    <div class="item">
+                        <div class="item-price">
+                            <span>Lifetime</span>
+                            <div class="price-main">
+                                <sup>$</sup>
+                                <span>95</span>
+                            </div>
+                        </div>
+                        <div class="item-title">
+                            <span>Proffesional</span>
+                        </div>
+                        <div class="item-content">
+                            <ul>
+                                <li>Aenean a neque.</li>
+                                <li>Ut eu lectus consequat.</li>
+                                <li>Aenean lacinia porttitor.</li>
+                                <li>Praesent vitae.</li>
+                            </ul>
+                        </div>
+                        <div class="item-btn">
+                            <a class="action primary" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+            <stores>
+                <item>0</item>
+            </stores>
+            <page_layout>1column</page_layout>
+            <layout_update_xml><![CDATA[]]></layout_update_xml>
+        </cms_item>
+    </pages>
+</root>

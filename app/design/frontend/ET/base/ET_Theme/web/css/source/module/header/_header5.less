@@ -1,0 +1,1866 @@
+.cms-index-index {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                border-bottom: none;
+                margin-bottom: 0;
+                + #maincontent {
+                    padding-top: 0;
+                }
+                .header-menu-block {
+                    .nav-sections {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width: 768px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header-menu-block {
+                    position: relative;
+                    background: #fff;
+                    > .page-main {
+                        padding-left: 0;
+                        padding-right: 0;
+                        position: relative;
+                    }
+                    .content-static {
+                        display: table;
+                        position: absolute;
+                        right: 15px;
+                        top: 0;
+                        padding: 0;
+                        height: 54px;
+                        width: 200px;
+                        box-sizing: border-box;
+                        text-align: right;
+                        z-index: 4;
+                        .header-contact-block {
+                            display: table-cell;
+                            height: 100%;
+                            vertical-align: middle;
+                            color: #555555;
+                            font-weight: 500;
+                            font-size: 14px;
+                            a {
+                                color: #333333;
+                                transition: all 0.2s ease-in 0s;
+                                -webkit-transition: all 0.2s ease-in 0s;
+                                -moz-transition: all 0.2s ease-in 0s;
+                                font-weight: 600;
+                                &:focus, &:visited, &:active {
+                                    color: #333333;
+                                }
+                                &:hover {
+                                    color: #227ed1;
+                                }
+                            }
+                        }
+                        + .nav-sections {
+                            .navigation {
+                                > ul {
+                                    padding-right: 210px;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                    .nav-sections {
+                        background: transparent;
+                        margin-bottom: 0;
+                        .nav-sections-item-content {
+                            > .switcher {
+                                display: none;
+                            }
+                        }
+                        .navigation {
+                            padding: 0 15px;
+                            background: transparent;
+                            > ul {
+                                background: transparent;
+                                padding: 0;
+                                li.level0 {
+                                    margin-right: 0;
+                                    &.parent {
+                                        > a.level-top {
+                                            padding: 17px 28px 17px 20px;
+                                        }
+                                    }
+                                    &:first-child {
+                                        &.parent {
+                                            > a.level-top {
+                                                padding-left: 0;
+                                            }
+                                        }
+                                        > a.level-top {
+                                            padding-left: 0;
+                                        }
+                                    }
+                                    > a.level-top {
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        display: block;
+                                        color: #333333;
+                                        line-height: 20px;
+                                        padding: 17px 15px;
+                                        transition: all 0.2s ease-in-out;
+                                        -webkit-transition: all 0.2s ease-in-out;
+                                        -moz-transition: all 0.2s ease-in-out;
+                                        text-decoration: none;
+                                        &:active, &:focus, &:visited {
+                                            color: #333333;
+                                            text-decoration: none;
+                                        }
+                                        &:hover {
+                                            color: #227ed1;
+                                            border: none;
+                                            text-decoration: none;
+                                        }
+                                        &.ui-state-focus {
+                                            color: #227ed1;
+                                            border: none;
+                                        }
+                                        &.ui-state-active {
+                                            color: #227ed1;
+                                            border: none;
+                                        }
+                                    }
+                                    &.active {
+                                        > a.level-top {
+                                            color: #227ed1;
+                                            border: none;
+                                        }
+                                    }
+                                    &.has-active {
+                                        > a.level-top {
+                                            color: #227ed1;
+                                            border: none;
+                                        }
+                                    }
+                                    ul.submenu, div.submenu {
+                                        text-align: left;
+                                        height: auto;
+                                        padding: 10px 0px;
+                                        border-style: solid;
+                                        border-width: 1px;
+                                        border-color: #e1e1e1;
+                                        background: #ffffff;
+                                        box-shadow: none;
+                                        li {
+                                            margin-bottom: 0;
+                                            position: relative;
+                                            > a {
+                                                position: relative;
+                                                color: #555555;
+                                                text-decoration: none;
+                                                font-size: 14px;
+                                                &:active, &:focus, &:visited {
+                                                    color: #555555;
+                                                    text-decoration: none;
+                                                }
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-focus {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-active {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.has-active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                        .subchildmenu {
+                                            .subchildmenu {
+                                                border-style: solid;
+                                                border-width: 1px;
+                                                border-color: #e1e1e1;
+                                                background: #ffffff;
+                                                height: auto;
+                                                padding: 10px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                li.staticwidth {
+                                    ul.submenu, div.submenu {
+                                        text-align: left;
+                                        height: auto;
+                                        padding: 10px;
+                                        border-style: solid;
+                                        border-width: 1px;
+                                        border-color: #e1e1e1;
+                                        background: #ffffff;
+                                        box-shadow: none;
+                                        li {
+                                            margin-bottom: 0;
+                                            position: relative;
+                                            > a {
+                                                position: relative;
+                                                color: #555555;
+                                                font-size: 14px;
+                                                &:active, &:focus, &:visited {
+                                                    color: #555555;
+                                                    text-decoration: none;
+                                                }
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-focus {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-active {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.has-active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.level1 {
+                                                > a {
+                                                    position: relative;
+                                                    color: #333333;
+                                                    > span:after {
+                                                        background: #333333;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .subchildmenu {
+                                            background: transparent !important;
+                                            .subchildmenu {
+                                                border-style: none;
+                                                border-width: none;
+                                                border-color: none;
+                                                height: auto;
+                                                padding: 10px 0;
+                                                background: transparent !important;
+                                                .subchildmenu {
+                                                    border-style: none;
+                                                    border-width: none;
+                                                    border-color: none;
+                                                    height: auto;
+                                                    padding: 0;
+                                                    background: transparent !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                li.fullwidth {
+                                    ul.submenu, div.submenu {
+                                        text-align: left;
+                                        height: auto;
+                                        padding: 10px;
+                                        border-style: solid;
+                                        border-width: 1px;
+                                        border-color: #e1e1e1;
+                                        background: #ffffff;
+                                        box-shadow: none;
+                                        li {
+                                            margin-bottom: 0;
+                                            position: relative;
+                                            > a {
+                                                position: relative;
+                                                color: #555555;
+                                                font-size: 14px;
+                                                &:active, &:focus, &:visited {
+                                                    color: #555555;
+                                                    text-decoration: none;
+                                                }
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-focus {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-active {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.has-active {
+                                                > a {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                            &.level1 {
+                                                > a {
+                                                    position: relative;
+                                                    color: #333333;
+                                                    > span:after {
+                                                        background: #333333;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .subchildmenu {
+                                            background: transparent !important;
+                                            .subchildmenu {
+                                                border-style: none;
+                                                border-width: none;
+                                                border-color: none;
+                                                height: auto;
+                                                padding: 10px 0;
+                                                background: transparent !important;
+                                                .subchildmenu {
+                                                    border-style: none;
+                                                    border-width: none;
+                                                    border-color: none;
+                                                    height: auto;
+                                                    padding: 0;
+                                                    background: transparent !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-wrapper {
+    .page-header {
+        &.type5 {
+            background: #227ed1;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e1e1e1;
+            .header {
+                &.content {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    .header-logo-block {
+                        float: left;
+                        display: table;
+                        height: 90px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        .logo {
+                            margin: 0;
+                            max-width: 100%;
+                            display: table-cell;
+                            vertical-align: middle;
+                            float: none;
+                        }
+                    }
+                    .header-sections-block {
+                        float: right;
+                        position: relative;
+                        .header-sections {
+                            .header-search {
+                                float: right;
+                                position: relative;
+                                border-right: 1px solid #4b94cb;
+                                border-left: 1px solid #4b94cb;
+                                margin-right: -1px;
+                                #header-search-main {
+                                    display: block;
+                                    position: relative;
+                                    text-align: center;
+                                    .block-search-icon {
+                                        > a {
+                                            color: #ffffff;
+                                            display: block;
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                            line-height: 24px;
+                                            transition: all 0.2s ease-in 0s;
+                                            -webkit-transition: all 0.2s ease-in 0s;
+                                            -moz-transition: all 0.2s ease-in 0s;
+                                            display: table-cell;
+                                            table-layout: fixed;
+                                            width: 80px;
+                                            height: 90px;
+                                            max-width: 80px;
+                                            vertical-align: middle;
+                                            padding: 5px 0;
+                                            box-sizing: border-box;
+                                            &:focus, &:visited, &:active {
+                                                color: #ffffff;
+                                            }
+                                            &:hover {
+                                                color: #ffffff;
+                                            }
+                                            > .icon {
+                                                display: block;
+                                                font-size: 20px;
+                                                margin-bottom: 2px;
+                                            }
+                                            > .text {
+                                                display: block;
+                                                font-size: 13px;
+                                                text-transform: uppercase;
+                                                line-height: 22px;
+                                                word-wrap: break-word;
+                                            }
+                                        }
+                                    }
+                                    .block-content {
+                                        &.dropdown {
+                                            display: none;
+                                            min-width: 200px;
+                                            position: absolute;
+                                            right: 0;
+                                            margin: 0;
+                                            top: 100%;
+                                            padding: 0;
+                                            background: #ffffff;
+                                            color: #555555;
+                                            z-index: 5;
+                                            border: none;
+                                            .search-content {
+                                                .search-inner {
+                                                    .block-search {
+                                                        float: right;
+                                                        padding-left: 0;
+                                                        position: relative;
+                                                        width: 350px;
+                                                        margin-left: 0;
+                                                        margin-right: 0;
+                                                        padding: 0;
+                                                        .block-content {
+                                                            position: relative;
+                                                        }
+                                                        .field {
+                                                            &.search {
+                                                                .control {
+                                                                    .input-text {
+                                                                        margin: 0;
+                                                                        padding-right: 43px;
+                                                                        position: static;
+                                                                        border: 1px solid #cccccc;
+                                                                        height: 42px;
+                                                                        border-radius: 0;
+                                                                        padding-left: 15px;
+                                                                        font-size: 13px;
+                                                                        background-color: #ffffff;
+                                                                        color: #333333;
+                                                                        font-weight: 500;
+                                                                        &:focus {
+                                                                            box-shadow: none;
+                                                                        }
+                                                                        &::-webkit-input-placeholder {
+                                                                            color: #333333;
+                                                                        }
+                                                                        &::-ms-input-placeholder {
+                                                                            color: #333333;
+                                                                        }
+                                                                        &::-moz-placeholder {
+                                                                            color: #333333;
+                                                                            opacity: 1;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .actions {
+                                                            .action {
+                                                                &.search {
+                                                                    right: 0;
+                                                                    text-align: center;
+                                                                    height: 42px;
+                                                                    width: 40px;
+                                                                    transition: all 0.2s ease-in-out;
+                                                                    -webkit-transition: all 0.2s ease-in-out;
+                                                                    -moz-transition: all 0.2s ease-in-out;
+                                                                    &:before {
+                                                                        color: #333333;
+                                                                        font-size: 18px;
+                                                                        line-height: 40px;
+                                                                    }
+                                                                    &:hover {
+                                                                        &:before {
+                                                                            color: #333333;
+                                                                            opacity: 0.8;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-links {
+                                float: right;
+                                position: relative;
+                                border-right: 1px solid #4b94cb;
+                                border-left: 1px solid #4b94cb;
+                                margin-right: -1px;
+                                #header-links-main {
+                                    display: block;
+                                    position: relative;
+                                    text-align: center;
+                                    .block-links-icon {
+                                        > a {
+                                            color: #ffffff;
+                                            display: block;
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                            line-height: 24px;
+                                            transition: all 0.2s ease-in 0s;
+                                            -webkit-transition: all 0.2s ease-in 0s;
+                                            -moz-transition: all 0.2s ease-in 0s;
+                                            display: table-cell;
+                                            table-layout: fixed;
+                                            width: 90px;
+                                            height: 90px;
+                                            max-width: 90px;
+                                            vertical-align: middle;
+                                            padding: 5px 0;
+                                            box-sizing: border-box;
+                                            &:focus, &:visited, &:active {
+                                                color: #ffffff;
+                                            }
+                                            &:hover {
+                                                color: #ffffff;
+                                            }
+                                            > .icon {
+                                                display: block;
+                                                font-size: 20px;
+                                                margin-bottom: 2px;
+                                            }
+                                            > .text {
+                                                display: block;
+                                                font-size: 13px;
+                                                text-transform: uppercase;
+                                                line-height: 22px;
+                                                word-wrap: break-word;
+                                            }
+                                        }
+                                    }
+                                    .block-content {
+                                        &.dropdown {
+                                            display: none;
+                                            min-width: 200px;
+                                            position: absolute;
+                                            right: 0;
+                                            margin: 0;
+                                            top: 100%;
+                                            padding: 15px;
+                                            background: #ffffff;
+                                            color: #555555;
+                                            z-index: 5;
+                                            border: 1px solid #e1e1e1;
+                                            .header-content-nd {
+                                                .header-content-inner {
+                                                    .header-link-menu {
+                                                        display: block;
+                                                        .header {
+                                                            &.links {
+                                                                list-style: outside none none;
+                                                                margin: 0;
+                                                                padding: 0;
+                                                                text-align: left;
+                                                                > li {
+                                                                    display: block;
+                                                                    margin-bottom: 10px;
+                                                                    a {
+                                                                        color: #555555;
+                                                                        display: block;
+                                                                        text-decoration: none;
+                                                                        &:visited, &:focus, &:active {
+                                                                            color: #555555;
+                                                                            text-decoration: none;
+                                                                            outline: none;
+                                                                        }
+                                                                        &:hover {
+                                                                            color: #227ed1;
+                                                                            text-decoration: none;
+                                                                        }
+                                                                    }
+                                                                    span {
+                                                                        color: #555555;
+                                                                        &:hover {
+                                                                            color: #227ed1;
+                                                                        }
+                                                                    }
+                                                                    &.customer-welcome {
+                                                                        margin-bottom: 0;
+                                                                        .customer-name {
+                                                                            display: none !important;
+                                                                        }
+                                                                        .customer-menu {
+                                                                            display: block !important;
+                                                                            .header.links {
+                                                                                display: block !important;
+                                                                                position: static;
+                                                                                max-width: 100%;
+                                                                                padding: 0;
+                                                                                border: none;
+                                                                                box-shadow: none;
+                                                                                &:before, &:after {
+                                                                                    display: none !important;
+                                                                                }
+                                                                                > li {
+                                                                                    display: block;
+                                                                                    margin-bottom: 10px;
+                                                                                    &.authorization-link {
+                                                                                        display: none;
+                                                                                    }
+                                                                                    > a {
+                                                                                        padding: 0;
+                                                                                        display: block;
+                                                                                        &:hover {
+                                                                                            background: transparent;
+                                                                                        }
+                                                                                    }
+                                                                                    &:hover {
+                                                                                        background: transparent;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-settings {
+                                float: right;
+                                position: relative;
+                                border-right: 1px solid #4b94cb;
+                                border-left: 1px solid #4b94cb;
+                                margin-right: -1px;
+                                #header-settings-main {
+                                    display: block;
+                                    position: relative;
+                                    text-align: center;
+                                    .block-settings-icon {
+                                        > a {
+                                            color: #ffffff;
+                                            display: block;
+                                            font-size: 18px;
+                                            font-weight: normal;
+                                            line-height: 24px;
+                                            transition: all 0.2s ease-in 0s;
+                                            -webkit-transition: all 0.2s ease-in 0s;
+                                            -moz-transition: all 0.2s ease-in 0s;
+                                            display: table-cell;
+                                            table-layout: fixed;
+                                            width: 90px;
+                                            height: 90px;
+                                            max-width: 90px;
+                                            vertical-align: middle;
+                                            padding: 5px 0;
+                                            box-sizing: border-box;
+                                            &:focus, &:visited, &:active {
+                                                color: #ffffff;
+                                            }
+                                            &:hover {
+                                                color: #ffffff;
+                                            }
+                                            > .icon {
+                                                display: block;
+                                                font-size: 20px;
+                                                margin-bottom: 2px;
+                                            }
+                                            > .text {
+                                                display: block;
+                                                font-size: 13px;
+                                                text-transform: uppercase;
+                                                line-height: 22px;
+                                                word-wrap: break-word;
+                                            }
+                                        }
+                                    }
+                                    .block-content {
+                                        &.dropdown {
+                                            display: none;
+                                            min-width: 200px;
+                                            position: absolute;
+                                            right: 0;
+                                            margin: 0;
+                                            top: 100%;
+                                            padding: 15px;
+                                            background: #ffffff;
+                                            color: #555555;
+                                            z-index: 5;
+                                            border: 1px solid #e1e1e1;
+                                            .settings-content {
+                                                .settings-inner {
+                                                    .header-currency-language {
+                                                        text-align: left;
+                                                        #switcher-currency {
+                                                            display: block;
+                                                            margin-top: 5px;
+                                                        }
+                                                        #switcher-language {
+                                                            border-top: 1px solid #e1e1e1;
+                                                            display: block;
+                                                            margin-top: 10px;
+                                                            padding-top: 10px;
+                                                        }
+                                                        .dropdown-switcher {
+                                                            > strong {
+                                                                display: block;
+                                                                font-size: 14px;
+                                                                margin-bottom: 10px;
+                                                                text-transform: uppercase;
+                                                                color: #555555;
+                                                            }
+                                                            > ul {
+                                                                list-style: outside none none;
+                                                                margin: 0;
+                                                                padding: 0;
+                                                                > li {
+                                                                    display: block;
+                                                                    a {
+                                                                        color: #555555;
+                                                                        text-decoration: none;
+                                                                        &:visited, &:focus, &:active {
+                                                                            color: #555555;
+                                                                            text-decoration: none;
+                                                                        }
+                                                                        &:hover {
+                                                                            color: #227ed1;
+                                                                        }
+                                                                        > span {
+                                                                            display: inline-block;
+                                                                            vertical-align: middle;
+                                                                            img {
+                                                                                display: block;
+                                                                                width: 20px;
+                                                                                height: auto;
+                                                                                margin-right: 2px;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .wishlist-link {
+                                float: right;
+                                position: relative;
+                                text-align: center;
+                                border-right: 1px solid #4b94cb;
+                                border-left: 1px solid #4b94cb;
+                                margin-right: -1px;
+                                > a {
+                                    color: #ffffff;
+                                    display: block;
+                                    font-size: 18px;
+                                    font-weight: normal;
+                                    line-height: 24px;
+                                    transition: all 0.2s ease-in 0s;
+                                    -webkit-transition: all 0.2s ease-in 0s;
+                                    -moz-transition: all 0.2s ease-in 0s;
+                                    display: table-cell;
+                                    table-layout: fixed;
+                                    width: 90px;
+                                    height: 90px;
+                                    max-width: 90px;
+                                    vertical-align: middle;
+                                    padding: 5px 0;
+                                    box-sizing: border-box;
+                                    &:focus, &:visited, &:active {
+                                        color: #ffffff;
+                                    }
+                                    &:hover {
+                                        color: #ffffff;
+                                    }
+                                    > .icon {
+                                        display: block;
+                                        font-size: 20px;
+                                        margin-bottom: 2px;
+                                    }
+                                    > .text {
+                                        display: block;
+                                        font-size: 13px;
+                                        text-transform: uppercase;
+                                        line-height: 22px;
+                                        word-wrap: break-word;
+                                    }
+                                }
+                            }
+                            .header-cart {
+                                float: right;
+                                position: relative;
+                                border-right: 1px solid #4b94cb;
+                                border-left: 1px solid #4b94cb;
+                                .minicart-wrapper {
+                                    margin: 0;
+                                    width: 100%;
+                                    .action {
+                                        &.showcart {
+                                            display: block;
+                                            text-align: center;
+                                            transition: all 0.2s ease-in 0s;
+                                            -webkit-transition: all 0.2s ease-in 0s;
+                                            -moz-transition: all 0.2s ease-in 0s;
+                                            display: table-cell;
+                                            table-layout: fixed;
+                                            width: 90px;
+                                            height: 90px;
+                                            max-width: 90px;
+                                            vertical-align: middle;
+                                            padding: 5px 0;
+                                            box-sizing: border-box;
+                                            &:before {
+                                                color: #ffffff;
+                                                line-height: 24px;
+                                                content: "\f290";
+                                                font-family: "Fontawesome";
+                                                font-size: 18px;
+                                                font-weight: normal;
+                                                margin-bottom: 2px;
+                                            }
+                                            &:focus, &:visited, &:active {
+                                                &:before {
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                            &:hover {
+                                                &:before {
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                            &.active {
+                                                &:before {
+                                                    color: #ffffff;
+                                                    line-height: 24px;
+                                                    content: "\f290";
+                                                    font-family: "Fontawesome";
+                                                    font-size: 18px;
+                                                    font-weight: normal;
+                                                    margin-bottom: 2px;
+                                                }
+                                            }
+                                            .text {
+                                                display: block;
+                                                height: auto;
+                                                width: auto;
+                                                position: static;
+                                                margin: 0;
+                                                color: #fff;
+                                                text-transform: uppercase;
+                                                font-size: 13px;
+                                                line-height: 22px;
+                                                word-wrap: break-word;
+                                            }
+                                            .counter {
+                                                &.qty {
+                                                    background: #ffffff;
+                                                    border-radius: 50%;
+                                                    color: #333333;
+                                                    display: inline-block;
+                                                    font-size: 12px;
+                                                    height: 22px;
+                                                    line-height: 22px;
+                                                    margin: 0;
+                                                    min-width: 18px;
+                                                    overflow: hidden;
+                                                    padding: 0;
+                                                    position: absolute;
+                                                    right: 24px;
+                                                    text-align: center;
+                                                    top: 14px;
+                                                    vertical-align: middle;
+                                                    white-space: normal;
+                                                    width: 22px;
+                                                    &.empty {
+                                                        display: none;
+                                                    }
+                                                    .counter-number {
+                                                        text-shadow: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .block-minicart {
+                                        box-shadow: none;
+                                        -moz-box-shadow: none;
+                                        -webkit-box-shadow: none;
+                                        border-color: #e1e1e1;
+                                        right: 0;
+                                        margin: 0;
+                                        &:before {
+                                            border: none;
+                                        }
+                                        &:after {
+                                            border: none;
+                                        }   
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-sections-block {
+                        .header-sections {
+                            .header-settings {
+                                #header-settings-main {
+                                    .block-settings-icon {
+                                        > a {
+                                            width: 80px;
+                                            max-width: 80px;
+                                        }
+                                    }
+                                }
+                            }
+                            .wishlist-link {
+                                > a {
+                                    width: 80px;
+                                    max-width: 80px;
+                                }
+                            }
+                            .header-links {
+                                #header-links-main {
+                                    .block-links-icon {
+                                        > a {
+                                            width: 80px;
+                                            max-width: 80px;
+                                        }
+                                    }
+                                }
+                            }
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        width: 80px;
+                                        max-width: 80px;
+                                        .counter {
+                                            &.qty {
+                                                right: 18px;
+                                                top: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width: 992px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-sections-block {
+                        .header-sections {
+                            .header-search {
+                                border-right: none;
+                                border-left: none;
+                                margin-right: 0;
+                                #header-search-main {
+                                    .block-search-icon {
+                                        display: none !important;
+                                    }
+                                    .ui-widget {
+                                        display: block !important;
+                                    }
+                                    .block-content {
+                                        &.dropdown {
+                                            display: block !important;
+                                            position: static;
+                                            padding: 0;
+                                            background: transparent;
+                                            border: none;
+                                            .search-content {
+                                                .search-inner {
+                                                    .block-search {
+                                                        margin-left: 20px;
+                                                        margin-right: 20px;
+                                                        padding: 24px 0;
+                                                        .block-content {
+                                                            position: relative;
+                                                        }
+                                                        .field {
+                                                            &.search {
+                                                                .control {
+                                                                    .input-text {
+                                                                        border: 1px solid #4b94cb;
+                                                                        background-color: transparent;
+                                                                        color: #ffffff;
+                                                                        &:focus {
+                                                                            box-shadow: none;
+                                                                        }
+                                                                        &::-webkit-input-placeholder {
+                                                                            color: #ffffff;
+                                                                        }
+                                                                        &:-ms-input-placeholder {
+                                                                            color: #ffffff;
+                                                                        }
+                                                                        &::-moz-placeholder {
+                                                                            color: #ffffff;
+                                                                            opacity: 1;
+                                                                        }
+                                                                        &:-moz-placeholder {
+                                                                            color: #ffffff;
+                                                                            opacity: 1;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .actions {
+                                                            .action {
+                                                                &.search {
+                                                                    &:before {
+                                                                        color: #ffffff;
+                                                                    }
+                                                                    &:hover {
+                                                                        &:before {
+                                                                            color: #ffffff;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .cms-index-index {
+        .page-wrapper {
+            .page-header {
+                &.type5 {
+                    margin-bottom: 15px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .checkout-index-index {
+        .page-wrapper {
+            .page-header {
+                &.type5 {
+                    .header.content {
+                        .header-logo-block {
+                            .logo {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                background: #227ed1;
+                margin-bottom: 20px;
+                .header.content {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    .header-logo-block {
+                        height: 80px;
+                        position: relative;
+                        .logo {
+                            padding: 0 0 0 40px;
+                            margin: 0;
+                        }
+                        .nav-toggle {
+                            top: 23px;
+                            left: 0;
+                            &:before {
+                                color: #ffffff;
+                            }
+                            &:hover {
+                                &:before {
+                                    color: #333333;
+                                }
+                            }
+                        }
+                    }
+                    .header-sections-block {
+                        .header-sections {
+                            .header-search {
+                                #header-search-main {
+                                    .block-search-icon {
+                                        > a {
+                                            height: 80px;
+                                            width: 75px;
+                                            max-width: 75px;
+                                        }
+                                    }
+                                    .block-content.dropdown {
+                                        .search-content {
+                                            .search-inner {
+                                                .block-search {
+                                                    margin-top: 0;
+                                                    width: 300px;
+                                                    .field.search {
+                                                        > .label {
+                                                            display: none !important;
+                                                        }
+                                                        .control {
+                                                            border-top: none;
+                                                            clear: both;
+                                                            margin: 0;
+                                                            padding: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-settings {
+                                #header-settings-main {
+                                    .block-settings-icon {
+                                        > a {
+                                            height: 80px;
+                                            width: 75px;
+                                            max-width: 75px;
+                                        }
+                                    }
+                                }
+                            }
+                            .wishlist-link {
+                                display: none !important;
+                            }
+                            .header-links {
+                                #header-links-main {
+                                    .block-links-icon {
+                                        > a {
+                                            height: 80px;
+                                            width: 75px;
+                                            max-width: 75px;
+                                        }
+                                    }
+                                }
+                            }
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        height: 80px;
+                                        width: 75px;
+                                        max-width: 75px;
+                                        .counter {
+                                            &.qty {
+                                                right: 17px;
+                                                top: 9px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-menu-block {
+                    .content-static {
+                        display: none !important;
+                    }
+                    .nav-sections {
+                        margin-bottom: 0;
+                        background: #ffffff;
+                        .navigation {
+                            background: transparent;
+                            > ul {
+                                padding: 0;
+                                li {
+                                    &.level0 {
+                                        padding-top: 0;
+                                        padding-bottom: 0;
+                                        border-color: #e1e1e1;
+                                        &:first-child {
+                                            border-top: none;
+                                        }
+                                        .row {
+                                            margin: 0 !important;
+                                        }
+                                        > a {
+                                            &.level-top {
+                                                color: #555555;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                overflow-wrap: break-word;
+                                                padding: 10px 36px 10px 15px;
+                                                text-transform: uppercase;
+                                                > span {
+                                                    margin-left: 0 !important;
+                                                }
+                                                &:active, &:visited, &:focus {
+                                                    color: #555555;
+                                                }
+                                                &:hover {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-focus {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &.ui-state-active {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                                &:after {
+                                                    right: 12px;
+                                                    top: 11px;
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            > a {
+                                                &.level-top {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                        &.has-active {
+                                            > a {
+                                                &.level-top {
+                                                    color: #227ed1;
+                                                    background: transparent;
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                        ul, div {
+                                            &.submenu {
+                                                border: none;
+                                                li {
+                                                    position: relative;
+                                                    > a {
+                                                        position: relative;
+                                                        color: #555555;
+                                                        padding: 9px 0 9px 15px;
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                        background: #f8f8f8;
+                                                        &:visited, &:active, &:focus {
+                                                            color: #555555;
+                                                        }
+                                                        > span {
+                                                            margin-left: 0 !important;
+                                                        }
+                                                        &:hover {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-focus {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-active {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.has-active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+
+                                                        }
+                                                    }
+                                                }
+                                                .subchildmenu {
+                                                    padding-left: 0;
+                                                    > li {
+                                                        border-top: 1px solid #e1e1e1;
+                                                        > a {
+                                                            padding-left: 25px;
+                                                        }
+                                                        .subchildmenu {
+                                                            > li {
+                                                                > a {
+                                                                    padding-left: 35px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.staticwidth {
+                                        ul, div {
+                                            &.submenu {
+                                                border: none;
+                                                li {
+                                                    margin-bottom: 0;
+                                                    position: relative;
+                                                    > a {
+                                                        position: relative;
+                                                        color: #555555;
+                                                        padding: 9px 0 9px 15px;
+                                                        font-size: 13px;
+                                                        background: #f8f8f8;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                        &:visited, &:active, &:focus {
+                                                            color: #555555;
+                                                        }
+                                                        > span {
+                                                            margin-left: 0 !important;
+                                                        }
+                                                        &:hover {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-focus {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-active {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.has-active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.level1 {
+                                                        > a {
+                                                            > span {
+                                                                &:after {
+                                                                    display: none;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .subchildmenu {
+                                                    padding-left: 0;
+                                                    > li {
+                                                        border-top: 1px solid #e1e1e1;
+                                                        > a {
+                                                            padding-left: 25px;
+                                                        }
+                                                        .subchildmenu {
+                                                            > li {
+                                                                > a {
+                                                                    padding-left: 35px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.fullwidth {
+                                        ul, div {
+                                            &.submenu {
+                                                border: none;
+                                                li {
+                                                    margin-bottom: 0;
+                                                    position: relative;
+                                                    > a {
+                                                        position: relative;
+                                                        color: #555555;
+                                                        padding: 9px 0 9px 15px;
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                        background: #f8f8f8;
+                                                        &:visited, &:active, &:focus {
+                                                            color: #555555;
+                                                        }
+                                                        > span {
+                                                            margin-left: 0 !important;
+                                                        }
+                                                        &:hover {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-focus {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                        &.ui-state-active {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.has-active {
+                                                        > a {
+                                                            color: #227ed1;
+                                                            background: transparent;
+                                                            border: none;
+                                                        }
+                                                    }
+                                                    &.level1 {
+                                                        > a {
+                                                            > span {
+                                                                &:after {
+                                                                    display: none;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .subchildmenu {
+                                                    padding-left: 0;
+                                                    > li {
+                                                        border-top: 1px solid #e1e1e1;
+                                                        > a {
+                                                            padding-left: 25px;
+                                                        }
+                                                        .subchildmenu {
+                                                            > li {
+                                                                > a {
+                                                                    padding-left: 35px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nav-sections-item-title {
+                            display: none;
+                        }
+                        .section-item-content {
+                            margin-top: 0;
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 639px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-logo-block {
+                        height: 70px;
+                        .logo {
+                            max-width: 135px;
+                        }
+                        .nav-toggle {
+                            top: 15px;
+                        }
+                    }
+                    .header-sections-block {
+                        .header-sections {
+                            .header-search {
+                                #header-search-main {
+                                    .block-search-icon {
+                                        > a {
+                                            width: 48px;
+                                            max-width: 48px;
+                                            height: 70px;
+                                            > .text {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-settings {
+                                #header-settings-main {
+                                    .block-settings-icon {
+                                        > a {
+                                            width: 48px;
+                                            max-width:48px;
+                                            height: 70px;
+                                            > .text {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-links {
+                                #header-links-main {
+                                    .block-links-icon {
+                                        > a {
+                                            width: 48px;
+                                            max-width: 48px;
+                                            height: 70px;
+                                            > .text {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        width: 48px;
+                                        max-width: 48px;
+                                        height: 70px;
+                                        .text {
+                                            display: none;
+                                        }
+                                        .counter {
+                                            &.qty {
+                                                right: 4px;
+                                                top: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 479px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    padding-left: 0;
+                    padding-right: 0;
+                    .header-logo-block {
+                        height: auto;
+                        width: 100%;
+                        margin-top: 13px;
+                        margin-bottom: 13px;
+                        text-align: center;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        box-sizing: border-box;
+                        .logo {
+                            max-width: 135px;
+                            margin: 0 auto;
+                            padding-left: 0;
+                            display: inline-block;
+                        }
+                        .nav-toggle {
+                            top: 3px;
+                            left: 15px;
+                        }
+                    }
+                    .header-sections-block {
+                        float: right;
+                        position: relative;
+                        border-top: 1px solid #4b94cb;
+                        width: 100%;
+                        .header-sections {
+                            .header-cart {
+                                width: 25%;
+                                box-sizing: border-box;
+                                border-right: none;
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        width: 100%;
+                                        max-width: 100%;
+                                        height: auto;
+                                        text-align: center;
+                                        display: block;
+                                        padding: 12px 0;
+                                        .counter {
+                                            &.qty {
+                                                right: 31%;
+                                                top: 9%;
+                                            }
+                                        }
+                                    }
+                                    .block-minicart {
+                                        right: 15px;
+                                    }
+                                }
+                            }
+                            .header-links {
+                                width: 25%;
+                                box-sizing: border-box;
+                                #header-links-main {
+                                    .block-links-icon {
+                                        > a {
+                                            width: 100%;
+                                            max-width: 100%;
+                                            height: auto;
+                                            text-align: center;
+                                            display: block;
+                                            padding: 12px 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .header-settings {
+                                width: 25%;
+                                box-sizing: border-box;
+                                #header-settings-main {
+                                    .block-settings-icon {
+                                        > a {
+                                            width: 100%;
+                                            max-width: 100%;
+                                            height: auto;
+                                            text-align: center;
+                                            display: block;
+                                            padding: 12px 0;
+                                        }
+                                    }
+                                    .block-content.dropdown {
+                                        right: auto;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                            .header-search {
+                                width: 25%;
+                                box-sizing: border-box;
+                                border-left: none;
+                                #header-search-main {
+                                    .block-search-icon {
+                                        > a {
+                                            width: 100%;
+                                            max-width: 100%;
+                                            height: auto;
+                                            text-align: center;
+                                            display: block;
+                                            padding: 12px 0;
+                                        }
+                                    }
+                                    .block-content.dropdown {
+                                        right: auto;
+                                        left: 13px;
+                                        .search-content {
+                                            .search-inner {
+                                                .block-search {
+                                                    width: 290px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 439px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-sections-block {
+                        .header-sections {
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        .counter.qty {
+                                            right: 29%;
+                                            top: 9%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 379px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-sections-block {
+                        .header-sections {
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        .counter.qty {
+                                            right: 27%;
+                                            top: 9%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 359px) {
+    .page-wrapper {
+        .page-header {
+            &.type5 {
+                .header.content {
+                    .header-sections-block {
+                        .header-sections {
+                            .header-cart {
+                                .minicart-wrapper {
+                                    .action.showcart {
+                                        .counter.qty {
+                                            right: 25%;
+                                            top: 9%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 479px){
+    .checkout-index-index.checkout-design .page-wrapper .checkout-container .opc-wrapper .opc .checkout-payment-method .form.payments > .fieldset > .opc-payment-additional.discount-code .payment-option-content .form-discount .actions-toolbar .primary .action-apply {
+        position: static;
+      }
+      .checkout-index-index.checkout-design .page-wrapper .checkout-container .opc-wrapper .opc .checkout-payment-method .form.payments > .fieldset > .opc-payment-additional.discount-code .payment-option-content .form-discount .actions-toolbar .primary .action-apply, .checkout-index-index.checkout-design .page-wrapper .checkout-container .opc-wrapper .opc .checkout-payment-method .form.payments > .fieldset > .opc-payment-additional.discount-code .payment-option-content .form-discount .actions-toolbar .primary .action-cancel{
+        padding: 0 1px;
+    }
+    .checkout-index-index.checkout-design .page-wrapper .checkout-container .opc-wrapper .opc .checkout-payment-method .form.payments > .fieldset > .opc-payment-additional.discount-code .payment-option-content .form-discount .payment-option-inner .field .control .input-text{
+        padding: 0 132px 0 15px;
+      }
+      button {
+        font-size: 1.4rem;
+      }
+}

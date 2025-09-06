@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Sizechart::title" title="Size Chart" module="ET_Sizechart" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Sizechart::title"/>
+        <add id="ET_Sizechart::config" title="Configuration" module="ET_Sizechart" parent="ET_Sizechart::title" sortOrder="30" action="adminhtml/system_config/edit/section/sizechartsection" resource="ET_Sizechart::config"/>
+    </menu>
+</config>

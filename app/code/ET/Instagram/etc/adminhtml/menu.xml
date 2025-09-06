@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Instagram::title" title="Instagram Widget" module="ET_Instagram" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Instagram::title"/>
+        <add id="ET_Instagram::config" title="Configuration" module="ET_Instagram" parent="ET_Instagram::title" sortOrder="30" action="adminhtml/system_config/edit/section/instagramsection" resource="ET_Instagram::config"/>
+    </menu>
+</config>

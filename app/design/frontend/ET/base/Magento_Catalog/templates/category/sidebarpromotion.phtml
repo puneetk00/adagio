@@ -1,0 +1,9 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$sidebarPromotionBlock = $baseHelper->getConfigValue('category_section/sidebar/sidebar_promotion_block');
+?>
+<?php if ($sidebarPromotionBlock != '') { ?>
+    <div class="category-promotion block">
+        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($sidebarPromotionBlock)->toHtml(); ?>
+    </div>
+<?php } ?>

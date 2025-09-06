@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <recentordersection>
+            <generalgroup>
+                <enable>0</enable>
+                <show_mobile>1</show_mobile>
+                <orderstatus>0</orderstatus>
+                <position>botton-left</position>
+                <recent_order_count>5</recent_order_count>
+                <display_time>10000</display_time>
+                <start_time>10000</start_time>
+                <repeat_time>120000</repeat_time>
+                <message_template><![CDATA[{{time}}, Someone in {{country}} <br >purchased <b><a href="{{product_url}}">{{product_name}}</a></b>]]></message_template>
+            </generalgroup>
+            <fakeordergroup>
+                <fake_orders>0</fake_orders>
+            </fakeordergroup>
+            <design_settings>
+                <display_product_img>1</display_product_img>
+                <icon_enable>0</icon_enable>
+                <icon></icon>
+                <bg_color>#FFFFFF</bg_color>
+                <text_color>#333333</text_color>
+            </design_settings>
+        </recentordersection>
+    </default>
+</config>

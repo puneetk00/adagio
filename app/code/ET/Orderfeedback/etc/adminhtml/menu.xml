@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Orderfeedback::view" title="Order Feedback" module="ET_Orderfeedback" sortOrder="15" parent="ET_Theme::etrend" resource="ET_Orderfeedback::view"/>
+        <add id="ET_Orderfeedback::menu" title="View Feedback" module="ET_Orderfeedback" sortOrder="5" parent="ET_Orderfeedback::view" action="orderfeedback/index/index" resource="ET_Orderfeedback::menu"/>
+        <add id="ET_Orderfeedback::config" title="Configuration" module="ET_Orderfeedback" parent="ET_Orderfeedback::view" sortOrder="10" action="adminhtml/system_config/edit/section/orderfeedback" resource="ET_Orderfeedback::config"/>
+    </menu>
+</config>

@@ -1,0 +1,11 @@
+<?php
+$_product = $block->getProduct();
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$productPromotionBlock = $baseHelper->getConfigValue('product_section/general/product_promotion_block');
+?>
+<?php if ($productPromotionBlock != '') { ?>
+    <div style="clear: both;"></div>
+    <div class="product-page-static">
+        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($productPromotionBlock)->toHtml(); ?>
+    </div>
+<?php } ?>

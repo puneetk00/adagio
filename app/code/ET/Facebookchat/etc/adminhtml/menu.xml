@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Facebookchat::title" title="Facebook Chat" module="ET_Facebookchat" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Facebookchat::title"/>
+        <add id="ET_Facebookchat::config" title="Configuration" module="ET_Facebookchat" parent="ET_Facebookchat::title" sortOrder="30" action="adminhtml/system_config/edit/section/facebookchatsection" resource="ET_Facebookchat::config"/>
+    </menu>
+</config>

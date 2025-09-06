@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.review" destination="product.info.main" before="product.info.price"/>
+        
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.page.static" template="Magento_Catalog::product/view/productstatic.phtml" after="-"/>
+        </referenceContainer>
+        
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Catalog\Block\Product\View" name="product.labels" template="Magento_Catalog::product/view/productlabels.phtml" after="-" />
+        </referenceContainer>
+        
+        <move element="product.info.stock.sku" destination="product.info.price" after="-"/>
+        <move element="product.info.overview" destination="product.info.main" after="product.info.price"/>
+        
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.countdown.timer" template="Magento_Catalog::product/view/protimer.phtml" after="product.info" />
+        </referenceContainer>
+    </body>
+</page>

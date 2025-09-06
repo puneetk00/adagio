@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_NewsletterPopup::title" title="Newsletter Popup" module="ET_NewsletterPopup" parent="ET_Theme::etrend" sortOrder="50" resource="ET_NewsletterPopup::title"/>
+        <add id="ET_NewsletterPopup::config" title="Configuration" module="ET_NewsletterPopup" parent="ET_NewsletterPopup::title" sortOrder="30" action="adminhtml/system_config/edit/section/addonnewspopup" resource="ET_NewsletterPopup::config"/>
+    </menu>
+</config>

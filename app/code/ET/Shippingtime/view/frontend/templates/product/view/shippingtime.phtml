@@ -1,0 +1,55 @@
+<?php
+$helper = $this->helper('ET\Shippingtime\Helper\Data');
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('shippingtimesection/generalgroup/enabled');
+if ($enabled == 1) {
+    $enableGeneralTime = $baseHelper->getConfigValue('shippingtimesection/generalgroup/enable_general_time');
+    $daysMessage = $baseHelper->getConfigValue('shippingtimesection/generalgroup/days_message');
+    $displayDeliveryDate = $baseHelper->getConfigValue('shippingtimesection/generalgroup/display_delivery_date');
+    $workingDays = $baseHelper->getConfigValue('shippingtimesection/generalgroup/working_days');
+    $dateMessage = $baseHelper->getConfigValue('shippingtimesection/generalgroup/date_message');
+    $dateFormat = $baseHelper->getConfigValue('shippingtimesection/generalgroup/date_format');
+
+    $_product = $block->getProduct();
+    $actualShippingDays = $_product->getProductShippingTime();
+    $productShippingDays = $actualShippingDays;
+    if ($productShippingDays != '') {
+        if (strpos($productShippingDays, '-') !== false) {
+            $productShippingDaysTemp = explode('-', $productShippingDays);
+            if (count($productShippingDaysTemp) > 1) {
+                $productShippingDays = trim($productShippingDaysTemp[1]);
+            } else {
+                $productShippingDays = trim($productShippingDaysTemp[0]);
+            }
+        }
+    } else if ($enableGeneralTime == 1) {
+        $actualShippingDays = $baseHelper->getConfigValue('shippingtimesection/generalgroup/general_time');
+        $productShippingDays = $actualShippingDays;
+        if (strpos($productShippingDays, '-') !== false) {
+            $productShippingDaysTemp = explode('-', $productShippingDays);
+            if (count($productShippingDaysTemp) > 1) {
+                $productShippingDays = trim($productShippingDaysTemp[1]);
+            } else {
+                $productShippingDays = trim($productShippingDaysTemp[0]);
+            }
+        }
+    }
+    ?>
+    <?php if ($productShippingDays != '') { ?>
+        <div class="shipping-est-wrapper">
+            <div class="icon-block"></div>
+            <div class="text-block">
+                <div class="text-inner">
+                    <span><?php echo __($daysMessage, $actualShippingDays); ?></span>
+                    <?php
+                    if ($displayDeliveryDate == 1) {
+                        $shippingDate = date('Y-m-d');
+                        $deliveryDate = $helper->getFinalDeliveryDate($shippingDate, $dateFormat, $holidays = array(), $productShippingDays, $workingDays);
+                        ?>
+                        <span><?php echo __($dateMessage, $deliveryDate); ?></span>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>

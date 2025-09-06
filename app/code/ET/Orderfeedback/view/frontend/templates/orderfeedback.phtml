@@ -1,0 +1,66 @@
+<?php
+$orderId = $block->getOrderId();
+
+$feedbackHelper = $this->helper('ET\Orderfeedback\Helper\Data');
+$enabled = $feedbackHelper->getConfigValue('orderfeedback/settings/enabled');
+$successMessage = $feedbackHelper->getConfigValue('orderfeedback/settings/success_message');
+
+if ($enabled == 1) {
+    if ($orderId != '') {
+        ?>
+        <div class="order-feedback">
+            <div id="feedback-error">
+                <span></span>
+            </div>
+            <div id="feedback-form">
+                <fieldset class="fieldset">
+                    <div class="field order_rating">
+                        <label class="label" for="order_rating"><span><?= $block->escapeHtml(__('How was your experience?')) ?></span></label>
+                        <div class="control">
+                            <div class="rating-stars">
+                                <ul id="order_rating">
+                                    <li class="star" title="Awful" data-value="1">
+                                        <i class="fa fa-star fa-fw"></i>
+                                    </li>
+                                    <li class="star" title="Poor" data-value="2">
+                                        <i class="fa fa-star fa-fw"></i>
+                                    </li>
+                                    <li class="star" title="Okay" data-value="3">
+                                        <i class="fa fa-star fa-fw"></i>
+                                    </li>
+                                    <li class="star" title="Good" data-value="4">
+                                        <i class="fa fa-star fa-fw"></i>
+                                    </li>
+                                    <li class="star" title="Excellent" data-value="5">
+                                        <i class="fa fa-star fa-fw"></i>
+                                    </li>
+                                </ul>
+                                <div class="success-box">
+                                    <div class="text-message"></div>
+                                    <input type="hidden" name="order_rating_val" id="order_rating_val" value="" />
+                                </div>
+                            </div>
+                            <div class="rating-error" style="display: none;"><?= $block->escapeHtml(__('This is required field.')) ?></div>
+                        </div>
+                    </div>
+                    <div class="field order_comment">
+                        <label class="label" for="order_comment"><span><?= $block->escapeHtml(__('Let us know what you liked or what needs improvement (Optional)')) ?></span></label>
+                        <div class="control">
+                            <textarea name="order_comment" id="order_comment" title="<?= $block->escapeHtmlAttr(__('Comment')) ?>" class="input-text" cols="5" rows="5" maxlength="1200"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <a id="submit-feedback" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                            <span><?= $block->escapeHtml(__('Submit')) ?></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="feedback-success">
+                <span></span>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>

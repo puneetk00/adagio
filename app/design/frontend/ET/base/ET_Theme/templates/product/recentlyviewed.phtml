@@ -1,0 +1,32 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('category_section/recentliy_viewed/enabled');
+if ($enabled == 1) {
+    $contentBlock = $baseHelper->getConfigValue('category_section/recentliy_viewed/content_block');
+    if ($contentBlock != '') {
+        $btnText = $baseHelper->getConfigValue('category_section/recentliy_viewed/btn_text');
+        if ($btnText == '') {
+            $btnText = 'Recently Viewed';
+        }
+        $btnPosition = $baseHelper->getConfigValue('category_section/recentliy_viewed/btn_position');
+        if ($btnPosition == '') {
+            $btnPosition == 'right';
+        }
+        ?>
+        <div id="res-tog-btn" class="<?php echo $btnPosition; ?>">
+            <span>
+                <?php echo __($btnText); ?>
+            </span>
+        </div>
+        <div id="res-tog-content" style="display: none;">
+            <div class="content-main">
+                <span id="close-res">
+                    <i class="fa fa-times"></i>
+                </span>
+                <div class="page-main">
+                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($contentBlock)->toHtml(); ?>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>

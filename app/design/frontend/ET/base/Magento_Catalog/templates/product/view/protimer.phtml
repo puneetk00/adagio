@@ -1,0 +1,94 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('product_section/countdown_timer/enabled');
+$_product = $block->getProduct();
+$productType = $_product->getTypeId();
+
+if ($productType == "bundle") {
+    $enabled = 0;
+} else if ($productType == 'configurable') {
+    $enabled = 0;
+} else if ($productType == 'grouped') {
+    $enabled = 0;
+}
+if ($enabled == 1) {
+    $messageText = $baseHelper->getConfigValue('product_section/countdown_timer/message_text');
+    $messageColor = $baseHelper->getConfigValue('product_section/countdown_timer/message_color');
+    $timerBoxColor = $baseHelper->getConfigValue('product_section/countdown_timer/timer_box_color');
+    $timerBoxTextColor = $baseHelper->getConfigValue('product_section/countdown_timer/timer_box_text_color');
+    $timerFormat = $baseHelper->getConfigValue('product_section/countdown_timer/timer_format');
+
+    $simplePrice = $_product->getPrice();
+    
+    $_savingPercent = '0%';
+    $_finalPrice = $_product->getFinalPrice();
+    if ($_finalPrice < $simplePrice) {
+        $_savingPercent = 100 - round(($_finalPrice / $simplePrice) * 100);
+        $_savingPercent = $_savingPercent . '%';
+    }
+
+    $timerRandom = rand(10, 100000);
+    $productSpecialPrice = number_format((float)$_product->getSpecialPrice(), 2);
+    $productRegularPrice = number_format((float)$_product->getPrice(), 2);
+    if (isset($productSpecialPrice) && $productSpecialPrice > 0) {
+        if ($productSpecialPrice < $productRegularPrice) {
+            $productFromSpecialDate = $_product->getSpecialFromDate();
+            $ProductToSpecialDate = $_product->getSpecialToDate();
+            if (isset($productFromSpecialDate) && isset($ProductToSpecialDate)) {
+                $productFromSpecialDate = strtotime($productFromSpecialDate);
+                $ProductToSpecialDate = strtotime($ProductToSpecialDate);
+                $nowDate = strtotime(date("Y-m-d h:m:s"));
+                if ($productFromSpecialDate <= $nowDate && $nowDate <= $ProductToSpecialDate) {
+                    $ProductToSpecialDateSec = date('Y-m-d h:m:s', $ProductToSpecialDate);
+                    ?>
+                    <div class="product-timer-wrapper">
+                        <?php if ($messageText != '') { ?>
+                            <span>
+                                <?php echo __($messageText, $_savingPercent); ?>
+                            </span>
+                        <?php } ?>
+                        <div class="timer-wrapper-outer">
+                            <div class="timer" id="countdown-<?php echo $timerRandom; ?>"></div>
+                        </div>
+                    </div>
+                    <script>
+                        require([
+                            "jquery", "basecountdowntimer"
+                        ], function () {
+                            var myDate = new Date("<?php echo $ProductToSpecialDateSec; ?>");
+                            jQuery("#countdown-<?php echo $timerRandom; ?>").countdown(myDate, function (event) {
+                                jQuery(this).html(
+                                        event.strftime(
+                                                '<?php echo $timerFormat; ?>'
+                                                )
+                                        );
+                            });
+                        });
+                    </script>
+                    <?php
+                }
+            }
+        }
+    }
+    ?>
+    <style>
+    <?php if ($timerBoxColor != '') { ?>
+            .catalog-product-view .product-info-main .product-timer-wrapper .timer-wrapper-outer .timer .timer-wrapper .time {
+                background: <?php echo $timerBoxColor; ?>;
+            }
+    <?php } ?>
+    <?php if ($timerBoxTextColor != '') { ?>
+            .catalog-product-view .product-info-main .product-timer-wrapper .timer-wrapper-outer .timer .timer-wrapper .time {
+                color: <?php echo $timerBoxTextColor; ?>;
+            }
+    <?php } ?>
+    <?php if ($messageColor != '') { ?>
+            .catalog-product-view .product-info-main .product-timer-wrapper > span {
+                color: <?php echo $messageColor; ?>;
+            }
+            .catalog-product-view .product-info-main .product-timer-wrapper .timer-wrapper-outer .timer .timer-wrapper .text {
+                color: <?php echo $messageColor; ?>;
+            }
+    <?php } ?>
+    </style>
+<?php } ?>

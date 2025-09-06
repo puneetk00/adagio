@@ -1,0 +1,161 @@
+.product-nav-wrapper {
+    display: block;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-bottom: 25px;
+    &.left {
+        text-align: left;
+        .nav-link {
+            text-align: left;
+            margin-right: 12px;
+        }
+    }
+    &.right {
+        text-align: right;
+        .nav-link {
+            text-align: left;
+            margin-left: 12px;
+        }
+    }
+    &.center {
+        text-align: center;
+        .nav-link {
+            text-align: left;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+    }
+    &.fullwidth {
+        .nav-link {
+            text-align: left;
+            &.nav-previous-link {
+                float: left;
+                margin-right: 6px;
+            }
+            &.nav-next-link {
+                float: right;
+                margin-left: 6px;
+            }
+        }
+    }
+    .nav-link {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        text-align: left;
+        &.nav-previous-link, &.nav-next-link {
+            .hover-box {
+                left: 0;
+                &:before {
+                    left: 25px;
+                }
+                &:after {
+                    left: 26px;
+                }
+            }
+        }
+        .hover-box {          
+            position: absolute;
+            bottom: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            z-index: 1;
+            display: none;
+            transition: all 0.2s;
+            text-align: center;
+            width: 100px;
+            margin-bottom: 14px;
+            border: 1px solid #cccccc;
+            z-index: 999;
+            .nav-product-image {
+                margin-bottom: 3px;
+            }
+            .nav-product-name {
+                margin: 0;
+                font-weight: normal;
+                font-size: 12px;
+            }
+            &:before {
+                content: "";
+                border-style: solid;
+                border-width: 7px;
+                border-color: #999999 transparent transparent transparent;
+                display: block;
+                height: 0;
+                width: 0;
+                position: absolute;
+                top: 100%;
+            }
+            &:after {
+                content: "";
+                height: 0;
+                width: 0;
+                border-style: solid;
+                border-width: 6px;
+                border-color: #ffffff transparent transparent transparent;
+                position: absolute;
+                top: 100%;
+                z-index: 1;
+            }
+        }
+        &:hover .hover-box {
+            display: block;
+        }
+        .nav-product-image-block {
+            display: inline-block;
+            max-width: 75px;
+            margin-right: 12px;
+            vertical-align: top;
+        }
+        .nav-product-info {
+            display: inline-block;
+            vertical-align: top;
+            .nav-product-name {
+                margin: 0 0 10px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .action.primary {
+                padding: 6px 15px;
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .product-nav-wrapper {
+        .nav-link {
+            .nav-product-image-block {
+                display: none !important;
+            }
+            .nav-product-info {
+                .nav-product-name {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 479px) {
+    .product-nav-wrapper {
+        margin-bottom: 18px;
+        .nav-link {
+            .nav-product-info {
+                .action.primary {
+                    padding: 4px 10px;
+                    font-size: 13px;
+                }
+            }
+        }
+        &.right {
+            .nav-link {
+                margin-left: 6px;
+            }
+        }
+        &.left {
+            .nav-link {
+                margin-right: 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,1055 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$baseUrl = $this->getBaseUrl();
+$headerStaticBlock = $baseHelper->getConfigValue('header_section/general/header_static_block');
+$headerType = $baseHelper->getConfigValue('header_section/general/header_type');
+?>
+<?php if ($headerType == 1) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type1">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 2) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type2">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 3) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type3">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 4) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type4">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 5) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type5">
+        <div class="header content">
+            <div class="header-logo-block">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="text">
+                                        <?php echo __('Account'); ?>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wishlist-link">
+                        <a href="<?php echo $baseUrl . 'wishlist'; ?>" title="<?php echo __('Wishlist'); ?>">
+                            <span class="icon">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </span>
+                            <span class="text">
+                                <?php echo __('Wishlist'); ?>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header-settings">
+                        <div id="header-settings-main">
+                            <div class="block-settings-icon" id="settings-tog-btn">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="text">
+                                        <?php echo __('Setting'); ?>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-settings-main",
+                                 "triggerTarget":"#settings-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="settings-content">
+                                    <div class="settings-inner">
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <div id="header-search-main">
+                            <div class="block-search-icon" id="search-tog-btn">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="text">
+                                        <?php echo __('Search'); ?>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-search-main",
+                                 "triggerTarget":"#search-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="search-content">
+                                    <div class="search-inner">
+                                        <?php echo $this->getChildHtml("top.search"); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu-block">
+            <div class="page-main">
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="content-static">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 6) { ?> 
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type6">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 7) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type7">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 8) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type8">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+        </div>
+        <div class="menu-wrapper">
+            <div class="page-main">
+                <div class="menu-inner">
+                    <?php echo $this->getChildHtml("navigation.sections"); ?>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 9) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type9">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php echo $this->getChildHtml("top.search"); ?>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 10) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type10">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+        </div>
+        <div class="menu-wrapper">
+            <div class="page-main">
+                <div class="menu-inner">
+                    <?php echo $this->getChildHtml("navigation.sections"); ?>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 11) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type11">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+        </div>
+        <div class="header-menu-block">
+            <?php echo $this->getChildHtml("navigation.sections"); ?>
+        </div>
+    </header>
+<?php } else if ($headerType == 12) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type12">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 13) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type13">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 14) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type14">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 15) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type15">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 16) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type16">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php echo $this->getChildHtml("top.search"); ?>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 17) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type17">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 18) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type18">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+            if ($headerStaticBlock != '') {
+                echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml();
+            }
+            ?>
+        </div>
+        <div class="header-menu-block">
+            <?php echo $this->getChildHtml("navigation.sections"); ?>
+        </div>
+    </header>
+<?php } else if ($headerType == 19) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type19">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 20) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type20">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 21) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type21">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php if ($headerStaticBlock != '') { ?>
+                    <div class="static-info">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($headerStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } else if ($headerType == 22) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type22">
+        <div class="panel wrapper">
+            <div class="panel header">
+                <?php echo $this->getChildHtml("skip_to_content"); ?>
+                <?php echo $this->getChildHtml("store_language"); ?>
+                <?php echo $this->getChildHtml("currency"); ?>
+                <?php echo $this->getChildHtml("header.links"); ?>
+            </div>
+        </div>
+        <div class="header content">
+            <div class="header-logo">
+                <?php echo $this->getChildHtml("logo"); ?>
+            </div>
+            <?php echo $this->getChildHtml("minicart"); ?>
+            <?php echo $this->getChildHtml("top.search"); ?>
+        </div>
+        <?php echo $this->getChildHtml("navigation.sections"); ?>
+    </header>
+<?php } else if ($headerType == 23) { ?>
+    <?php echo $this->getChildHtml("et.top.promotion"); ?>
+    <header class="page-header type23">
+        <div class="header content">
+            <div class="header-logo-block">
+                <div class="logo-home">
+                    <?php echo $this->getChildHtml("logo"); ?>
+                </div>
+            </div>
+            <div class="header-sections-block">
+                <div class="header-sections">
+                    <div class="header-cart">
+                        <div class="top-cart-contain">
+                            <?php echo $this->getChildHtml("minicart"); ?>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <div id="header-links-main">
+                            <div class="block-links-icon" id="links-tog-btn">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="block block-content dropdown"
+                                 data-mage-init='{"dropdownDialog":{
+                                 "appendTo":"#header-links-main",
+                                 "triggerTarget":"#links-tog-btn",
+                                 "timeout": "100",
+                                 "closeOnMouseLeave": false,
+                                 "triggerClass":"active",
+                                 "parentClass":"active",
+                                 "triggerEvent" : "click",
+                                 "buttons":null}}'>
+                                <div class="header-content-nd">
+                                    <div class="header-content-inner">
+                                        <div class="header-link-menu">
+                                            <?php echo $this->getChildHtml("header.links"); ?>
+                                        </div>
+                                        <div class="header-currency-language">
+                                            <?php echo $this->getChildHtml("currency.inline"); ?>
+                                            <?php echo $this->getChildHtml("store.language.inline"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <?php echo $this->getChildHtml("top.search.toggle"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-block">
+                <?php echo $this->getChildHtml("navigation.sections"); ?>
+            </div>
+        </div>
+    </header>
+<?php } ?>

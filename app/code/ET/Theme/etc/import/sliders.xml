@@ -1,0 +1,1460 @@
+<root>
+    <sliders>
+        <banner_item>
+            <name>Demo 1 Fashion - Slide 1</name>
+            <demo>demo01</demo>
+            <img><![CDATA[slide1.jpg]]></img>
+            <link>#</link>
+            <target>2</target>
+            <content><![CDATA[<div class="et-fashion-slider">
+	<h2>
+Up to <span>40%</span><br/>
+<strong>DISCOUNT</strong><br/>
+on Fashion<br/>
+Brands
+</h2>
+<a href="#" class="action primary">Shop Now</a>	
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 1 Fashion - Slide 2</name>
+            <demo>demo01</demo>
+            <img><![CDATA[slide2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="et-fashion-slider">
+	<h2>
+		Up to <span>40%</span><br/>
+		<strong>DISCOUNT</strong><br/>
+		on Fashion<br/>
+		Brands
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 1 Fashion - Slide 3</name>
+            <demo>demo01</demo>
+            <img><![CDATA[slide3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="et-fashion-slider">
+	<h2>
+		Up to <span>40%</span><br/>
+		<strong>DISCOUNT</strong><br/>
+		on Fashion<br/>
+		Brands
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 2 Grocery - Slide 1</name>
+            <demo>demo02</demo>
+            <img><![CDATA[grocery-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="grocery-slider slide1">
+	<h2>
+		Flat <span>20%</span> off<br/>
+		<strong>On Grocery</strong><br/>
+		<span class="desc">Min. $200 Purchase<br/>
+		Save Today!!</span>
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 2 Grocery - Slide 2</name>
+            <demo>demo02</demo>
+            <img><![CDATA[grocery-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="grocery-slider slide2">
+	<h2>
+		Up to <span>50%</span> Off<br/>
+		<strong>To all Quality<br/>
+		Product</strong><br/>
+		<span class="desc">You need it and we got it<br/></span>
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 2 Grocery - Slide 3</name>
+            <demo>demo02</demo>
+            <img><![CDATA[grocery-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="grocery-slider slide3">
+	<h2>
+		Get <span>40%</span> Discount<br/>
+		<strong>Garden Fresh Fruits</strong><br/>
+		<span class="desc">Eat fresh, stay healthy<br/></span>
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 3 Autoparts - Slide 1</name>
+            <demo>demo03</demo>
+            <img><![CDATA[autoparts-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="autoparts-slider slide1">
+	<h2>
+		The Best<br/>
+		<strong>Automotive Parts</strong><br/>
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>2</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 3 Autoparts - Slide 2</name>
+            <demo>demo03</demo>
+            <img><![CDATA[autoparts-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="autoparts-slider slide2">
+	<h2>
+		This week only<br/>
+		<strong>Wheels & Tires</strong><br/>
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>2</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 4 Electronics - Slide 1</name>
+            <demo>demo04</demo>
+            <img><![CDATA[electronics-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="electronics-slider slide1">
+	<h2>
+		30<span>% off</span><br/>
+		<strong>Mega Sale</strong><br/>
+		on Mobiles<br/>
+		2 days left
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 4 Electronics - Slide 2</name>
+            <demo>demo04</demo>
+            <img><![CDATA[electronics-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="electronics-slider slide2">
+	<h2>
+		New Arrival<br/>
+		<strong>Laptouch</strong><br/>
+		Save now<br/>
+		20% off
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 4 Electronics - Slide 3</name>
+            <demo>demo04</demo>
+            <img><![CDATA[electronics-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="electronics-slider slide3">
+	<h2>
+		50<span>% off</span><br/>
+		<strong>Curved Tv</strong><br/>
+		On Bigsale<br/>
+		Save today!!
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 5 KidsToys - Slide 1</name>
+            <demo>demo05</demo>
+            <img><![CDATA[kidstoys-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="kidstoys-slider slide1">
+	<h2>
+		<strong>Winter sale</strong><br>
+		Up to <span>50</span>% off<br>
+		<span class="desc">The best material<br/>
+		for your kids</span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 5 KidsToys - Slide 2</name>
+            <demo>demo05</demo>
+            <img><![CDATA[kidstoys-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="kidstoys-slider slide2">
+	<h2>
+		Get <span>20</span>% off<br>
+		<strong>Kid's Toys</strong><br>
+		<span class="desc">Smart parent's choice<br/>
+		for baby safty</span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 5 KidsToys - Slide 3</name>
+            <demo>demo05</demo>
+            <img><![CDATA[kidstoys-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="kidstoys-slider slide3">
+	<h2>
+		<span>35</span>% discount!<br>
+		<strong>On sneakers</strong><br>
+		<span class="desc">Trendy shoes for<br/>
+		trendy kids</span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 6 Perfume - Slide 1</name>
+            <demo>demo06</demo>
+            <img><![CDATA[perfume-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="perfume-slider slide1">
+	<h2>
+		<span>Take a perfume</span><br>
+		Get <strong>25</strong>% Discount<br>
+		<span class="desc">Perfume starting from $9.99<br/></span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 6 Perfume - Slide 2</name>
+            <demo>demo06</demo>
+            <img><![CDATA[perfume-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="perfume-slider slide2">
+	<h2>
+		<span>Best Collection</span><br>
+		Flat <strong>20</strong>% Off!<br>
+		<span class="desc">Order now<br/></span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 6 Perfume - Slide 3</name>
+            <demo>demo06</demo>
+            <img><![CDATA[perfume-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="perfume-slider slide3">
+	<h2>
+		<span>Summer Collection</span><br>
+		Upto <strong>45</strong>% Off!<br>
+		<span class="desc">Exclusive available online<br/></span>
+	</h2>
+	<a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 7 Furniture - Slide 1</name>
+            <demo>demo07</demo>
+            <img><![CDATA[furniture-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="furniture-slider slide1">
+    <h2>
+        Up to <span>30%</span> Off<br/>
+        Sale Going On<br/>
+        <strong>Printed sofa</strong><br/>
+        <span class="desc">Reflecting your image<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 7 Furniture - Slide 2</name>
+            <demo>demo07</demo>
+            <img><![CDATA[furniture-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="furniture-slider slide2">
+    <h2>
+        Get <span>Mega Sale</span> Offer<br/>
+        To Renovate Your<br/>
+        <strong>Office</strong><br/>
+        <span class="desc">Crafted with excellence<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 7 Furniture - Slide 3</name>
+            <demo>demo07</demo>
+            <img><![CDATA[furniture-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="furniture-slider slide3">
+    <h2>
+        Get <span>Your copy</span> with<br/>
+        <strong>20%</strong> Discount<br/>
+        <span class="desc">Sit with luxury<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 8 Winestore - Slide 1</name>
+            <demo>demo08</demo>
+            <img><![CDATA[winestore-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="winestore-slider slide1">
+    <h2>
+        Flat <span>25</span>% Off<br/>
+        <strong>Wine & Chocolate</strong><br/>
+        <span class="desc">New Luxury Wine<br/>
+        From France<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 8 Winestore - Slide 2</name>
+            <demo>demo08</demo>
+            <img><![CDATA[winestore-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="winestore-slider slide2">
+    <h2>
+        Up to <span>35</span>% Off<br/>
+        <strong>On Red Wine</strong><br/>
+        <span class="desc">Season of Tasting<br/>
+        On Luxury Wines<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 8 Winestore - Slide 3</name>
+            <demo>demo08</demo>
+            <img><![CDATA[winestore-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="winestore-slider slide3">
+    <h2>
+        <span>20</span>% Discount!<br/>
+        <strong>Branded Wine</strong><br/>
+        <span class="desc">Market Seasonal<br/>
+        Discount<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 9 Health - Slide 1</name>
+            <demo>demo09</demo>
+            <img><![CDATA[health-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="health-slider slide1">
+    <h2>
+        Face Mask<br/>
+        Thermometer<br/>
+        <span class="desc">Measure your body<br/>
+        temperature.<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 9 Health - Slide 2</name>
+            <demo>demo09</demo>
+            <img><![CDATA[health-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="health-slider slide2">
+    <h2>
+        Antibacterial<br/>
+        Medical Mask<br/>
+        <span class="desc">Only in this week.<br/>
+        Don’t misss!<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 9 Health - Slide 3</name>
+            <demo>demo09</demo>
+            <img><![CDATA[health-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="health-slider slide3">
+    <h2>
+        Fresh Smelling<br/>
+        Hand Sanitizer<br/>
+        <span class="desc">Save Lives Clean<br/>
+        your hands.<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 10 FastFood - Slide 1</name>
+            <demo>demo10</demo>
+            <img><![CDATA[fastfood-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fastfood-slider slide1">
+    <h2>
+        Unlimited<br/>
+        Medium <strong>Pizzas</strong><br/>
+        <span class="desc">We’ll Deliver Your Masterpiece!</span><br/>
+        <span>Price : $10.50</span><br/>
+    </h2>
+    <a href="#" class="action primary">Order Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 10 FastFood - Slide 2</name>
+            <demo>demo10</demo>
+            <img><![CDATA[fastfood-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fastfood-slider slide2">
+    <h2>
+        Big <strong>Burger</strong><br/>
+        Little Money<br/>
+        <span class="desc">Burger at a Discount Price!<br/></span>
+        <span>Price : $8.95</span><br/>
+    </h2>
+    <a href="#" class="action primary">Order Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 10 FastFood - Slide 3</name>
+            <demo>demo10</demo>
+            <img><![CDATA[fastfood-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fastfood-slider slide3">
+    <h2>
+        Freshly made<br/>
+        Best <strong>Sandwich</strong><br/>
+        <span class="desc">Buy One Get Two<br/></span>
+        <span>Price : $4.99</span><br/>
+    </h2>
+    <a href="#" class="action primary">Order Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 11 Fashion - Slide 1</name>
+            <demo>demo11</demo>
+            <img><![CDATA[fashion-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fashion-slider slide1">
+    <h2>
+        Sale up to<br/>
+        <span>50%</span> Off<br/>
+        <strong>Summer</strong><br/>
+        This Week Only<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 11 Fashion - Slide 2</name>
+            <demo>demo11</demo>
+            <img><![CDATA[fashion-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fashion-slider slide2">
+    <h2>
+        Hurry Up!<br/>
+        <span>60%</span> Off<br/>
+        <strong>New Arrival</strong><br/>
+        For Your Just In<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 11 Fashion - Slide 3</name>
+            <demo>demo11</demo>
+            <img><![CDATA[fashion-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="fashion-slider slide3">
+    <h2>
+        Up to<br/>
+        <span>70%</span> Off<br/>
+        <strong>Flash Sale</strong><br/>
+        Special Offer<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 12 Electronics - Slide 1</name>
+            <demo>demo12</demo>
+            <img><![CDATA[elc2-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="elc2-slider slide1">
+    <h2>
+        New Arrivals<br/>
+        <strong>Apple Fitness</strong><br/>
+        <span class="desc">up to 30% off<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 12 Electronics - Slide 2</name>
+            <demo>demo12</demo>
+            <img><![CDATA[elc2-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="elc2-slider slide2">
+    <h2>
+        iPhone16<br/>
+        <strong>Say Hello G7</strong><br/>
+        <span class="desc">Save up to $25<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 12 Electronics - Slide 3</name>
+            <demo>demo12</demo>
+            <img><![CDATA[elc2-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="elc2-slider slide3">
+    <h2>
+        X- Game<br/>
+        <strong>Controller</strong><br/>
+        <span class="desc">Save 20% off on select game<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 13 Vitamin - Slide 1</name>
+            <demo>demo13</demo>
+            <img><![CDATA[vitamin-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="vitamin-slider slide1">
+    <h2>
+        Special offer organics<br>
+        <strong>27% Discount</strong><br>
+        <span class="desc">Vitamin Pills<br/></span>
+    </h2>
+    <a href="#" class="action primary">
+        Shop now
+    </a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 13 Vitamin - Slide 2</name>
+            <demo>demo13</demo>
+            <img><![CDATA[vitamin-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="vitamin-slider slide2">
+    <h2>
+        Unleash your power<br>
+        <strong>FLat 15% Off</strong><br>
+        <span class="desc">Multivitamin<br/></span>
+    </h2>
+    <a href="#" class="action primary">
+        Shop now
+    </a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 13 Vitamin - Slide 3</name>
+            <demo>demo13</demo>
+            <img><![CDATA[vitamin-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="vitamin-slider slide3">
+    <h2>
+        Boost your immunity<br>
+        <strong>Starting at $99</strong><br>
+        <span class="desc">Vitamin D3 spray<br/></span>
+    </h2>
+    <a href="#" class="action primary">
+        Shop now
+    </a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 14 GymSpa - Slide 1</name>
+            <demo>demo14</demo>
+            <img><![CDATA[gymspa-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="gymspa-slider slide1">
+	<h2>
+		<span>Flat 50% off</span><br/>
+		Start your <strong>Fitness</strong><br/>
+		journey today
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 14 GymSpa - Slide 2</name>
+            <demo>demo14</demo>
+            <img><![CDATA[gymspa-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="gymspa-slider slide2">
+	<h2>
+		<span>Up to 30% off</span><br/>
+		Grow <strong>Your</strong><br/>
+		strength today
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 14 GymSpa - Slide 3</name>
+            <demo>demo14</demo>
+            <img><![CDATA[gymspa-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="gymspa-slider slide3">
+	<h2>
+		<span>30% off</span><br/>
+		Get in <strong>Shape</strong> &<br/>
+		be healthy
+	</h2>
+	<a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 15 Cosmetics - Slide 1</name>
+            <demo>demo15</demo>
+            <img><![CDATA[cosmetics-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="cosmtc-slider slide1">
+    <h2>
+        Get your freebies<br/>
+        Makeup brushes<br/>
+        <span>free shipping with any purchase over $25</span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 15 Cosmetics - Slide 2</name>
+            <demo>demo15</demo>
+            <img><![CDATA[cosmetics-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="cosmtc-slider slide2">
+    <h2>
+        Nail it with the<br/>
+        Perfect set of colors<br/>
+        <span>buy any 2 products and get 1 free</span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 15 Cosmetics - Slide 3</name>
+            <demo>demo15</demo>
+            <img><![CDATA[cosmetics-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="cosmtc-slider slide3">
+    <h2>
+        Unleash the innate<br/>
+        Power of your skin<br/>
+        <span>free highlighter on order off $99</span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 16 Bookstore - Slide 1</name>
+            <demo>demo16</demo>
+            <img><![CDATA[bookstore-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="book-slider slide1">
+    <h2>
+        New Arrivals<br/>
+        <strong>New Best Book</strong><br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 16 Bookstore - Slide 2</name>
+            <demo>demo16</demo>
+            <img><![CDATA[bookstore-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="book-slider slide2">
+    <h2>
+        Special trend for books<br/>
+        <strong>Online Book Store</strong><br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 16 Bookstore - Slide 3</name>
+            <demo>demo16</demo>
+            <img><![CDATA[bookstore-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="book-slider slide3">
+    <h2>
+        Welcome to PS-book<br/>
+        <strong>Best Author Book</strong><br/>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 17 Jewelry - Slider 1</name>
+            <demo>demo17</demo>
+            <img><![CDATA[jewelry-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="jewelry-slider slide1">
+    <h2>
+        <strong>Beautiful Earings</strong><br>
+        <span>Spring sale</span><br>
+        Limited offer<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 17 Jewelry - Slider 2</name>
+            <demo>demo17</demo>
+            <img><![CDATA[jewelry-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="jewelry-slider slide2">
+    <h2>
+        <strong>Pearls Spring</strong><br>
+        <span>Collection</span><br>
+        Jewelry arrivals<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 17 Jewelry - Slider 3</name>
+            <demo>demo17</demo>
+            <img><![CDATA[jewelry-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="jewelry-slider slide3">
+    <h2>
+        <strong>Family Jewelry</strong><br>
+        <span>Collection</span><br>
+        Designer jewelry bracelets<br/>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 18 Bicycle - Slide 18</name>
+            <demo>demo18</demo>
+            <img><![CDATA[bicycle-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="bicycle-slider slide1">
+    <h2>
+        Factory Price<br>
+        <strong>Sport Bicycle</strong><br>
+        <span class="desc">New Arrivals<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 18 Bicycle - Slide 18</name>
+            <demo>demo18</demo>
+            <img><![CDATA[bicycle-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="bicycle-slider slide2">
+    <h2>
+        Big Sale<br>
+        <strong>Mountain Bike</strong><br>
+        <span class="desc">Sale 40% off<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 18 Bicycle - Slide 18</name>
+            <demo>demo18</demo>
+            <img><![CDATA[bicycle-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="bicycle-slider slide3">
+    <h2>
+        Best Cycle<br>
+        <strong>Off Road Bicycle</strong><br>
+        <span class="desc">Get 30% off<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 19 E-Vehicle - Slide 19</name>
+            <demo>demo19</demo>
+            <img><![CDATA[evehicle-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="evehicle-slider slide1">
+    <h2>
+        <p class="desc"><span>50% </span>Off On</p>
+        All <strong>Maintenance</strong><br>
+        Services
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 19 E-Vehicle - Slide 19</name>
+            <demo>demo19</demo>
+            <img><![CDATA[evehicle-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="evehicle-slider slide2">
+    <h2>
+        <p class="desc">Flat <span>30% </span>Off</p>
+        Electric <strong>Bike</strong><br>
+        Collection
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 19 E-Vehicle - Slide 19</name>
+            <demo>demo19</demo>
+            <img><![CDATA[evehicle-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="evehicle-slider slide3">
+    <h2>
+        <p class="desc"><span>Bike </span>Buy New</p>
+        Don't need <strong>Fuel</strong><br>
+        To Run
+    </h2>
+    <a href="#" class="action primary">Shop Today</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 20 SmartWatch - Slide 20</name>
+            <demo>demo20</demo>
+            <img><![CDATA[smartwatch-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="smartwatch-slider slide1">
+    <h2>
+        Rich Watch<br>
+        <strong>Sale 35% Off</strong><br>
+        <span class="desc">Make a rich life<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 20 SmartWatch - Slide 20</name>
+            <demo>demo20</demo>
+            <img><![CDATA[smartwatch-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="smartwatch-slider slide2">
+    <h2>
+        H-Vault Classico<br>
+        <strong>Offer-20% Off</strong><br>
+        <span class="desc">Starting at $10.99<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 20 SmartWatch - Slide 20</name>
+            <demo>demo20</demo>
+            <img><![CDATA[smartwatch-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="smartwatch-slider slide3">
+    <h2>
+        Smart Watch<br>
+        <strong>Flat 25% Off</strong><br>
+        <span class="desc">At $99-only for today<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 21 Sports - Slide 21</name>
+            <demo>demo21</demo>
+            <img><![CDATA[sports-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="sports-slider slide1">
+    <h2>
+        Flat 50% off<br>
+        <strong>Golf Strong,</strong><br>
+        <span class="desc">Go long<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 21 Sports - Slide 21</name>
+            <demo>demo21</demo>
+            <img><![CDATA[sports-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="sports-slider slide2">
+    <h2>
+        Sale for week<br>
+        <strong>Find your perfect</strong><br>
+        <span class="desc">Sport Equipment<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 21 Sports - Slide 21</name>
+            <demo>demo21</demo>
+            <img><![CDATA[sports-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="sports-slider slide3">
+    <h2>
+        New Arrival<br>
+        <strong>We are best for</strong><br>
+        <span class="desc">Sport club<br/></span>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 22 Flowershop - Slide 22</name>
+            <demo>demo22</demo>
+            <img><![CDATA[flowershop-1.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="flwrshp-slider slide1">
+    <h2>
+        Flower Trend<br>
+        <strong>Flower with soul</strong><br>
+        <p>Up to <span class="desc">50%</span> off</p>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>1</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 22 Flowershop - Slide 22</name>
+            <demo>demo22</demo>
+            <img><![CDATA[flowershop-2.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="flwrshp-slider slide2">
+    <h2>
+        New Collection<br>
+        <strong>Blooms All Day</strong><br>
+        <p>Starting at <span class="desc">$19.99</span></p>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>3</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>2</sort_order>
+            <status>1</status>
+        </banner_item>
+        <banner_item>
+            <name>Demo 22 Flowershop - Slide 22</name>
+            <demo>demo22</demo>
+            <img><![CDATA[flowershop-3.jpg]]></img>
+            <link>#</link>
+            <target>1</target>
+            <content><![CDATA[<div class="flwrshp-slider slide3">
+    <h2>
+        Season Sale<br>
+        <strong>Power of flowers</strong><br>
+        <p>Flat <span class="desc">40%</span> off</p>
+    </h2>
+    <a href="#" class="action primary">Shop Now</a>
+</div>]]></content>
+            <content_position>1</content_position>
+            <disablemobile>0</disablemobile>
+            <start_date><![CDATA[2020-07-01 00:00:00]]></start_date>
+            <end_date><![CDATA[2022-12-31 00:00:00]]></end_date>
+            <store_id>0</store_id>
+            <sort_order>3</sort_order>
+            <status>1</status>
+        </banner_item>
+    </sliders>
+</root>

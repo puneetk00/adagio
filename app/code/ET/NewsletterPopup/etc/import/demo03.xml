@@ -1,0 +1,38 @@
+<root>
+    <config>
+        <cms>
+            <wysiwyg>
+                <enabled>hidden</enabled>
+            </wysiwyg>
+        </cms>
+        <addonnewspopup>
+            <settings>
+                <enabled>1</enabled>
+                <use_ajax>1</use_ajax>
+                <enable_homepage>1</enable_homepage>
+                <popup_delay>1</popup_delay>
+                <popup_title>Get in touch</popup_title>
+                <template_mode>0</template_mode>
+                <demo_layout>3</demo_layout>
+                <popup_custom_text></popup_custom_text>
+                <popup_text><![CDATA[<div class="popup-content-main" style="background: url('{{media url="wysiwyg/ht/newsletter/demo3-back.jpg"}}');background-size: cover;background-position: center center;">
+    <div class="popup-content-inner">
+        <h1>Get in touch</h1>
+        <p class="nw-text">Subscribe to our newsletter to get exclusive discounts, special offers and new theme launches right in your inbox.</p>
+        <div class="nw-form">
+            {{block class="ET\NewsletterPopup\Block\Subscribe" name="newsletter-form" template="ET_NewsletterPopup::newsletter/form.phtml"}}
+        </div>
+        <div class="nw-checkbox">
+            <input type="checkbox" id="nw-checked" name="nw-checked" />
+            <label for="nw-checked">Don't show this popup again!</label>
+        </div>
+    </div>
+</div>]]></popup_text>
+                <popup_dimension>1</popup_dimension>
+                <popup_width>850px</popup_width>
+                <popup_height>auto</popup_height>
+                <custom_css></custom_css>
+            </settings>
+        </addonnewspopup>
+    </config>
+</root>

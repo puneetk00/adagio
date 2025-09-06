@@ -1,0 +1,51 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$instagramHelper = $this->helper('ET\Instagram\Helper\Data');
+$enabled = $baseHelper->getConfigValue('instagramsection/generalgroup/enabled');
+$appAccessToken = $baseHelper->getConfigValue('instagramsection/generalgroup/app_access_token');
+if ($enabled == 1 && $appAccessToken != '') {
+    $title = $this->getData('title');
+    $imageCount = $this->getData('image_count');
+
+    $instaData = $instagramHelper->getInstaData($appAccessToken);
+
+    if ($instaData && count($instaData)) {
+        ?>
+        <?php if ($title != '') { ?>
+            <div class="title">
+                <?php echo __($title); ?>
+            </div>
+        <?php } ?>
+        <div class="content">
+            <ul class="insta-imgs">
+                <?php
+                $i = 0;
+                foreach ($instaData as $instaVal) {
+                    if ($i >= $imageCount) {
+                        break;
+                    }
+                    $mediaType = $instaVal->media_type;
+                    if ($mediaType == 'IMAGE') {
+                        $imgUrl = $instaVal->media_url;
+                        $imgCaption = '';
+                        if (isset($instaVal->caption)) {
+                            $imgCaption = $instaVal->caption;
+                        }
+                        ?>
+                        <li>
+                            <a href="<?php echo $instaVal->permalink; ?>" target="_blank">
+                                <img src="<?php echo $imgUrl; ?>" title="<?php echo $imgCaption; ?>" alt="<?php echo $imgCaption; ?>" />
+                                <div class="hover-caption">
+                                    <span class="icon-span"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <?php
+                        $i++;
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+    <?php } ?>
+<?php } ?>

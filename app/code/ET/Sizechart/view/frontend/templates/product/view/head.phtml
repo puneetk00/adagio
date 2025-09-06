@@ -1,0 +1,51 @@
+<?php
+$_product = $block->getProduct();
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('sizechartsection/generalgroup/enabled');
+if ($enabled == 1) {
+    $_product = $block->getProduct();
+    $sizeChartContent = $_product->getSizechartContent();
+    if ($sizeChartContent != '') {
+        $displayMode = $baseHelper->getConfigValue('sizechartsection/generalgroup/display_mode');
+        $title = $baseHelper->getConfigValue('sizechartsection/generalgroup/title');
+        $width = $baseHelper->getConfigValue('sizechartsection/generalgroup/width');
+        $height = $baseHelper->getConfigValue('sizechartsection/generalgroup/height');
+
+        if ($displayMode == 1) {
+            ?>
+            <script>
+                require(['jquery', 'Magento_Ui/js/modal/modal'],
+                        function ($, modal) {
+                            var options = {
+                                type: 'popup',
+                                modalClass: 'sizechart-popup-modal',
+                                responsive: true,
+                                innerScroll: true,
+                                title: '<?php echo __($title); ?>',
+                                opened: function ($Event) {
+                                    $(".modal-footer").hide();
+                                }
+                            };
+                            var popup = modal(options, $('#sizechart-modal'));
+                        }
+                );
+
+                require(['jquery', 'Magento_Ui/js/modal/modal'], function () {
+                    jQuery(document).ready(function () {
+                        jQuery("#view-sizechart").on('click', function () {
+                            jQuery("#sizechart-modal").modal("openModal");
+                        });
+                    });
+                });
+            </script>
+            <style>
+                .modal-popup.sizechart-popup-modal > .modal-inner-wrap {
+                    max-width: <?php echo $width; ?>;
+                    width: 100%;
+                    height: 100%;
+                    max-height: <?php echo $height; ?>;
+                }
+            </style>
+        <?php } ?>
+    <?php } ?>
+<?php } ?>

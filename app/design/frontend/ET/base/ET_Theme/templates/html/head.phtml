@@ -1,0 +1,131 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$customCss = $baseHelper->getConfigValue('theme_section/custom_settings/custom_css');
+$customJs = $baseHelper->getConfigValue('theme_section/custom_settings/custom_js');
+
+$cssHelper = $this->helper('ET\Theme\Helper\CssSetting');
+?>
+<?php
+$fontSizes = "%3A300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic";
+$useCustomFonts = $baseHelper->getConfigValue('theme_section/font_family/use_custom_fonts');
+$googleFontFamily = $baseHelper->getConfigValue('theme_section/font_family/google_font_family');
+if ($useCustomFonts == 1) {
+    if ($googleFontFamily != 'Select') {
+        ?>
+        <link rel="stylesheet" href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $googleFontFamily) . $fontSizes; ?>' type='text/css' />
+        <?php
+    }
+}
+?>
+<?php
+$settingsFile = $cssHelper->getSettingsFile();
+if ($settingsFile) {
+    ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $settingsFile; ?>">
+<?php }
+?>
+<?php if ($customCss != '') { ?>
+    <style>
+    <?php echo $customCss; ?>        
+    </style>
+<?php } ?>
+<?php if ($customJs != '') { ?>
+    <script>
+        require(['jquery'], function () {
+    <?php echo $customJs; ?>
+        });
+    </script>
+<?php } ?>
+
+<?php
+$addthisEnable = $baseHelper->getConfigValue('theme_section/addthis/enable');
+$pubId = $baseHelper->getConfigValue('theme_section/addthis/pubid');
+
+if ($addthisEnable) {
+    ?>
+    <div class="addthis_sharing_toolbox"></div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $pubId; ?>" async="async"></script>
+<?php } ?>
+
+<?php
+$enableCheckoutDesign = $baseHelper->getConfigValue('checkout_section/general/enabled');
+if ($enableCheckoutDesign == 1) {
+    ?>
+    <style>
+        .checkout-index-index .page-wrapper .page-header.type1,
+        .checkout-index-index .page-wrapper .page-header.type2,
+        .checkout-index-index .page-wrapper .page-header.type3,
+        .checkout-index-index .page-wrapper .page-header.type4,
+        .checkout-index-index .page-wrapper .page-header.type5,
+        .checkout-index-index .page-wrapper .page-header.type6,
+        .checkout-index-index .page-wrapper .page-header.type7, 
+        .checkout-index-index .page-wrapper .page-header.type8, 
+        .checkout-index-index .page-wrapper .page-header.type9, 
+        .checkout-index-index .page-wrapper .page-header.type10,
+        .checkout-index-index .page-wrapper .page-header.type11, 
+        .checkout-index-index .page-wrapper .page-header.type12,
+        .checkout-index-index .page-wrapper .page-header.type13,
+        .checkout-index-index .page-wrapper .page-header.type14,
+        .checkout-index-index .page-wrapper .page-header.type15,
+        .checkout-index-index .page-wrapper .page-header.type16,
+        .checkout-index-index .page-wrapper .page-header.type17,
+        .checkout-index-index .page-wrapper .page-header.type18,
+        .checkout-index-index .page-wrapper .page-header.type19,
+        .checkout-index-index .page-wrapper .page-header.type20,
+        .checkout-index-index .page-wrapper .page-header.type21,
+        .checkout-index-index .page-wrapper .page-header.type22,
+        .checkout-index-index .page-wrapper .page-header.type23 {
+            display: none !important;
+        }
+        .checkout-index-index #promobar-wrapper {
+            display: none !important;
+        }
+    </style>
+<?php } ?>
+
+<?php
+$isHome = $baseHelper->getIsHome();
+$pageMessagesToast = $baseHelper->getConfigValue('theme_section/page_messages/page_messages_toast');
+if ($pageMessagesToast != 'disabled') {
+    if ($pageMessagesToast == 'onlyhome') {
+        $enableHome = 1;
+    } else {
+        $enableHome = 0;
+    }
+    if (($enableHome && $isHome) || (!$enableHome)) {
+        ?>
+        <script>
+            require(['jquery'], function () {
+                var win_width = jQuery(window).width();
+                if (win_width > 767) {
+                    jQuery('.page-wrapper #maincontent .page.messages').click(function () {
+                        jQuery('.page-wrapper #maincontent .page.messages .messages').remove();
+                    });
+                }
+            });
+        </script>
+        <style>
+            @media(min-width: 768px) {
+                .page-wrapper #maincontent .page.messages {
+                    position: absolute;
+                    z-index: 999;
+                    right: 0;
+                    top: 25px;
+                    max-width: 400px;
+                }
+                .page-wrapper #maincontent .page.messages .messages > .message {
+                    padding-right: 30px;
+                }
+                .page-wrapper #maincontent .page.messages .messages > .message:after {
+                    content: "\f00d";
+                    display: block;
+                    font-family: "Fontawesome";
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    font-size: 16px;
+                }
+            }
+        </style>
+    <?php } ?>
+<?php } ?>

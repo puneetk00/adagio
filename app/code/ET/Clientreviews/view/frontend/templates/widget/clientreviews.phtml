@@ -1,0 +1,135 @@
+<?php
+$title = $this->getData('title');
+$reviewsCount = $this->getData('reviews_count');
+$displayDesignation = $this->getData('designation');
+$displayLocation = $this->getData('location');
+$enableSocials = $this->getData('socials');
+
+$autoplay = $this->getData('autoplay');
+$dots = $this->getData('dots');
+$nav = $this->getData('nav');
+$loop = $this->getData('loop');
+$stoponhover = $this->getData('stoponhover');
+$mousedrag = $this->getData('mousedrag');
+$touchdrag = $this->getData('touchdrag');
+
+$mediaUrl = $block->getMediaUrl();
+$reviewsCollection = $block->getReviewCollection($reviewsCount);
+
+$randomNum = rand(10, 1000);
+?>
+<?php if ($reviewsCollection && count($reviewsCollection) > 0) { ?>
+    <div class="cr-wrapper">
+        <div class="page-main">
+            <?php if ($title != '') { ?>
+                <div class="section-title">
+                    <span><?php echo htmlspecialchars_decode($title); ?></span>
+                </div>
+            <?php } ?>
+            <div id="crslider-<?php echo $randomNum; ?>" class="items owl-carousel owl-theme">
+                <?php foreach ($reviewsCollection AS $review) { ?>
+                    <div class="item" style="display: none;">
+                        <?php
+                        $name = $review->getName();
+                        $profileImg = $review->getProfileImg();
+                        $designation = $review->getDesignation();
+                        $location = $review->getLocation();
+                        $content = $review->getContent();
+                        $facebookUrl = $review->getFacebookUrl();
+                        $twitterUrl = $review->getTwitterUrl();
+                        $linkedinUrl = $review->getLinkedinUrl();
+                        $instagramUrl = $review->getInstagramUrl();
+                        ?>
+                        <div class="img-content">
+                            <?php if ($profileImg != '') { ?>
+                                <img src="<?php echo $mediaUrl . 'clientreviews/image/' . $profileImg; ?>" alt="<?php echo $name; ?>" />
+                            <?php } ?>
+                            <?php if ($name != '') { ?>
+                                <strong><?php echo $name; ?></strong>
+                            <?php } ?>
+                            <?php if ($displayDesignation == 1 && $designation != '') { ?>
+                                <p><?php echo $designation; ?></p>
+                            <?php } ?>
+                            <?php if ($displayLocation == 1 && $location != '') { ?>
+                                <p><?php echo $location; ?></p>
+                            <?php } ?>
+                            <?php if ($enableSocials == 1) { ?>
+                                <ul>
+                                    <?php if ($facebookUrl != '') { ?>
+                                        <li>
+                                            <a href="<?php echo $facebookUrl ?>" title="<?php echo __('Facebook') ?>">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if ($twitterUrl != '') { ?>
+                                        <li>
+                                            <a href="<?php echo $twitterUrl ?>" title="<?php echo __('Twitter') ?>">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if ($twitterUrl != '') { ?>
+                                        <li>
+                                            <a href="<?php echo $linkedinUrl ?>" title="<?php echo __('Linkedin') ?>">
+                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if ($instagramUrl != '') { ?>
+                                        <li>
+                                            <a href="<?php echo $instagramUrl ?>" title="<?php echo __('Instagram') ?>">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
+                            <?php } ?>
+                        </div>
+                        <div class="text-content">
+                            <?php echo $block->getCmsFilterContent($content); ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+            <script>
+                require(['jquery', 'baseowlcarousel'], function () {
+                    jQuery(document).ready(function () {
+                        jQuery('#crslider-<?php echo $randomNum; ?>').owlCarousel({
+                            items: 1,
+                            responsive: {
+                                0: {
+                                    items: 1
+                                },
+                                479: {
+                                    items: 1
+                                },
+                                639: {
+                                    items: 1
+                                },
+                                767: {
+                                    items: 1
+                                },
+                                991: {
+                                    items: 1
+                                },
+                                1199: {
+                                    items: 1
+                                }
+                            },
+                            loop: <?php echo ($loop) ? 'true' : 'false'; ?>,
+                            autoplay: <?php echo ($autoplay) ? 'true' : 'false'; ?>,
+                            autoplayHoverPause: <?php echo ($stoponhover) ? 'true' : 'false'; ?>,
+                            mouseDrag: <?php echo ($mousedrag) ? 'true' : 'false'; ?>,
+                            touchDrag: <?php echo ($touchdrag) ? 'true' : 'false'; ?>,
+                            dots: <?php echo ($dots) ? 'true' : 'false'; ?>,
+                            nav: <?php echo ($nav) ? 'true' : 'false'; ?>,
+                            navText: ['<div class="prev-arrow"></div>', '<div class="next-arrow"></div>']
+                        });
+                        jQuery('#crslider-<?php echo $randomNum; ?> .item').show();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+<?php } ?>

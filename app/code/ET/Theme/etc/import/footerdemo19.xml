@@ -1,0 +1,30 @@
+<root>
+    <config>
+        <footer_section>
+            <general>
+                <footer_type>19</footer_type>
+            </general>
+            <footer_top>
+                <enable>1</enable>
+                <static_block>et_home_services_ten</static_block>
+            </footer_top>
+            <footer_middle>
+                <enable>1</enable>
+                <column_one_static_block>et_footer_contact_info</column_one_static_block>
+                <column_one_width>3</column_one_width>
+                <column_two_static_block>et_footer_my_account</column_two_static_block>
+                <column_two_width>3</column_two_width>
+                <column_three_static_block>et_footer_quicklinks</column_three_static_block>
+                <column_three_width>3</column_three_width>
+                <column_four_static_block>et_footer_column_newsletter</column_four_static_block>
+                <column_four_width>3</column_four_width>
+                <footer_middle_static_block></footer_middle_static_block>
+            </footer_middle>
+            <footer_bottom>
+                <enable>1</enable>
+                <left_static_block>et_footer_copyright</left_static_block>
+                <right_static_block>et_payment_icons</right_static_block>
+            </footer_bottom>
+        </footer_section>
+    </config>
+</root>

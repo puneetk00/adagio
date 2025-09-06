@@ -1,0 +1,21 @@
+<?php
+$_helper = $this->helper('ET\Navigationmenu\Helper\Data');
+$_config = $_helper->getConfigValue('header_section');
+
+$columnsLimit = 0;
+?>
+<?php $_menu = $block->getMegamenuHtml(); ?>
+<nav class="navigation hlm-topmenu" role="navigation">
+    <ul>
+        <?php echo $_menu; ?>
+    </ul>
+</nav>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'ET_Navigationmenu/js/megamenu'
+    ], function ($) {
+        $(".hlm-topmenu").websMegamenu({
+        });
+    });
+</script>

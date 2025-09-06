@@ -1,0 +1,72 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('recentordersection/generalgroup/enable');
+if ($enabled) {
+    $displayTime = $baseHelper->getConfigValue('recentordersection/generalgroup/display_time');
+    $startTime = $baseHelper->getConfigValue('recentordersection/generalgroup/start_time');
+    $repeatTime = $baseHelper->getConfigValue('recentordersection/generalgroup/repeat_time');
+    $displayTime = intval($displayTime);
+    $startTime = intval($startTime);
+    $repeatTime = intval($repeatTime);
+    ?>
+    <script>
+        require(['jquery'], function () {
+            jQuery(document).ready(function () {
+                setTimeout(function () {
+                    callAjaxController();
+                    setInterval(callAjaxController, <?php echo $repeatTime; ?>);
+                }, <?php echo $startTime; ?>);
+
+                function callAjaxController() {
+                    jQuery.ajax({
+                        url: '<?php echo $this->getUrl('recentorderpopup/index/index') ?>',
+                        type: 'post',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.product_img != '') {
+                                if (jQuery('.recent-order .img-span img').length > 0) {
+                                    jQuery('.recent-order .img-span img').attr('src', data.product_img);
+                                }
+                            }
+                            if (data.message != '') {
+                                jQuery('.recent-order .text-span').html(data.message);
+                                popMessage('recent-order');
+                            }
+                        }
+                    });
+                }
+
+                function popMessage(className) {
+                    jQuery('.' + className).fadeIn(1000, function () {
+                        setTimeout(function () {
+                            jQuery('.' + className).fadeOut(1000);
+                        }, <?php echo $displayTime; ?>);
+                    });
+                }
+            });
+        });
+    </script>
+    <?php
+    $bg_color = $baseHelper->getConfigValue('recentordersection/design_settings/bg_color');
+    $textColor = $baseHelper->getConfigValue('recentordersection/design_settings/text_color');
+    ?>
+    <style>
+    <?php if ($bg_color != '') { ?>
+            .recent-order {
+                background-color: <?php echo $bg_color; ?>;
+            }
+    <?php } ?>
+    <?php if ($textColor != '') { ?>
+            .recent-order {
+                color: <?php echo $textColor; ?>;
+            }
+            .recent-order a,
+            .recent-order a:active,
+            .recent-order a:focus,
+            .recent-order a:visited,
+            .recent-order a:hover {
+                color: <?php echo $textColor; ?>;
+            }
+    <?php } ?>
+    </style>
+<?php } ?>

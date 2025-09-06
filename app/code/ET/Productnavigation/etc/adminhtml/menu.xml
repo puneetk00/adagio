@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Productnavigation::title" title="Product Navigation" module="ET_Productnavigation" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Productnavigation::title"/>
+        <add id="ET_Productnavigation::config" title="Configuration" module="ET_Productnavigation" parent="ET_Productnavigation::title" sortOrder="30" action="adminhtml/system_config/edit/section/productnavigationsection" resource="ET_Productnavigation::config"/>
+    </menu>
+</config>

@@ -1,0 +1,94 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$productNavHelper = $this->helper('ET\Productnavigation\Helper\Data');
+$imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+
+$prevNav = "<i class='fa fa-angle-left'></i>";
+$nextNav = "<i class='fa fa-angle-right'></i>";
+
+// Check if module enabled or not
+$enable = $baseHelper->getConfigValue('productnavigationsection/generalgroup/enabled');
+if ($enable) {
+    $prevNav = $baseHelper->getConfigValue('productnavigationsection/generalgroup/prevnav');
+    $nextNav = $baseHelper->getConfigValue('productnavigationsection/generalgroup/nextnav');
+    $displayProductImage = $baseHelper->getConfigValue('productnavigationsection/generalgroup/display_product_image');
+    $displayProductName = $baseHelper->getConfigValue('productnavigationsection/generalgroup/display_product_name');
+    $displayImageOnHover = $baseHelper->getConfigValue('productnavigationsection/generalgroup/display_image_on_hover');
+    $displayNameOnHover = $baseHelper->getConfigValue('productnavigationsection/generalgroup/display_name_on_hover');
+    $navPosition = $baseHelper->getConfigValue('productnavigationsection/generalgroup/nav_position');
+
+    $_product = $block->getProduct();
+    $previous_product = $productNavHelper->getPrevProduct($_product);
+    $next_product = $productNavHelper->getNextProduct($_product);
+    ?>
+    <?php if ($previous_product || $next_product) { ?>
+        <div style="clear:both;"></div>
+        <div class="product-nav-wrapper <?php echo $navPosition; ?>">
+            <?php if ($previous_product) { ?>
+                <?php
+                $productImage = $imagehelper->init($previous_product, 'category_page_grid')->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepTransparency(TRUE)->keepFrame(TRUE)->resize(65, 65);
+                $productImageUrl = $productImage->getUrl();
+                ?>
+                <div class="nav-link nav-previous-link">
+                    <?php if ($displayImageOnHover == 1 || $displayNameOnHover == 1) { ?>
+                        <div class="hover-box">
+                            <?php if ($displayImageOnHover == 1) { ?>
+                                <img class="nav-product-image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+                            <?php } ?>
+                            <?php if ($displayNameOnHover == 1) { ?>
+                                <h3 class="nav-product-name"><?php echo $previous_product->getName(); ?></h3>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
+                    <?php if ($displayProductImage == 1) { ?>
+                        <span class="nav-product-image-block">
+                            <img class="nav-product-image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+                        </span>
+                    <?php } ?>
+                    <span class="nav-product-info">
+                        <?php if ($displayProductName == 1) { ?>
+                            <h3 class="nav-product-name"><?php echo $previous_product->getName(); ?></h3>
+                        <?php } ?>
+                        <a class="action primary" href="<?php echo $previous_product->getProductUrl(); ?>" title="<?php echo __('Previous'); ?>">
+                            <?php echo $prevNav; ?>
+                        </a>
+                    </span>
+                </div>
+            <?php } ?>
+            <?php if ($next_product) { ?>
+                <?php
+                $productImage = $imagehelper->init($next_product, 'category_page_grid')->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepTransparency(TRUE)->keepFrame(TRUE)->resize(65, 65);
+                $productImageUrl = $productImage->getUrl();
+                ?>
+                <div class="nav-link nav-next-link">
+                    <?php if ($displayImageOnHover == 1 || $displayNameOnHover == 1) { ?>
+                        <div class="hover-box">
+                            <?php if ($displayImageOnHover == 1) { ?>
+                                <img class="nav-product-image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+                            <?php } ?>
+                            <?php if ($displayNameOnHover == 1) { ?>
+                                <h3 class="nav-product-name"><?php echo $next_product->getName(); ?></h3>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
+                    <?php if ($displayProductImage == 1) { ?>
+                        <span class="nav-product-image-block">
+                            <img class="nav-product-image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+                        </span>
+                    <?php } ?>
+                    <span class="nav-product-info">
+                        <?php if ($displayProductName == 1) { ?>
+                            <h3 class="nav-product-name"><?php echo $next_product->getName(); ?></h3>
+                        <?php } ?>
+                        <a class="action primary" href="<?php echo $next_product->getProductUrl(); ?>" title="<?php echo __('Next'); ?>">
+                            <?php echo $nextNav; ?>
+                        </a>
+                    </span>
+                </div>
+            <?php } ?>
+        </div>
+        <div style="clear:both;"></div>
+    <?php } ?>
+    <?php
+}
+?>

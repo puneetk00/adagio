@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="root">
+            <block class="ET\NewsletterPopup\Block\NewsletterPopup" name="newsletter-popup"
+                   template="ET_NewsletterPopup::newsletter/popup.phtml"
+                   ifconfig="addonnewspopup/settings/enabled">
+                <block class="ET\NewsletterPopup\Block\Subscribe" name="newsletter-form" template="ET_NewsletterPopup::newsletter/form.phtml"/>
+            </block>
+        </referenceContainer>
+        
+        <referenceContainer name="head.additional">
+            <block class="ET\NewsletterPopup\Block\NewsletterPopup" name="newsletter.popup.head" 
+                   template="ET_NewsletterPopup::newsletter/head.phtml" 
+                   ifconfig="addonnewspopup/settings/enabled"/>
+        </referenceContainer>
+    </body>
+</page>

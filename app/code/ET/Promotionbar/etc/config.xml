@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <promosection>
+            <generalgroup>
+                <enable>0</enable>
+                <enablehome>0</enablehome>
+                <barstyle>2</barstyle>
+                <closebtnvisibility>1</closebtnvisibility>
+                <sticky>1</sticky>
+                <enable_loop>1</enable_loop>
+                <autoplay>1</autoplay>
+                <stoponhover>1</stoponhover>
+                <mousedrag>1</mousedrag>
+                <touchdrag>1</touchdrag>
+            </generalgroup>
+        </promosection>
+    </default>
+</config>

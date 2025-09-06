@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <stickycartsection>
+            <generalgroup>
+                <enabled>0</enabled>
+                <position>top</position>
+                <show_image>1</show_image>
+                <show_name>1</show_name>
+                <show_price>1</show_price>
+                <show_sku>0</show_sku>
+                <show_availability>0</show_availability>
+                <show_cart>1</show_cart>
+                <enable_timer>0</enable_timer>
+                <timer_text><![CDATA[Hurry up! Sale ends in:]]></timer_text>
+                <timer_format><![CDATA[<div class="timer-wrapper">
+    <div class="time">%D</div>
+    <span class="text">Days</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%H</div>
+    <span class="text">Hrs</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%M</div>
+    <span class="text">Mins</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%S</div>
+    <span class="text">Sec</span>
+</div>]]></timer_format>
+                <staticblock></staticblock>
+                <textcolor>#333333</textcolor>
+                <btnbackcolor>#227ed1</btnbackcolor>
+                <btnbackhovercolor>#333333</btnbackhovercolor>
+                <btntextcolor>#ffffff</btntextcolor>
+                <btntexthovercolor>#ffffff</btntexthovercolor>
+                <timerboxcolor>#333333</timerboxcolor>
+                <timerboxtextcolor>#ffffff</timerboxtextcolor>
+                <backgroundsstyle>1</backgroundsstyle>
+                <plainbackground>#ffffff</plainbackground>
+                <gradientbackground><![CDATA[#009FFF,#ec2F4B]]></gradientbackground>
+            </generalgroup>
+        </stickycartsection>
+    </default>
+</config>

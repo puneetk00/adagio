@@ -1,0 +1,14 @@
+<!--@subject {{trans "Order Feedback"}} @-->
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr>
+        <td valign="top">
+            <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;">Hello,</h1>
+            <p><b>Order Id:</b> {{var order_id}}<p>
+            <p><b>Customer Email:</b> {{var customer_email}}<p>
+            <p><b>Rating:</b> {{var order_rating}}</p>
+            <p><b>Comment:</b> {{var order_comment}}</p>
+        </td>
+    </tr>
+</table>

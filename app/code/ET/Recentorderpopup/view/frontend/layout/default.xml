@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="ET\Recentorderpopup\Block\Index\Index" name="recentorderpopup.data" template="ET_Recentorderpopup::recentorderpopup.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="head.additional">
+            <block class="ET\Recentorderpopup\Block\Index\Index" name="recentorder.popup.head" template="ET_Recentorderpopup::head.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

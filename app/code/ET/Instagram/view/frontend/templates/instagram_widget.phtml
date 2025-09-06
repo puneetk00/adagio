@@ -1,0 +1,113 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$instagramHelper = $this->helper('ET\Instagram\Helper\Data');
+$enabled = $baseHelper->getConfigValue('instagramsection/generalgroup/enabled');
+$appAccessToken = $baseHelper->getConfigValue('instagramsection/generalgroup/app_access_token');
+if ($enabled == 1 && $appAccessToken != '') {
+    $title = $this->getData('title');
+    $imageCount = $this->getData('image_count');
+    $imageWidth = $this->getData('image_width');
+    $imageHeight = $this->getData('image_height');
+    $showCaption = $this->getData('show_caption');
+    
+    $enableSlider = $this->getData('enable_slider');
+    $nav = $this->getData('nav');
+    $dots = $this->getData('dots');
+    $autoplay = $this->getData('autoplay');
+    $stoponhover = $this->getData('stoponhover');
+    $loop = $this->getData('loop');
+    $mousedrag = $this->getData('mousedrag');
+    $touchdrag = $this->getData('touchdrag');
+
+    $instaData = $instagramHelper->getInstaData($appAccessToken);
+
+    $randNum = rand(10, 1000000);
+    if ($instaData && count($instaData)) {
+        ?>
+        <div class="insta-wrapper <?php if ($enableSlider == 1) { ?>insta-slider<?php } ?>">
+            <div class="page-main">
+                <?php if ($title != '') { ?>
+                    <div class="section-title">
+                        <span>
+                            <?php echo htmlspecialchars_decode($title); ?>
+                        </span>
+                    </div>
+                <?php } ?>
+                <div class="item-row">
+                    <ul id="insta-gallery-<?php echo $randNum; ?>" class="insta-gallery <?php if ($enableSlider == 1) { ?> owl-carousel owl-theme <?php } ?>">
+                        <?php
+                        $i = 0;
+                        foreach ($instaData as $instaVal) {
+                            if ($i >= $imageCount) {
+                                break;
+                            }
+                            $mediaType = $instaVal->media_type;
+                            if ($mediaType == 'IMAGE') {
+                                $imgUrl = $instaVal->media_url;
+                                $imgCaption = '';
+                                if (isset($instaVal->caption)) {
+                                    $imgCaption = $instaVal->caption;
+                                }
+                                ?>
+                                <li class="item" <?php if ($enableSlider == 1) { ?> style="display: none;" <?php } ?>>
+                                    <a href ="<?php echo $instaVal->permalink; ?>" target="_blank">
+                                        <img src="<?php echo $imgUrl; ?>" title="<?php echo $imgCaption; ?>" alt="<?php echo $imgCaption; ?>" style="width:<?php echo $imageWidth; ?>;height:<?php echo $imageHeight; ?>;"/>
+                                        <div class="hover-caption">
+                                            <span class="icon-span"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                                            <?php if ($showCaption == 1 && $imgCaption != '') { ?>
+                                                <span class="text-span"><?php echo $imgCaption; ?></span>
+                                            <?php } ?>
+                                        </div>
+                                    </a>
+                                </li>
+                                <?php
+                                $i++;
+                            }
+                        }
+                        ?>
+                    </ul>
+                </div>
+                <?php if ($enableSlider == 1) { ?>
+                    <script>
+                        require(['jquery', 'baseowlcarousel'], function () {
+                            jQuery(document).ready(function () {
+                                jQuery('#insta-gallery-<?php echo $randNum; ?>').owlCarousel({
+                                    items: 6,
+                                    responsive: {
+                                        0: {
+                                            items: 2
+                                        },
+                                        479: {
+                                            items: 3
+                                        },
+                                        639: {
+                                            items: 4
+                                        },
+                                        767: {
+                                            items: 5
+                                        },
+                                        991: {
+                                            items: 6
+                                        },
+                                        1199: {
+                                            items: 6
+                                        }
+                                    },
+                                    loop: <?php echo ($loop) ? 'true' : 'false'; ?>,
+                                    autoplay: <?php echo ($autoplay) ? 'true' : 'false'; ?>,
+                                    autoplayHoverPause: <?php echo ($stoponhover) ? 'true' : 'false'; ?>,
+                                    mouseDrag: <?php echo ($mousedrag) ? 'true' : 'false'; ?>,
+                                    touchDrag: <?php echo ($touchdrag) ? 'true' : 'false'; ?>,
+                                    dots: <?php echo ($dots) ? 'true' : 'false'; ?>,
+                                    nav: <?php echo ($nav) ? 'true' : 'false'; ?>,
+                                    navText: ['<div class="prev-arrow"></div>', '<div class="next-arrow"></div>']
+                                });
+                                jQuery('#insta-gallery-<?php echo $randNum; ?> .item').show();
+                            });
+                        });
+                    </script>
+                <?php } ?>
+            </div>
+        </div>
+    <?php } ?>
+<?php } ?>

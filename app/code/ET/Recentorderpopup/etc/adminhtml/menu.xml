@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Recentorderpopup::title" title="Recent Order Notification" module="ET_Recentorderpopup" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Recentorderpopup::title"/>
+        <add id="ET_Recentorderpopup::config" title="Configuration" module="ET_Recentorderpopup" parent="ET_Recentorderpopup::title" sortOrder="30" action="adminhtml/system_config/edit/section/recentordersection" resource="ET_Recentorderpopup::config"/>
+    </menu>
+</config>

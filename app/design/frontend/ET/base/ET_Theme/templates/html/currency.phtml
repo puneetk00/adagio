@@ -1,0 +1,19 @@
+<?php if ($block->getCurrencyCount() > 1) : ?>
+    <?php $currencies = $block->getCurrencies(); ?>
+    <?php $currentCurrencyCode = $block->getCurrentCurrencyCode(); ?>
+    <?php $id = $block->getIdModifier() ? '-' . $block->getIdModifier() : '' ?>
+    <div class="dropdown-switcher" id="switcher-currency<?php /* @escapeNotVerified */ echo $id ?>">
+        <strong>
+            <?php echo __('Currency'); ?>
+        </strong>
+        <ul>
+            <?php foreach ($currencies as $_code => $_name) : ?>
+                <?php if ($_code != $currentCurrencyCode) : ?>
+                    <li class="currency-<?= $block->escapeHtmlAttr($_code) ?> switcher-option">
+                        <a href="#" data-post='<?= /* @noEscape */ $block->getSwitchCurrencyPostData($_code) ?>'><?= $block->escapeHtml($_code) ?> - <?= $block->escapeHtml($_name) ?></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

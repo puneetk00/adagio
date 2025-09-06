@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="productstocksection" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Product Remaining Stock</label>
+            <tab>etextensions</tab>
+            <resource>Magento_Config::config_admin</resource>
+            <group id="generalgroup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Only work for simple, downloadable and virtual type products.]]></comment>
+                </field>
+                <field id="product_quantity" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Quantity</label>
+                    <comment><![CDATA[Enter product quantity. ex 100. So, if product quantity is equal or below 100, then product stock will display.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="message_text" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Text</label>
+                    <comment><![CDATA[You must need to include %1 in string. On store front product stock will display in place of %1.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="message_color" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Color</label>
+                    <comment><![CDATA[ex. #333333]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="message_stock_color" translate="label" type="text" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Stock Color</label>
+                    <comment><![CDATA[ex. #ff0000]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="display_progressbar" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Progress Bar</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="progressbar_style" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Progress Bar Style</label>
+                    <source_model>ET\Productstock\Model\Config\Settings\Progressbarstyle</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="plain_background" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment><![CDATA[ex. #0095ff]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                        <field id="progressbar_style">1</field>
+                    </depends>
+                </field>
+                <field id="gradient_background" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment><![CDATA[ex. #11998e,#38ef7d <br/>Note: Add only two colors with comma separated]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                        <field id="progressbar_style">2</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

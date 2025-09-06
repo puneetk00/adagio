@@ -1,0 +1,159 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enable = $baseHelper->getConfigValue('stickycartsection/generalgroup/enabled');
+if ($enable) {
+    $showPrice = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_price');
+    $position = $baseHelper->getConfigValue('stickycartsection/generalgroup/position');
+
+    $textcolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/textcolor');
+    $btnbackcolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/btnbackcolor');
+    $btnbackhovercolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/btnbackhovercolor');
+    $btntextcolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/btntextcolor');
+    $btntexthovercolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/btntexthovercolor');
+    $timerboxbolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/timerboxcolor');
+    $timerboxtextcolor = $baseHelper->getConfigValue('stickycartsection/generalgroup/timerboxtextcolor');
+    $backgroundsstyle = $baseHelper->getConfigValue('stickycartsection/generalgroup/backgroundsstyle');
+    $plainbackground = $baseHelper->getConfigValue('stickycartsection/generalgroup/plainbackground');
+    $gradientbackground = $baseHelper->getConfigValue('stickycartsection/generalgroup/gradientbackground');
+    ?>
+    <script type="text/javascript">
+        require([
+            'jquery'
+        ], function () {
+            var screenmove = false;
+            jQuery(window).scroll(function () {
+                if (450 < jQuery(window).scrollTop() && !screenmove) {
+                    screenmove = true;
+    <?php if ($showPrice) { ?>
+                        jQuery('.product-info-main .product-info-price > *').each(function () {
+                            jQuery(this).parent().append(jQuery(this).clone());
+                            var temp_content = jQuery(this).detach();
+                            jQuery('.sticky-wrapper .product-info-price > .product-info-price-inner').append(temp_content);
+                        });
+    <?php } ?>
+                    jQuery(".sticky-wrapper").removeClass("remove");
+                    jQuery("#product-addtocart-button").off("DOMSubtreeModified").on("DOMSubtreeModified", function () {
+                        jQuery("#product-addtocart-sticky").html(jQuery(this).html());
+                        jQuery("#product-addtocart-sticky").attr("class", jQuery(this).attr("class"));
+                    });
+                }
+                if (450 >= jQuery(window).scrollTop() && screenmove) {
+                    screenmove = false;
+    <?php if ($showPrice) { ?>
+                        jQuery('.product-info-main .product-info-price > *').remove();
+                        jQuery('.sticky-wrapper .product-info-price > .product-info-price-inner > *').each(function () {
+                            var temp_content = jQuery(this).detach();
+                            jQuery('.product-info-main .product-info-price').append(temp_content);
+                        });
+    <?php } ?>
+                    jQuery(".sticky-wrapper").addClass("remove");
+                }
+            });
+            jQuery("#product-addtocart-sticky").click(function () {
+                jQuery("#product-addtocart-button").trigger("click");
+            });
+        });
+    </script>
+    <?php if ($position == 'top') { ?>
+        <script type = "text/javascript">
+            require([
+                'jquery'
+            ], function () {
+                jQuery(document).ready(function () {
+                    setTimeout(function () {
+                        if (jQuery('html > body.pb-sticky').length > 0) {
+                            var pb_height = jQuery('#promobar-wrapper').height();
+                            jQuery('.catalog-product-view .sticky-wrapper.top').css('top', pb_height + 'px');
+                        }
+                    }, 2000);
+                    jQuery('.pb-close-bar,.pb-close-button').click(function () {
+                        setTimeout(function () {
+                            jQuery('.catalog-product-view .sticky-wrapper.top').css('top', '0px');
+                        }, 600);
+                    });
+                });
+            });
+        </script>
+    <?php } ?>
+    <style>
+    <?php if ($textcolor != '') { ?>
+            .catalog-product-view .sticky-wrapper .product-sticky-info .product-name-block h2 {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product-info-price .price-box .special-price .price-wrapper .price {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product-info-price .price-box .old-price .price-wrapper .price {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product-info-price .price-box .price-wrapper .price {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .stock.available, .catalog-product-view .sticky-wrapper .stock.unavailable {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product.attibute.sku .type, .catalog-product-view .sticky-wrapper .product.attribute.sku .type {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product.attibute.sku .value, .catalog-product-view .sticky-wrapper .product.attribute.sku .value {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .sticky-timer-wrapper .sticky-timer-text {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .sticky-timer-wrapper .sticky-timer-inner .sticky-timer .timer-wrapper .text {
+                color: <?php echo $textcolor; ?>;
+            }
+            .catalog-product-view .sticky-wrapper .product-info-price .price-box .old-price .price-wrapper .price::after {
+                background: <?php echo $textcolor; ?>;
+            }
+    <?php } ?>
+    <?php if ($btnbackcolor != '' || $btntextcolor != '') { ?>
+            .catalog-product-view .sticky-wrapper .actions .action.primary {
+        <?php if ($btnbackcolor != '') { ?>
+                    background: <?php echo $btnbackcolor; ?>;
+                    border-color: <?php echo $btnbackcolor; ?>;
+        <?php } ?>
+        <?php if ($btntextcolor != '') { ?>
+                    color: <?php echo $btntextcolor; ?>;
+        <?php } ?>
+            }
+    <?php } ?>
+    <?php if ($btnbackhovercolor != '' || $btntexthovercolor != '') { ?>
+            .catalog-product-view .sticky-wrapper .actions .action.primary:hover {
+        <?php if ($btnbackhovercolor != '') { ?>
+                    background: <?php echo $btnbackhovercolor; ?>;
+                    border-color: <?php echo $btnbackhovercolor; ?>;
+        <?php } ?>
+        <?php if ($btntexthovercolor != '') { ?>
+                    color: <?php echo $btntexthovercolor; ?>;
+        <?php } ?>
+            }
+    <?php } ?>
+    <?php if ($timerboxbolor != '') { ?>
+            .catalog-product-view .sticky-wrapper .sticky-timer-wrapper .sticky-timer-inner .sticky-timer .timer-wrapper .time {
+                background: <?php echo $timerboxbolor; ?>;
+            }
+    <?php } ?>
+    <?php if ($timerboxtextcolor != '') { ?>
+            .catalog-product-view .sticky-wrapper .sticky-timer-wrapper .sticky-timer-inner .sticky-timer .timer-wrapper .time {
+                color: <?php echo $timerboxtextcolor; ?>;
+            }
+    <?php } ?>
+    <?php if ($backgroundsstyle == 1 && $plainbackground != '') { ?>
+            .catalog-product-view .sticky-wrapper {
+                background-color: <?php echo $plainbackground; ?>;
+            }
+    <?php } ?>
+    <?php if ($backgroundsstyle == 2 && $gradientbackground != '') { ?>
+        <?php
+        $gradientbackground = explode(",", $gradientbackground);
+        if (count($gradientbackground) > 1) {
+            ?>
+                .catalog-product-view .sticky-wrapper {
+                    background-image: linear-gradient(to right, <?php echo $gradientbackground[0]; ?> , <?php echo $gradientbackground[1]; ?>);
+                }
+        <?php } ?>
+    <?php } ?>
+    </style>
+<?php } ?>

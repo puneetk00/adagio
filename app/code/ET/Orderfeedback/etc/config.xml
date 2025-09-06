@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <orderfeedback>
+            <settings>
+                <enabled>0</enabled>
+                <success_message>Success!</success_message>
+                <email_enabled>0</email_enabled>
+                <send_empty_email>0</send_empty_email>
+            </settings>
+        </orderfeedback>
+    </default>
+</config>

@@ -1,0 +1,29 @@
+<?php
+$enabled = $block->getEnabled();
+$enableHomepage = $block->getEnableHomepage();
+if ($enableHomepage) {
+    $isHome = $block->getIsHome();
+    if ($isHome == 0) {
+        $enabled = 0;
+    }
+}
+?>
+<?php if ($enabled) { ?>
+    <?php
+    $popupText = $block->getPopupDisplayText();
+    ?>
+    <div style="display: none">
+        <div class="popup-newsletter">
+            <div class="content">
+                <?php echo $popupText; ?>
+            </div>
+        </div>
+    </div>
+    <script type="text/x-magento-init">
+        {
+        ".popup-newsletter": {
+        "newsletterPopup": <?php echo \Laminas\Json\Json::encode($block->getConfig()) ?>
+        }
+        }
+    </script>
+<?php } ?>

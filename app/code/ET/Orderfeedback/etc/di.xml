@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="ET\Orderfeedback\Api\Data\FeedbackInterface" type="ET\Orderfeedback\Model\Feedback" />
+    <preference for="ET\Orderfeedback\Api\FeedbackRepositoryInterface" type="ET\Orderfeedback\Model\FeedbackRepository" />
+    
+    <virtualType name="ETOrderfeedbackFeedbackFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ETOrderfeedbackFeedbackFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">ET\Orderfeedback\Model\ResourceModel\Feedback\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ETOrderfeedbackFeedbackFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <type name="ET\Orderfeedback\Model\ResourceModel\Feedback\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">et_orderfeedback</argument>
+            <argument name="eventPrefix" xsi:type="string">et_orderfeedback_feedback_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">feedback_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">ET\Orderfeedback\Model\ResourceModel\Feedback</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="et_orderfeedback_feedback_listing_data_source" xsi:type="string">ET\Orderfeedback\Model\ResourceModel\Feedback\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="ET\Orderfeedback\Api\Data\FeedbackInterface" xsi:type="string">ET\Orderfeedback\Api\FeedbackRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="ET\Orderfeedback\Api\Data\FeedbackInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">et_orderfeedback</item>
+                    <item name="identifierField" xsi:type="string">id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\Operation\ExtensionPool">
+        <arguments>
+            <argument name="extensionActions" xsi:type="array">
+                <item name="ET\Orderfeedback\Api\Data\FeedbackInterface" xsi:type="array">
+                    <item name="read" xsi:type="array">
+                        <item name="storeReader" xsi:type="string">ET\Orderfeedback\Model\ResourceModel\Feedback\Relation\Store\ReadHandler</item>
+                    </item>
+                    <item name="create" xsi:type="array">
+                        <item name="storeCreator" xsi:type="string">ET\Orderfeedback\Model\ResourceModel\Feedback\Relation\Store\SaveHandler</item>
+                    </item>
+                    <item name="update" xsi:type="array">
+                        <item name="storeUpdater" xsi:type="string">ET\Orderfeedback\Model\ResourceModel\Feedback\Relation\Store\SaveHandler</item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

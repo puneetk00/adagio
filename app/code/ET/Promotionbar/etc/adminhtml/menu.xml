@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Promotionbar::view" title="Promotion Bar" module="ET_Promotionbar" parent="ET_Theme::etrend" sortOrder="20" resource="ET_Promotionbar::view"/>
+        <add id="ET_Promotionbar::menu" title="Manage Promotion" module="ET_Promotionbar" sortOrder="5" parent="ET_Promotionbar::view" action="promotionbar/index/index" resource="ET_Promotionbar::menu"/>
+        <add id="ET_Promotionbar::config" title="Configuration" module="ET_Promotionbar" parent="ET_Promotionbar::view" sortOrder="10" action="adminhtml/system_config/edit/section/promosection" resource="ET_Promotionbar::config"/>
+    </menu>
+</config>

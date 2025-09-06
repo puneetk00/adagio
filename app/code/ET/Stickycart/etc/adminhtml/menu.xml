@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Stickycart::title" title="Sticky Cart" module="ET_Stickycart" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Stickycart::title"/>
+        <add id="ET_Stickycart::config" title="Configuration" module="ET_Stickycart" parent="ET_Stickycart::title" sortOrder="30" action="adminhtml/system_config/edit/section/stickycartsection" resource="ET_Stickycart::config"/>
+    </menu>
+</config>

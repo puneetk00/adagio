@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Productstock::title" title="Product Remaining Stock" module="ET_Productstock" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Productstock::title"/>
+        <add id="ET_Productstock::config" title="Configuration" module="ET_Productstock" parent="ET_Productstock::title" sortOrder="30" action="adminhtml/system_config/edit/section/productstocksection" resource="ET_Productstock::config"/>
+    </menu>
+</config>

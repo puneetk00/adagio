@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ET_Clientreviews::view" title="Client Reviews" module="ET_Clientreviews" parent="ET_Theme::etrend" sortOrder="50" resource="ET_Clientreviews::view"/>
+        <add id="ET_Clientreviews::menu" title="Manage Reviews" module="ET_Clientreviews" sortOrder="20" parent="ET_Clientreviews::view" action="clientreviews/index/index" resource="ET_Clientreviews::menu"/>
+    </menu>
+</config>

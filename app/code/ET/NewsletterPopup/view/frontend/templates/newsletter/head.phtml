@@ -1,0 +1,29 @@
+<?php
+$enabled = $block->getEnabled();
+
+if ($enabled) {
+    $popupDimension = $block->getPopupDimension();
+    $popupWidth = $block->getPopupWidth();
+    $popupHeight = $block->getPopupHeight();
+    $popupWidth = $block->getPopupWidth();
+    ?>
+    <?php if ($popupDimension == 1) { ?>
+        <style>
+            .newsletter-modal.demo1 .modal-inner-wrap {
+                width: <?php echo $popupWidth; ?>;
+                max-width: <?php echo $popupWidth; ?>;
+                height: <?php echo $popupHeight; ?>;
+            }
+            .newsletter-modal.demo2 .modal-inner-wrap {
+                width: <?php echo $popupWidth; ?>;
+                max-width: <?php echo $popupWidth; ?>;
+                height: <?php echo $popupHeight; ?>;
+            }
+            .newsletter-modal.demo3 .modal-inner-wrap {
+                width: <?php echo $popupWidth; ?>;
+                max-width: <?php echo $popupWidth; ?>;
+                height: <?php echo $popupHeight; ?>;
+            }
+        </style>
+    <?php } ?>
+<?php } ?>

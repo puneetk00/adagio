@@ -1,0 +1,146 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enable = $baseHelper->getConfigValue('stickycartsection/generalgroup/enabled');
+if ($enable) {
+    $_product = $block->getProduct();
+    $productType = $_product->getTypeId();
+
+    $position = $baseHelper->getConfigValue('stickycartsection/generalgroup/position');
+    $showImage = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_image');
+    $showName = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_name');
+    $showPrice = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_price');
+    $showSku = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_sku');
+    $showAvailability = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_availability');
+    $showCart = $baseHelper->getConfigValue('stickycartsection/generalgroup/show_cart');
+    $enableTimer = $baseHelper->getConfigValue('stickycartsection/generalgroup/enable_timer');
+    if ($productType == "bundle") {
+        $enableTimer = 0;
+    } else if ($productType == 'configurable') {
+        $enableTimer = 0;
+    } else if ($productType == 'grouped') {
+        $enableTimer = 0;
+    }
+    $timerText = $baseHelper->getConfigValue('stickycartsection/generalgroup/timer_text');
+    $timerFormat = $baseHelper->getConfigValue('stickycartsection/generalgroup/timer_format');
+    $staticblock = $baseHelper->getConfigValue('stickycartsection/generalgroup/staticblock');
+
+    $_helper = $this->helper('Magento\Catalog\Helper\Output');
+    $_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+    $productImage = $_imagehelper->init($_product, 'category_page_grid')->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepTransparency(TRUE)->keepFrame(TRUE)->resize(80, 80);
+    $productImageUrl = $productImage->getUrl();
+    ?>
+    <div class="sticky-wrapper remove <?php echo $position; ?>">
+        <div class="page-main">
+            <div class="product-info-content">
+                <?php if ($showImage) { ?>
+                    <div class="product-sticky-img">
+                        <img class="product-image-photo default_image" src="<?php echo $productImageUrl; ?>" alt="<?php echo $productImage->getLabel(); ?>"/>
+                    </div>
+                <?php } ?>
+                <div class="product-sticky-info">
+                    <?php if ($showName) { ?>
+                        <div class="product-name-block">
+                            <h2 class="product-name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h2>
+                        </div>
+                    <?php } ?>
+                    <div class="product-info-price">
+                        <?php if ($showPrice) { ?>
+                            <div class="product-info-price-inner"></div>
+                        <?php } ?>
+                        <div class="product-info-stock-sku">
+                            <?php if ($showAvailability) { ?>
+                                <?php if ($_product->isAvailable()): ?>
+                                    <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+                                        <span><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+                                        <span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
+                                    </div>
+                                <?php endif; ?>
+                            <?php } ?>
+                            <?php if ($showSku) { ?>
+                                <div class="product attribute sku">
+                                    <strong class="type">SKU</strong>
+                                    <div class="value" itemprop="sku"><?php echo $_product->getSku(); ?></div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <?php if ($enableTimer == 1) { ?>
+                    <?php
+                    $simplePrice = $_product->getPrice();
+
+                    $_savingPercent = '0%';
+                    $_finalPrice = $_product->getFinalPrice();
+
+                    if ($_finalPrice < $simplePrice) {
+                        $_savingPercent = 100 - round(($_finalPrice / $simplePrice) * 100);
+                        $_savingPercent = $_savingPercent . '%';
+                    }
+
+                    $timerRandom = rand(10, 100000);
+                    $productSpecialPrice = number_format($_product->getSpecialPrice(), 2);
+                    $productRegularPrice = number_format($_product->getPrice(), 2);
+                    if (isset($productSpecialPrice) && $productSpecialPrice > 0) {
+                        if ($productSpecialPrice < $productRegularPrice) {
+                            $productFromSpecialDate = $_product->getSpecialFromDate();
+                            $ProductToSpecialDate = $_product->getSpecialToDate();
+                            if (isset($productFromSpecialDate) && isset($ProductToSpecialDate)) {
+                                $productFromSpecialDate = strtotime($productFromSpecialDate);
+                                $ProductToSpecialDate = strtotime($ProductToSpecialDate);
+                                $nowDate = strtotime(date("Y-m-d h:m:s"));
+                                if ($productFromSpecialDate <= $nowDate && $nowDate <= $ProductToSpecialDate) {
+                                    $ProductToSpecialDateSec = date('Y-m-d h:m:s', $ProductToSpecialDate);
+                                    ?>
+                                    <div class="sticky-timer-wrapper">
+                                        <?php if ($timerText != '') { ?>
+                                            <span class="sticky-timer-text"><?php echo $timerText; ?></span>
+                                        <?php } ?>
+                                        <div class="sticky-timer-inner">
+                                            <div class="sticky-timer" id="sticky-countdown-<?php echo $timerRandom; ?>"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        require([
+                                            "jquery", "basecountdowntimer"
+                                        ], function () {
+                                            var myDate = new Date("<?php echo $ProductToSpecialDateSec; ?>");
+                                            jQuery("#sticky-countdown-<?php echo $timerRandom; ?>").countdown(myDate, function (event) {
+                                                jQuery(this).html(
+                                                        event.strftime(
+                                                                '<?php echo $timerFormat; ?>'
+                                                                )
+                                                        );
+                                            });
+                                        });
+                                    </script>
+                                    <?php
+                                }
+                            }
+                        }
+                    }
+                    ?>
+                <?php } ?>
+            </div>
+            <?php if ($staticblock != '') { ?>
+                <div class="sticky-static-content">
+                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($staticblock)->toHtml(); ?>
+                </div>
+            <?php } ?>
+            <?php if ($showCart) { ?>
+                <?php if ($_product->isSaleable()): ?>
+                    <div class="actions">
+                        <button type="button"
+                                title="<?php /* @escapeNotVerified */ echo __('Add to Cart') ?>"
+                                class="action primary" id="product-addtocart-sticky">
+                            <span><?php /* @escapeNotVerified */ echo __('Add to Cart') ?></span>
+                        </button>
+                        <?php echo $block->getChildHtml('', true) ?>
+                    </div>
+                <?php endif; ?>
+            <?php } ?>
+        </div>
+    </div>
+<?php } ?>

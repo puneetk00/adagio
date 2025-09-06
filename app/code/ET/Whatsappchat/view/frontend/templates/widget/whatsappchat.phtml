@@ -1,0 +1,57 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$mediaUrl = $baseHelper->getMediaUrl();
+$enabled = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/enabled');
+if ($enabled == 1) {
+    $buttonStyle = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/button_style');
+    $icon = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/icon');
+    $buttonText = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/button_text');
+    $whatsappUrl = '';
+    $mobileNumber = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/mobile_number');
+    $mobileNumber = trim($mobileNumber);
+    $prefilledMessage = $baseHelper->getConfigValue('whatsappchatsection/generalgroup/prefilled_message');
+    $prefilledMessage = trim($prefilledMessage);
+
+    if (isset($mobileNumber) && $mobileNumber != '') {
+        $whatsappUrl = 'https://web.whatsapp.com/send?phone=' . $mobileNumber . '&text=' . $prefilledMessage;
+        $whatsappUrlMobile = 'https://api.whatsapp.com/send?phone=' . $mobileNumber . '&text=' . $prefilledMessage;
+    }
+    ?>
+    <?php if (isset($buttonStyle) && $buttonStyle == 'whatschat_style_1') { ?>
+        <div class="htwhatsapp-chat-widget text-icon ht_whatsapp_desk">
+            <a class="chat-btn" href="<?php echo $whatsappUrl; ?>" target="_blank">
+                <?php if ($icon != '') { ?>
+                    <img src="<?php echo $mediaUrl . 'ht/whatsappchat/images/' . $icon; ?>" alt="<?php echo $buttonText; ?>" title="<?php echo $buttonText; ?>"/>
+                <?php } ?>
+                <span>
+                    <?php echo $buttonText; ?>
+                </span>
+            </a>
+        </div>
+        <div class="htwhatsapp-chat-widget text-icon ht_whatsapp_mob">
+            <a class="chat-btn" href="<?php echo $whatsappUrlMobile; ?>" target="_blank">
+                <?php if ($icon != '') { ?>
+                    <img src="<?php echo $mediaUrl . 'ht/whatsappchat/images/' . $icon; ?>" alt="<?php echo $buttonText; ?>" title="<?php echo $buttonText; ?>"/>
+                <?php } ?>
+                <span>
+                    <?php echo $buttonText; ?>
+                </span>
+            </a>
+        </div>
+    <?php } else if (isset($buttonStyle) && $buttonStyle == 'whatschat_style_2') { ?>
+        <div class="htwhatsapp-chat-widget only-icon ht_whatsapp_desk">
+            <a class="chat-btn" href="<?php echo $whatsappUrl; ?>" target="_blank">
+                <?php if ($icon != '') { ?>
+                    <img src="<?php echo $mediaUrl . 'ht/whatsappchat/images/' . $icon; ?>" alt="<?php echo $buttonText; ?>" title="<?php echo $buttonText; ?>"/>
+                <?php } ?>
+            </a>
+        </div>
+        <div class="htwhatsapp-chat-widget only-icon ht_whatsapp_mob">
+            <a class="chat-btn" href="<?php echo $whatsappUrlMobile; ?>" target="_blank">
+                <?php if ($icon != '') { ?>
+                    <img src="<?php echo $mediaUrl . 'ht/whatsappchat/images/' . $icon; ?>" alt="<?php echo $buttonText; ?>" title="<?php echo $buttonText; ?>"/>
+                <?php } ?>
+            </a>
+        </div>
+    <?php } ?>
+<?php } ?>

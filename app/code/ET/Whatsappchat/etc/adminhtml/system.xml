@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="whatsappchatsection" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>WhatsApp Chat</label>
+            <tab>etextensions</tab>
+            <resource>ET_Whatsappchat::config</resource>
+            <group id="generalgroup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[<p><b>Use below code to add WhatsApp Chat button in any cms page or static block.</b></p>
+                            <p>{{block class="Magento\Framework\View\Element\Template" name="whatsapp.chat.cms" template="ET_Whatsappchat::widget/whatsappchat.phtml"}}</p>
+                            <p><b>Use below code to add WhatsApp Chat button in any phtml file.</b></p>
+                            <p>echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("ET_Whatsappchat::widget/whatsappchat.phtml")->toHtml();</p>]]>
+                    </comment>
+                </field>
+                <field id="mobile_number" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Mobile Number</label>
+                    <comment><![CDATA[Use like 15551234567. Dont use like +001-(555)1234567. Omit any zeroes, brackets or dashes when adding the phone number in international format.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="prefilled_message" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Pre-filled Message</label>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="button_text" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Button Text</label>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="icon" translate="label" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Icon</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">ht/whatsappchat/images</upload_dir>
+                    <base_url type="media" scope_info="1">ht/whatsappchat/images</base_url>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="button_style" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Style</label>
+                    <source_model>ET\Whatsappchat\Model\Config\Source\Buttonstyle</source_model>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="enable_general_btn" translate="label" type="select" sortOrder="65" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable General WhatsApp Chat Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[<p>Enable/Disable WhatsApp Chat button located at page bottom on every page.</p>]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>                        
+                    </depends>
+                </field>
+                <field id="general_button_style" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ganaral Button Style</label>
+                    <source_model>ET\Whatsappchat\Model\Config\Source\Buttonstyle</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                        <field id="enable_general_btn">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

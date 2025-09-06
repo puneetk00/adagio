@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="ET_Promotionbar::css/promobar.css"/>
+    </head>
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="ET\Promotionbar\Block\Promotionbar" name="et.promotionbar" template="ET_Promotionbar::promotionbar.phtml" before="global_notices">
+                <block class="Magento\Newsletter\Block\Subscribe" name="promotion.subscribe" as="promotion.subscribe" template="ET_Promotionbar::subscribe.phtml" />
+            </block>
+        </referenceContainer>
+    </body>
+</page>

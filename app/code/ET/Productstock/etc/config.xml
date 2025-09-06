@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <productstocksection>
+            <generalgroup>
+                <enabled>0</enabled>
+                <product_quantity>100</product_quantity>
+                <message_text><![CDATA[Hurry! Only <span>%1 items</span> left in stock]]></message_text>
+                <message_color><![CDATA[#333333]]></message_color>
+                <message_stock_color><![CDATA[#ff0000]]></message_stock_color>
+                <display_progressbar>1</display_progressbar>
+                <progressbar_style>1</progressbar_style>
+                <plain_background><![CDATA[#0095ff]]></plain_background>
+                <gradient_background><![CDATA[#11998e,#38ef7d]]></gradient_background>
+            </generalgroup>
+        </productstocksection>
+    </default>
+</config>

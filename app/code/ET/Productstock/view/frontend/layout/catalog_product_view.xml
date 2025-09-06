@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.stock.info" template="ET_Productstock::product/view/productstock.phtml" after="-"/>
+        </referenceContainer>
+        <referenceContainer name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" name="product.stock.head" template="ET_Productstock::product/view/head.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

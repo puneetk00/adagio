@@ -1,0 +1,38 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('productstocksection/generalgroup/enabled');
+if ($enabled == 1) {
+    $messageColor = $baseHelper->getConfigValue('productstocksection/generalgroup/message_color');
+    $messageStockColor = $baseHelper->getConfigValue('productstocksection/generalgroup/message_stock_color');
+    $progressbarStyle = $baseHelper->getConfigValue('productstocksection/generalgroup/progressbar_style');
+    $plainBackground = $baseHelper->getConfigValue('productstocksection/generalgroup/plain_background');
+    $gradientBackground = $baseHelper->getConfigValue('productstocksection/generalgroup/gradient_background');
+    ?>
+    <style>
+    <?php if ($messageColor != '') { ?>
+            .product-qty-wrapper .message-text {
+                color: <?php echo $messageColor; ?>
+            }
+    <?php } ?>
+    <?php if ($messageStockColor != '') { ?>
+            .product-qty-wrapper .message-text > span {
+                color: <?php echo $messageStockColor; ?>
+            }
+    <?php } ?>
+    <?php if ($progressbarStyle == 1 && $plainBackground != '') { ?>
+            .product-qty-wrapper .progressbar-block .outer-bar .inner-bar {
+                background-color: <?php echo $plainBackground; ?>
+            }
+    <?php } ?>
+    <?php if ($progressbarStyle == 2 && $gradientBackground != '') { ?>
+        <?php
+        $gradientBackground = explode(",", $gradientBackground);
+        if (count($gradientBackground) > 1) {
+            ?>
+                .product-qty-wrapper .progressbar-block .outer-bar .inner-bar {
+                    background-image: linear-gradient(to right, <?php echo $gradientBackground[0]; ?> , <?php echo $gradientBackground[1]; ?>);
+                }
+        <?php } ?>
+    <?php } ?>
+    </style>
+<?php } ?>

@@ -1,0 +1,246 @@
+<?php
+$enableHome = $block->enableHome();
+$isHomePage = $block->isHomePage();
+?>
+<?php if (($block->enablePromobar() && ($enableHome && $isHomePage)) || ($block->enablePromobar() && (!$enableHome))) { ?>
+    <?php
+    $_barCollection = $block->getPromotionBarCollection();
+    ?>
+    <?php if ($_barCollection && $_barCollection->count()) { ?>
+        <?php
+        $baseUrl = $block->getBaseUrl();
+
+        $enableSticky = $block->enableSticky();
+
+        $stopHover = $block->getStopHover();
+        $enableLoop = $block->getEnableLoop();
+        $mouseDrag = $block->getMouseDrag();
+        $touchDrag = $block->getTouchDrag();
+        $btnvisibility = $block->getCloseBtnvisibility();
+        $barCount = $_barCollection->count();
+        $autoPlay = $block->getAutoplay();
+        if($autoPlay == 1) {
+            $autoPlay = ($barCount > 1) ? true : false;
+        } else {
+            $autoPlay = false;
+        }
+        ?>
+        <div id="promobar-wrapper" class="promobar-wrapper no-display owl-carousel owl-theme">
+            <?php foreach ($_barCollection as $_bar): ?>
+                <?php
+                $barId = $_bar->getId();
+                $promoStyle = $_bar->getPromoStyle();
+
+                $bartext = $_bar->getPromoText();
+                $backcolor = $_bar->getBackcolor();
+                $txtcolor = $_bar->getTextcolor();
+
+                $btnEnable = $_bar->getBtnEnable();
+                $btntext = $_bar->getBtnText();
+                $btnurl = $_bar->getBtnUrl();
+                $btnbackcolor = $_bar->getBtnBackcolor();
+                $btntextcolor = $_bar->getBtnTextcolor();
+                $btnstyle = $_bar->getBtnStyle();
+                $newtab = $_bar->getBtnTarget();
+
+                $subEnable = $_bar->getSubEnable();
+                $subTextPlaceholder = $_bar->getSubTextPlaceholder();
+                $subBtnText = $_bar->getSubBtnText();
+                $subBtnBackcolor = $_bar->getSubBtnBackcolor();
+                $subBtnTextcolor = $_bar->getSubBtnTextcolor();
+
+                $timerEnable = $_bar->getTimerEnable();
+                $timerEnddate = $_bar->getTimerEnddate();
+
+                if ($subEnable || $promoStyle == 2) {
+                    $btnEnable = 0;
+                }
+
+                // Set Class As per the configured options
+                $barstyle = $block->getBarStyle();
+                $barClass = array('promobar', 'pb');
+
+                if ($barstyle == 1) {
+                    $barClass[] = 'pb-bar_height-skinny';
+                } else if ($barstyle == 2) {
+                    $barClass[] = 'pb-bar_height-thin';
+                } else if ($barstyle == 3) {
+                    $barClass[] = 'pb-bar_height-regular';
+                } else if ($barstyle == 4) {
+                    $barClass[] = 'pb-bar_height-tall';
+                } else {
+                    $barClass[] = 'pb-bar_height-skinny';
+                }
+
+                $alignment = 1;
+                if ($alignment == 1) {
+                    $barClass[] = 'pb-alignment-centered';
+                } else {
+                    $barClass[] = 'pb-alignment-centered';
+                }
+
+                $btnbordercolor = $btnbackcolor;
+                if ($btnstyle == 1) {
+                    $barClass[] = 'pb-button_style-rounded';
+                } else if ($btnstyle == 2) {
+                    $barClass[] = 'pb-button_style-pill';
+                } else if ($btnstyle == 3) {
+                    $barClass[] = 'pb-button_style-square';
+                } else if ($btnstyle == 4) {
+                    $barClass[] = 'pb-button_style-outline';
+                    $btnbordercolor = $btntextcolor;
+                } else {
+                    $barClass[] = 'pb-button_style-rounded';
+                }
+
+                if ($btnvisibility == 1) {
+                    $barClass[] = 'pb-close_button_visibility-onhover';
+                } else if ($btnvisibility == 2) {
+                    $barClass[] = 'pb-close_button_visibility-alwaysshow';
+                } else if ($btnvisibility == 3) {
+                    $barClass[] = 'pb-close_button_visibility-alwayshide';
+                } else {
+                    $barClass[] = 'pb-close_button_visibility-onhover';
+                }
+
+                $barClass = implode(' ', $barClass);
+
+                // Replace font icon with string for text and button text
+                $bartext = preg_replace('/{{(.*?)}}/i', '&nbsp;<i class="fa fa-$1"></i>&nbsp;', $bartext);
+                $btntext = preg_replace('/{{(.*?)}}/i', '&nbsp;<i class="fa fa-$1"></i>&nbsp;', $btntext);
+                ?>
+                <div class="promobar-list item">
+                    <div class="<?php echo $barClass; ?>" style="background-color: <?php echo $backcolor; ?>;">
+                        <div class="wrapper">
+                            <div class="pb-wrapper">
+                                <span style="color:<?php echo $txtcolor; ?>;" class="bar-text"><?php echo $bartext; ?></span>
+                                <?php if ($btnEnable == 1) { ?>
+                                    <span style="color:<?php echo $btntextcolor; ?>;background:<?php echo $btnbackcolor; ?>;border-color:<?php echo $btnbordercolor; ?>;" class="bar-button"><?php echo $btntext; ?></span>
+                                <?php } ?>
+                                <?php if ($promoStyle == 2 && $subEnable == 1) { ?>
+                                    <span class="pb-subscribe">
+                                        <form class="form" novalidate action="<?php echo $baseUrl . 'newsletter/subscriber/new' ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="promo-newsletter">
+                                            <input name="email" type="email" id="newsletter"
+                                                   placeholder="<?php echo $subTextPlaceholder; ?>"
+                                                   data-mage-init='{"mage/trim-input":{}}'
+                                                   data-validate="{required:true, 'validate-email':true}"
+                                                   />
+                                            <button style="background: <?php echo $subBtnBackcolor; ?>;color: <?php echo $subBtnTextcolor ?>" class="action subscribe"
+                                                    title="<?php echo $subBtnText; ?>"
+                                                    type="submit"
+                                                    aria-label="Subscribe">
+                                                <span><?php echo $subBtnText; ?></span>
+                                            </button>
+                                        </form>
+                                    </span>
+                                <?php } ?>
+                                <?php if ($promoStyle == 3 && $timerEnable == 1 && $timerEnddate != '') { ?>
+                                    <span class="pb-countdown">
+                                        <div class="timer-wrapper-outer">
+                                            <div class="timer" id="promo-countdown-<?php echo $barId; ?>"></div>
+                                        </div>
+                                        <script>
+                                            require([
+                                                "jquery", "basecountdowntimer"
+                                            ], function () {
+                                                setTimeout(function () {
+                                                    var myDate = new Date("<?php echo $timerEnddate; ?>");
+                                                    jQuery("#promo-countdown-<?php echo $barId; ?>").countdown(myDate, function (event) {
+                                                        jQuery(this).html(event.strftime('<div class="timer-wrapper"><div class="time">%D</div><span class="text">Days</span></div><div class="timer-wrapper"><div class="time">%H</div><span class="text">Hrs</span></div><div class="timer-wrapper"><div class="time">%M</div><span class="text">Mins</span></div><div class="timer-wrapper"><div class="time">%S</div><span class="text">Sec</span></div>'));
+                                                    });
+                                                }, 2000);
+                                            });
+                                        </script>
+                                        <style>
+                                            .promobar.pb .pb-countdown .timer-wrapper-outer .timer .timer-wrapper .time {
+                                                color: <?php echo $backcolor; ?>;
+                                                background: <?php echo $bartext; ?>;
+                                            }
+                                            .promobar.pb .pb-countdown .timer-wrapper-outer .timer .timer-wrapper .text {
+                                                color: <?php echo $bartext; ?>;
+                                            }
+                                        </style>
+                                    </span>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="pb-close-button"><i class="fa fa-times-circle-o"></i></div>
+                        <?php if ($btnEnable == 1) { ?>
+                            <a style="" class="link-overlay" <?php echo ($newtab == 1) ? 'target="_blank"' : ''; ?> href="<?php echo $btnurl; ?>"></a>
+                        <?php } ?>
+                        <div class="pb-close-bar"><i class="fa fa-chevron-up"></i></div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <script>
+            require(['jquery', 'baseowlcarousel'], function () {
+                jQuery(document).ready(function () {
+                    var owl = jQuery("#promobar-wrapper");
+                    owl.on('initialized.owl.carousel', function (e) {
+                        var owl = jQuery("#promobar-wrapper");
+                    }).owlCarousel({
+                        items: 1,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            479: {
+                                items: 1
+                            },
+                            639: {
+                                items: 1
+                            },
+                            767: {
+                                items: 1
+                            },
+                            991: {
+                                items: 1
+                            },
+                            1199: {
+                                items: 1
+                            }
+                        },
+                        dots: false,
+                        nav: false,
+                        loop: <?php echo ($enableLoop) ? 'true' : 'false'; ?>,
+                        autoplay: <?php echo ($autoPlay) ? 'true' : 'false'; ?>,
+                        autoplayHoverPause: <?php echo ($stopHover) ? 'true' : 'false'; ?>,
+                        mouseDrag: <?php echo ($mouseDrag) ? 'true' : 'false'; ?>,
+                        touchDrag: <?php echo ($touchDrag) ? 'true' : 'false'; ?>
+                    });
+
+                    jQuery('.promobar.pb').on('mouseover', function () {
+                        jQuery(".pb-attribution").stop().addClass('visible');
+                        jQuery(".pb-close-button").stop().addClass('visible');
+                    }).on('mouseout', function () {
+                        jQuery(".pb-attribution").stop().removeClass('visible');
+                        jQuery(".pb-close-button").stop().removeClass('visible');
+                    });
+
+                    jQuery('.pb-close-bar,.pb-close-button').click(function () {
+                        jQuery('#promobar-wrapper').slideUp("slow");
+                    });
+                });
+            });
+        </script>
+
+        <?php if ($enableSticky) { ?>
+            <script>
+                require(['jquery'], function () {
+                    jQuery(document).ready(function () {
+                        jQuery('html > body').addClass('pb-sticky');
+                        jQuery(window).scroll(function () {
+                            if (jQuery(this).scrollTop() > 1) {
+                                jQuery('#promobar-wrapper').addClass("sticky");
+                            } else {
+                                jQuery('#promobar-wrapper').removeClass("sticky");
+                            }
+                        });
+                    });
+                });
+            </script>
+        <?php } ?>
+    <?php } ?>
+<?php } ?>

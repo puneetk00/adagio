@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="recentordersection" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Recent Order Notification</label>
+            <tab>etextensions</tab>
+            <resource>ET_Recentorderpopupbar::config</resource>
+            <group id="generalgroup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Recent Order Popup</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_mobile" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display on Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="orderstatus" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Order Status</label>
+                    <source_model>ET\Recentorderpopup\Model\Recentorder\Source\Orderstatus</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="position" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Position</label>
+                    <source_model>ET\Recentorderpopup\Model\Recentorder\Source\Position</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="recent_order_count" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Recent Order to Fetch</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="display_time" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Disply Time</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g 5000 (in miliseconds) - Time until which you want to show notification]]></comment>
+                </field>
+                <field id="start_time" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Popup Delay Time</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g 10000 (in miliseconds)]]></comment>
+                </field>
+                <field id="repeat_time" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Delay Time Between 2 Notifications</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g 60000 (in miliseconds)]]></comment>
+                </field>
+                <field id="message_template" translate="label comment" type="textarea" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Notification Text</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g {{product_name}}, {{product_url}}, {{customer_name}}, {{country}}, {{time}}]]></comment>
+                </field>
+            </group>
+            <group id="fakeordergroup" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Fake Orders</label>
+                <field id="fake_orders" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Fake Orders</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="fake_customer_name" translate="label comment" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fake Customer Name</label>
+                    <depends>
+                        <field id="fake_orders">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g John Doe]]></comment>
+                </field>
+                <field id="fake_country" translate="label comment" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fake Countries</label>
+                    <depends>
+                        <field id="fake_orders">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g US, Canada, India]]></comment>
+                </field>
+                <field id="fake_products" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fake Product Ids</label>
+                    <depends>
+                        <field id="fake_orders">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g 4, 85, 128]]></comment>
+                </field>
+                <field id="fake_time" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fake Time</label>
+                    <depends>
+                        <field id="fake_orders">1</field>
+                    </depends>
+                    <comment><![CDATA[e.g 5 seconds ago, 10 mins ago, 1 hour ago]]></comment>
+                </field>
+            </group>
+            <group id="design_settings" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Settings</label>
+                <field id="display_product_img" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Product Image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="icon_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[e.g Only useful when you dont show product image in notification template]]></comment>
+                </field>
+                <field id="icon" translate="label" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon</label>
+                    <backend_model>ET\Recentorderpopup\Model\Image\Image</backend_model>
+                    <base_url type="media" scope_info="1">recentorderpopup/img</base_url>
+                    <depends>
+                        <field id="icon_enable">1</field>
+                    </depends>
+                </field>
+                <field id="bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment><![CDATA[e.g #333333]]></comment>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Color</label>
+                    <comment><![CDATA[e.g #ffffff]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

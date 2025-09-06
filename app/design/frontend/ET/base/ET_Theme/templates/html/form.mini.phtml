@@ -1,0 +1,56 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+?>
+<div class="block" id="search-tog-block">
+    <div class="block-search-icon" id="search-tog-btn">
+        <a href="#"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="block block-content dropdown"
+         data-mage-init='{"dropdownDialog":{
+         "appendTo":"#search-tog-block",
+         "triggerTarget":"#search-tog-btn",
+         "timeout": "100",
+         "closeOnMouseLeave": false,
+         "triggerClass":"active",
+         "parentClass":"active",
+         "triggerEvent" : "click",
+         "buttons":null}}'>
+        <form class="form minisearch" id="search_mini_form"
+              action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+            <div class="field search">
+                <div class="control">
+                    <input id="search"
+                           data-mage-init='{"quickSearch":{
+                           "formSelector":"#search_mini_form",
+                           "url":"<?= $block->escapeUrl($helper->getSuggestUrl()) ?>",
+                           "destinationSelector":"#search_autocomplete",
+                           "minSearchLength":"<?= $block->escapeHtml($helper->getMinQueryLength()) ?>"}
+                           }'
+                           type="text"
+                           name="<?= $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
+                           value="<?= /* @noEscape */ $helper->getEscapedQueryText() ?>"
+                           placeholder="<?= $block->escapeHtmlAttr(__('Search entire store here...')) ?>"
+                           class="input-text"
+                           maxlength="<?= $block->escapeHtmlAttr($helper->getMaxQueryLength()) ?>"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           aria-expanded="false"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <?= $block->getChildHtml() ?>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="<?= $block->escapeHtmlAttr(__('Search')) ?>"
+                        class="action search"
+                        aria-label="Search">
+                    <span><span><i class="fa fa-search"></i></span></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

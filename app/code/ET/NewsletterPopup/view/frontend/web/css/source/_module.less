@@ -1,0 +1,584 @@
+& when (@media-common = true) {
+
+    .popup-newsletter {
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        .action.primary {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+    }
+    .newsletter-modal {
+
+        .modal-inner-wrap {
+            max-width: 500px;
+        }
+
+        .modal-content {
+            padding: 1rem 3rem 3rem;
+        }
+        .action-close {
+            padding: 2rem;
+        }
+    }
+
+    .newsletter-modal {
+        &.demo1 {
+            .action-close {
+                padding: 13px 13px 7px;
+                background: #333333;
+                border-radius: 0;
+                &:before {
+                    color: #ffffff;
+                }
+                &:hover {
+                    background: #666666;
+                    &:before {
+                        color: #ffffff;
+                    }
+                }
+            }
+            .modal-inner-wrap {
+                max-height: none;
+                width: 750px;
+                max-width: 750px;
+                .modal-header {
+                    padding-bottom: 0;
+                    padding-top: 65px;
+                    text-align: center;
+                    padding-left: 75px;
+                    padding-right: 75px;
+                    .modal-title {
+                        border-bottom: none;
+                        padding-bottom: 16px;
+                        font-size: 28px;
+                        margin-bottom: 0;
+                        min-height: auto;
+                        font-weight: 600;
+                        word-wrap: break-word;
+                        text-transform: uppercase;
+                    }
+                }
+                .modal-content {
+                    overflow-y: auto;
+                    padding-left: 75px;
+                    padding-right: 75px;
+                    text-align: center;
+                    padding-top: 0;
+                    padding-bottom: 65px;
+                    .popup-newsletter {
+                        .nw-text {
+                            margin-bottom: 16px;
+                            font-size: 15px;
+                            line-height: 24px;
+                            font-weight: 600;
+                            color: #666666;
+                        }
+                        .nw-form {
+                            display: block;
+                            margin: 0 auto 16px;
+                            max-width: 380px;
+                            .form {
+                                &.subscribe {
+                                    #newsletter-popup {
+                                        height: 42px;
+                                        background: #ebebeb;
+                                        border-color: #ebebeb;
+                                        color: #333333;
+                                        font-size: 14px;
+                                        padding: 0 12px;
+                                        &::placeholder {
+                                            color: #666666;
+                                        }
+                                        &:-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                        &::-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                    }
+                                    .actions {
+                                        .subscribe {
+                                            &.primary {
+                                                margin-top: 15px;
+                                                width: auto;
+                                                padding: 12px 22px;
+                                                background: #333333;
+                                                border-color: #333333;
+                                                &:hover {
+                                                    background: #666666;
+                                                    border-color: #666666;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nw-checkbox {
+                            display: block;
+                            #nw-checked {
+                                margin: 0 2px 0 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            label {
+                                display: inline-block;
+                                vertical-align: middle;
+                                color: #666666;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.demo2 {
+            .action-close {
+                padding: 40px 40px 20px;
+                background: transparent;
+                border-radius: 0;
+                &:before {
+                    color: #227ed1;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 600;
+                }
+                &:hover {
+                    background: transparent;
+                    &:before {
+                        color: #333333;
+                    }
+                }
+            }
+            .modal-inner-wrap {
+                max-height: none;
+                width: 500px;
+                max-width: 500px;
+                .modal-header {
+                    padding-bottom: 0;
+                    padding-top: 65px;
+                    text-align: center;
+                    padding-left: 75px;
+                    padding-right: 75px;
+                    .modal-title {
+                        border-bottom: none;
+                        padding-bottom: 35px;
+                        font-size: 38px;
+                        margin-bottom: 0;
+                        min-height: auto;
+                        font-weight: 700;
+                        word-wrap: break-word;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                    }
+                }
+                .modal-content {
+                    overflow-y: auto;
+                    padding-left: 75px;
+                    padding-right: 75px;
+                    text-align: center;
+                    padding-top: 0;
+                    padding-bottom: 70px;
+                    .popup-newsletter {
+                        h3 {
+                            margin: 10px 0 20px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                        .nw-text {
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                            line-height: 24px;
+                            font-weight: 600;
+                            color: #333333;
+                        }
+                        h2 {
+                            color: #227ed1;
+                            font-size: 24px;
+                            margin: 0 0 40px;
+                            font-weight: normal;
+                        }
+                        .nw-form {
+                            display: block;
+                            margin: 0 auto 16px;
+                            max-width: 380px;
+                            position: relative;
+                            .form {
+                                &.subscribe {
+                                    #newsletter-popup {
+                                        height: 54px;
+                                        background: #ffffff;
+                                        border-color: #dddddd;
+                                        color: #333333;
+                                        font-size: 14px;
+                                        padding: 0 12px;
+                                        &::placeholder {
+                                            color: #666666;
+                                        }
+                                        &:-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                        &::-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                    }
+                                    .actions {
+                                        .subscribe {
+                                            &.primary {
+                                                width: auto;
+                                                padding: 12px 22px;
+                                                border-color: #227ed1;
+                                                margin: 0;
+                                                position: absolute;
+                                                right: 0;
+                                                top: 0;
+                                                text-transform: uppercase;
+                                                height: 54px;
+                                                background: #227ed1;
+                                                border-radius: 0;
+                                                font-weight: 600;
+                                                letter-spacing: 1px;
+                                                color: #ffffff;
+                                                display: inline-block;
+                                                &:hover {
+                                                    background: #333333;
+                                                    border-color: #333333;
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nw-checkbox {
+                            display: block;
+                            #nw-checked {
+                                margin: 0 2px 0 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            label {
+                                display: inline-block;
+                                vertical-align: middle;
+                                color: #666666;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.demo3 {
+            .action-close {
+                padding: 2px 15px 2px;
+                background: #333333;
+                border-radius: 0;
+                position: absolute;
+                top: -30px;
+                border: 1px solid #ffffff;
+                > span {
+                    position: static;
+                    height: auto;
+                    width: auto;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+                &:before {
+                    display: none;
+                }
+                &:hover {
+                    background: #666666;
+                    > span {
+                        color: #ffffff;
+                    }
+                }
+            }
+            .modal-inner-wrap {
+                max-height: none;
+                width: 800px;
+                max-width: 800px;
+                .modal-header {
+                    padding-bottom: 0;
+                    padding-top: 0;
+                    text-align: left;
+                    padding-left: 0;
+                    padding-right: 0;
+                    max-width: 480px;
+                    .modal-title {
+                        border-bottom: none;
+                        padding-bottom: 16px;
+                        font-size: 28px;
+                        margin-bottom: 0;
+                        min-height: auto;
+                        font-weight: 700;
+                        word-wrap: break-word;
+                        text-transform: capitalize;
+                        display: none;
+                    }
+                }
+                .modal-content {
+                    overflow-y: auto;
+                    padding: 0;
+                    text-align: left;
+                    .popup-newsletter {
+                        .popup-content-main {
+                            display: block;
+                            max-width: 100%;
+                            width: 100%;
+                            padding-left: 40px;
+                            padding-top: 80px;
+                            padding-bottom: 80px;
+                            padding-right: 20px;
+                            box-sizing: border-box;
+                            .popup-content-inner {
+                                display: block;
+                                max-width: 480px;
+                                width: 100%;
+                            }
+                        }
+                        .nw-text {
+                            margin-bottom: 16px;
+                            font-size: 15px;
+                            line-height: 24px;
+                            font-weight: 400;
+                            color: #666666;
+                            font-style: italic;
+                        }
+                        h1 {
+                            border-bottom: none;
+                            padding-bottom: 16px;
+                            font-size: 28px;
+                            margin-bottom: 0;
+                            min-height: auto;
+                            font-weight: 700;
+                            word-wrap: break-word;
+                            text-transform: capitalize;
+                            display: block;
+                        }
+                        .nw-form {
+                            display: block;
+                            margin: 0 0 16px;
+                            max-width: 450px;
+                            position: relative;
+                            .form {
+                                &.subscribe {
+                                    #newsletter-popup {
+                                        height: 44px;
+                                        background: #ebebeb;
+                                        border-color: #ebebeb;
+                                        color: #333333;
+                                        font-size: 14px;
+                                        padding: 0 12px;
+                                        &::placeholder {
+                                            color: #666666;
+                                        }
+                                        &:-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                        &::-ms-input-placeholder {
+                                            color: #666666;
+                                        }
+                                    }
+                                    .actions {
+                                        .subscribe {
+                                            &.primary {
+                                                width: auto;
+                                                padding: 10px 20px;
+                                                border-color: #333333;
+                                                margin: 0;
+                                                position: absolute;
+                                                right: 0;
+                                                top: 0;
+                                                text-transform: uppercase;
+                                                height: 44px;
+                                                background: #333333;
+                                                border-radius: 0;
+                                                font-weight: 600;
+                                                letter-spacing: 1px;
+                                                color: #ffffff;
+                                                display: inline-block;
+                                                &:hover {
+                                                    background: #666666;
+                                                    border-color: #666666;
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nw-checkbox {
+                            display: block;
+                            #nw-checked {
+                                margin: 0 2px 0 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            label {
+                                display: inline-block;
+                                vertical-align: middle;
+                                color: #666666;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header {
+        padding-top: 50px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header .modal-title {
+        padding-bottom: 25px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content {
+        padding-bottom: 50px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter h2 {
+        margin-bottom: 30px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap {
+        max-width: 700px !important;
+        width: 100% !important;
+    }
+}
+@media(max-width: 767px) {
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header {
+        padding-top: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header .modal-title {
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter h3 {
+        margin: 5px 0 15px;
+        font-size: 16px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-text {
+        margin-bottom: 12px;
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content {
+        padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter h2 {
+        font-size: 20px;
+        margin: 0 0 18px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-form .form.subscribe #newsletter-popup {
+        height: 48px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-form .form.subscribe .actions .subscribe.primary {
+        height: auto;
+        padding: 10px 15px;    
+        margin: 10px 0 0;
+        position: static;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-form {
+        margin: 0 auto 10px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-checkbox label {
+        font-size: 13px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap {
+        max-width: 420px !important;
+        width: 100% !important;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter .popup-content-main {
+        padding-left: 25px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 25px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter .nw-text {
+        font-size: 20px;
+        margin-bottom: 12px;
+        line-height: 22px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter .nw-checkbox label {
+        font-size: 13px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap {
+        max-width: 425px !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 479px) {
+    .newsletter-modal.demo2 .modal-inner-wrap {
+        max-width: 300px !important;
+        width: 100% !important;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header {
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .newsletter-modal.demo2 .action-close {
+        padding: 15px 15px 15px;
+    }
+    .newsletter-modal.demo2 .action-close:before {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-header .modal-title {
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter h3 {
+        margin: 3px 0 12px;
+        font-size: 14px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter h2 {
+        font-size: 16px;
+        margin: 0 0 15px;
+    }
+    .newsletter-modal.demo2 .modal-inner-wrap .modal-content .popup-newsletter .nw-text {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap {
+        max-width: 300px !important;
+        width: 100% !important;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter .popup-content-main {
+        padding-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 20px;
+    }
+    .newsletter-modal.demo3 .modal-inner-wrap .modal-content .popup-newsletter .nw-form .form.subscribe .actions .subscribe.primary {
+        margin: 10px 0 0;
+        position: static;
+        padding: 10px 15px;
+        height: auto;
+    }
+}

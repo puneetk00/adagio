@@ -1,0 +1,1461 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+
+$footerType = $baseHelper->getConfigValue('footer_section/general/footer_type');
+
+$enableFooterTop = $baseHelper->getConfigValue('footer_section/footer_top/enable');
+$footerTopStaticBlock = $baseHelper->getConfigValue('footer_section/footer_top/static_block');
+
+$enableFooterMiddle = $baseHelper->getConfigValue('footer_section/footer_middle/enable');
+
+$footerColumnOneStaticBlock = $baseHelper->getConfigValue('footer_section/footer_middle/column_one_static_block');
+$columnOneWidth = $baseHelper->getConfigValue('footer_section/footer_middle/column_one_width');
+
+$footerColumnTwoStaticBlock = $baseHelper->getConfigValue('footer_section/footer_middle/column_two_static_block');
+$columnTwoWidth = $baseHelper->getConfigValue('footer_section/footer_middle/column_two_width');
+
+$footerColumnThreeStaticBlock = $baseHelper->getConfigValue('footer_section/footer_middle/column_three_static_block');
+$columnThreeWidth = $baseHelper->getConfigValue('footer_section/footer_middle/column_three_width');
+
+$footerColumnFourStaticBlock = $baseHelper->getConfigValue('footer_section/footer_middle/column_four_static_block');
+$columnFourWidth = $baseHelper->getConfigValue('footer_section/footer_middle/column_four_width');
+
+$footerMiddleStaticBlock = $baseHelper->getConfigValue('footer_section/footer_middle/footer_middle_static_block');
+
+$enableFooterBottom = $baseHelper->getConfigValue('footer_section/footer_bottom/enable');
+
+$bottomLeftStaticBlock = $baseHelper->getConfigValue('footer_section/footer_bottom/left_static_block');
+$bottomRightStaticBlock = $baseHelper->getConfigValue('footer_section/footer_bottom/right_static_block');
+
+$baseUrl = $baseHelper->getBaseUrl();
+$mediaUrl = $baseHelper->getMediaUrl();
+?>
+<?php if ($footerType == 1) { ?>
+    <div class="footer-wrapper type1">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+    <?php
+} else if ($footerType == 2) {
+    $footerTextBlockWidth = $columnOneWidth + $columnTwoWidth + $columnThreeWidth;
+    ?>
+    <div class="footer-wrapper type2">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <?php if ($footerMiddleStaticBlock != '') { ?>
+                                <div class="footer-text-content col-large-<?php echo $footerTextBlockWidth; ?> col-medium-<?php echo $footerTextBlockWidth; ?> col-small-<?php echo $footerTextBlockWidth; ?> col-extrasmall-12">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 3) { ?>
+    <div class="footer-wrapper type3">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 4) { ?>
+    <div class="footer-wrapper type4">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 5) { ?>
+    <div class="footer-wrapper type5">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 6) { ?>
+    <div class="footer-wrapper type6">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 7) { ?>
+    <div class="footer-wrapper type7">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 8) { ?>
+    <div class="footer-wrapper type8">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 9) { ?>
+    <div class="footer-wrapper type9">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 10) { ?>
+    <div class="footer-wrapper type10">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 11) { ?>
+    <div class="footer-wrapper type11">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 12) { ?>
+    <div class="footer-wrapper type12">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 13) { ?>
+    <div class="footer-wrapper type13">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 14) { ?>
+    <div class="footer-wrapper type14">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 15) { ?>
+    <div class="footer-wrapper type15">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 16) { ?>
+    <div class="footer-wrapper type16">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 17) { ?>
+    <div class="footer-wrapper type17">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 18) { ?>
+    <div class="footer-wrapper type18">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 19) { ?>
+    <div class="footer-wrapper type19">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 20) { ?>
+    <div class="footer-wrapper type20">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 21) { ?>
+    <div class="footer-wrapper type21">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 22) { ?>
+    <div class="footer-wrapper type22">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 23) { ?>
+    <div class="footer-wrapper type23">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 24) { ?>
+    <div class="footer-wrapper type24">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } else if ($footerType == 25) { ?>
+    <div class="footer-wrapper type25">
+        <?php if ($enableFooterTop == 1) { ?>
+            <div class="footer-top">
+                <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerTopStaticBlock)->toHtml(); ?>
+            </div>
+        <?php } ?>
+        <div class="footer-columns">
+            <div class="page-main">
+                <?php if ($enableFooterMiddle == 1) { ?>
+                    <div class="content-main">
+                        <div class="col-row">
+                            <div class="item first col-large-<?php echo $columnOneWidth; ?> col-medium-<?php echo $columnOneWidth; ?> col-small-<?php echo $columnOneWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnOneStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnTwoWidth; ?> col-medium-<?php echo $columnTwoWidth; ?> col-small-<?php echo $columnTwoWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnTwoStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item col-large-<?php echo $columnThreeWidth; ?> col-medium-<?php echo $columnThreeWidth; ?> col-small-<?php echo $columnThreeWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnThreeStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                            <div class="item last col-large-<?php echo $columnFourWidth; ?> col-medium-<?php echo $columnFourWidth; ?> col-small-<?php echo $columnFourWidth; ?> col-extrasmall-12">
+                                <div class="item-inner">
+                                    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerColumnFourStaticBlock)->toHtml(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php if ($footerMiddleStaticBlock != '') { ?>
+                    <div class="footer-text-content">
+                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($footerMiddleStaticBlock)->toHtml(); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <?php if ($enableFooterBottom == 1) { ?>
+            <div class="footer-bottom">
+                <div class="page-main">
+                    <div class="content-main">
+                        <div class="left">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomLeftStaticBlock)->toHtml(); ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($bottomRightStaticBlock)->toHtml(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php } ?>

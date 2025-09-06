@@ -1,0 +1,27 @@
+<root>
+    <config>
+        <header_section>
+            <general>
+                <header_type>8</header_type>
+                <header_top_static_block></header_top_static_block>
+                <header_static_block>et_header_service_info</header_static_block>
+                <display_icons>0</display_icons>
+            </general>
+            <megamenu>
+                <menu_before>et_nav_menu_before</menu_before>
+                <menu_after>et_nav_menu_after</menu_after>
+                
+                <menu_type>classic</menu_type>
+                <static_width>500px</static_width>
+                <max_level>0</max_level>
+                <show_home_link>1</show_home_link>
+                <show_home_icon>0</show_home_icon>
+                <home_icon></home_icon>
+                
+                <label1>New</label1>
+                <label2>Hot</label2>
+                <label3>Sale</label3>
+            </megamenu>
+        </header_section>
+    </config>
+</root>

@@ -1,0 +1,35 @@
+<?php
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('recentordersection/generalgroup/enable');
+if ($enabled) {
+    $displayClass = 'mobile-hide';
+    $showMobile = $baseHelper->getConfigValue('recentordersection/generalgroup/show_mobile');
+    if ($showMobile == 1) {
+        $displayClass = 'mobile-show';
+    }
+    $position = $baseHelper->getConfigValue('recentordersection/generalgroup/position');
+    if ($position == '') {
+        $position = 'botton-left';
+    }
+
+    $iconEnable = $baseHelper->getConfigValue('recentordersection/design_settings/icon_enable');
+    $icon = $baseHelper->getConfigValue('recentordersection/design_settings/icon');
+    $displayProductImg = $baseHelper->getConfigValue('recentordersection/design_settings/display_product_img');
+    $mediaUrl = $baseHelper->getMediaUrl();
+    ?>
+    <div class="recent-order <?php echo $position . ' ' . $displayClass; ?>">
+        <?php if ($iconEnable && $icon != '') { ?>
+            <span class="icon-span">
+                <img src="<?php echo $mediaUrl . 'recentorderpopup/img/' . $icon; ?>" alt="icon" />
+            </span>
+        <?php } ?>
+        <?php if ($displayProductImg && $displayProductImg != '') { ?>
+            <span class="img-span">
+                <img src="" alt="Product Image" width="50"/>
+            </span>
+        <?php } ?>
+        <span class="text-span">
+
+        </span>
+    </div>
+<?php } ?>

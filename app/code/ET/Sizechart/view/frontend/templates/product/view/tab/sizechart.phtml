@@ -1,0 +1,15 @@
+<?php
+$_product = $block->getProduct();
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$enabled = $baseHelper->getConfigValue('sizechartsection/generalgroup/enabled');
+$displayTab = $baseHelper->getConfigValue('sizechartsection/generalgroup/display_tab');
+if ($enabled == 1 && $displayTab == 1) {
+    $_product = $block->getProduct();
+    $sizeChartContent = $_product->getSizechartContent();
+    if ($sizeChartContent != '') {
+        ?>
+        <div class="sizechart-tab">
+            <?= /* @escapeNotVerified */ $this->helper('Magento\Catalog\Helper\Output')->productAttribute($block->getProduct(), $block->getProduct()->getSizechartContent(), 'sizechart_content') ?>
+        </div>
+    <?php } ?>
+<?php } ?>

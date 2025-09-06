@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="ET\Clientreviews\Api\Data\ReviewInterface" type="ET\Clientreviews\Model\Review" />
+    <preference for="ET\Clientreviews\Api\ReviewRepositoryInterface" type="ET\Clientreviews\Model\ReviewRepository" />
+    
+    <virtualType name="ETClientreviewsReviewFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ETClientreviewsReviewFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">ET\Clientreviews\Model\ResourceModel\Review\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ETClientreviewsReviewFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <type name="ET\Clientreviews\Model\ResourceModel\Review\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">et_clientreviews</argument>
+            <argument name="eventPrefix" xsi:type="string">et_clientreviews_review_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">review_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">ET\Clientreviews\Model\ResourceModel\Review</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="et_clientreviews_review_listing_data_source" xsi:type="string">ET\Clientreviews\Model\ResourceModel\Review\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="ET\Clientreviews\Api\Data\ReviewInterface" xsi:type="string">ET\Clientreviews\Api\ReviewRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="ET\Clientreviews\Api\Data\ReviewInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">et_clientreviews</item>
+                    <item name="identifierField" xsi:type="string">id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\Operation\ExtensionPool">
+        <arguments>
+            <argument name="extensionActions" xsi:type="array">
+                <item name="ET\Clientreviews\Api\Data\ReviewInterface" xsi:type="array">
+                    <item name="read" xsi:type="array">
+                        <item name="storeReader" xsi:type="string">ET\Clientreviews\Model\ResourceModel\Review\Relation\Store\ReadHandler</item>
+                    </item>
+                    <item name="create" xsi:type="array">
+                        <item name="storeCreator" xsi:type="string">ET\Clientreviews\Model\ResourceModel\Review\Relation\Store\SaveHandler</item>
+                    </item>
+                    <item name="update" xsi:type="array">
+                        <item name="storeUpdater" xsi:type="string">ET\Clientreviews\Model\ResourceModel\Review\Relation\Store\SaveHandler</item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ET\Clientreviews\ReferenceImageUpload" type="ET\Clientreviews\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">clientreviews/tmp/image</argument>
+            <argument name="basePath" xsi:type="string">clientreviews/image</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument> 
+        </arguments>
+    </virtualType>
+ 
+    <type name="ET\Clientreviews\Controller\Adminhtml\Index\Uploader">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">ET\Clientreviews\ReferenceImageUpload</argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <whatsappchatsection>
+            <generalgroup>
+                <enabled>0</enabled>
+                <mobile_number></mobile_number>
+                <prefilled_message><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.]]></prefilled_message>
+                <button_text><![CDATA[WhatsApp Chat]]></button_text>
+                <icon>whatsapp-white.png</icon>
+                <button_style>whatschat_style_1</button_style>
+                <enable_general_btn>1</enable_general_btn>
+                <general_button_style>whatschat_style_1</general_button_style>
+            </generalgroup>
+        </whatsappchatsection>
+    </default>
+</config>

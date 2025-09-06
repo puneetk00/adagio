@@ -1,0 +1,276 @@
+// ========================================
+// MENU-WRAPPER CUSTOM STYLES
+// ========================================
+
+.menu-wrapper {
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    z-index: 1000;
+    background: transparent;
+
+    .dropdown-menu,
+    .mega-menu,
+    .nav-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 1200px;
+        min-width: 800px;
+        background: #ffffff;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        overflow: hidden;
+        z-index: 1001;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-columns,
+    .nav-columns,
+    .mega-menu-content {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .menu-column,
+    .nav-column,
+    .column {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 25px 20px;
+        border-right: 1px solid #f0f0f0;
+        position: relative;
+        overflow: hidden;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .menu-item,
+    .nav-item,
+    .category-item {
+        position: relative;
+        padding: 10px 15px;
+        margin: 2px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+
+        &:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+            transform: translateX(3px);
+        }
+
+        &.active,
+        &:hover {
+            background-color: #e3f2fd;
+            border-left: 3px solid #ff6b35;
+            padding-left: 12px;
+        }
+    }
+
+    .submenu,
+    .sub-menu,
+    .child-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 220px;
+        max-width: 280px;
+        background: #ffffff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        z-index: 1002;
+        display: none;
+        max-height: 450px;
+        overflow-y: auto;
+        padding: 15px 0;
+
+        .submenu,
+        .sub-menu,
+        .child-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            min-width: 200px;
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            z-index: 1003;
+            display: none;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px 0;
+        }
+
+        &.right-aligned {
+            left: auto;
+            right: 100%;
+        }
+    }
+
+    .menu-item:hover .submenu,
+    .menu-item:hover .sub-menu,
+    .menu-item:hover .child-menu {
+        display: block;
+    }
+
+    .submenu .menu-item:hover .submenu,
+    .sub-menu .menu-item:hover .sub-menu,
+    .child-menu .menu-item:hover .child-menu {
+        display: block;
+    }
+
+    .menu-images,
+    .menu-content,
+    .featured-content {
+        max-width: 100%;
+        overflow: hidden;
+        margin: 15px 0;
+    }
+
+    .menu-image-container {
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin: 8px 0;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+
+    .overflowing-content,
+    .problematic-content {
+        display: none !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    .menu-icon {
+        margin-right: 8px;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .menu-divider {
+        height: 1px;
+        background: #e0e0e0;
+        margin: 10px 0;
+    }
+
+    .menu-header {
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+        padding: 15px 20px 10px;
+        border-bottom: 2px solid #f0f0f0;
+        margin-bottom: 10px;
+    }
+
+    // Responsive Design
+    @media (max-width: 1024px) {
+        .dropdown-menu,
+        .mega-menu,
+        .nav-dropdown {
+            max-width: 900px;
+            min-width: 600px;
+        }
+
+        .menu-column,
+        .nav-column,
+        .column {
+            min-width: 180px;
+            max-width: 250px;
+            padding: 20px 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .dropdown-menu,
+        .mega-menu,
+        .nav-dropdown {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            min-width: auto;
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+        .menu-columns,
+        .nav-columns,
+        .mega-menu-content {
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .menu-column,
+        .nav-column,
+        .column {
+            max-width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px;
+        }
+
+        .submenu,
+        .sub-menu,
+        .child-menu {
+            position: static;
+            box-shadow: none;
+            border: none;
+            border-left: 3px solid #007bff;
+            margin-left: 20px;
+            margin-top: 10px;
+            max-height: none;
+            display: block;
+
+            .submenu,
+            .sub-menu,
+            .child-menu {
+                position: static;
+                margin-left: 20px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

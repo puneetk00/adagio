@@ -1,0 +1,4155 @@
+<root>
+    <blocks>
+        <cms_item>
+            <title>Header Contact Info</title>
+            <identifier>et_header_contact_info</identifier>
+            <content><![CDATA[<div class="header-contact-block">
+    <div class="item">
+        <span class="icon-block">
+            <em class="fa fa-phone"></em>
+        </span>
+        <span class="text-block">
+            Call Us Now
+            <a href="tel:+123456789">(123) 4567-890</a>
+        </span>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Two</title>
+            <identifier>et_header_contact_info_two</identifier>
+            <content><![CDATA[<div class="header-contact-block">
+    Call Now: <a href="tel:+123456789">(123) 4567-890</a>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Three</title>
+            <identifier>et_header_contact_info_three</identifier>
+            <content><![CDATA[<div class="header-contact-block">
+    <div class="items">
+        <div class="item">
+            <a class="action primary contact-btn" href="#">
+                <span>Special Offers</span>
+            </a>
+        </div>
+        <div class="item">
+            <span class="contact icon-block">
+                <em class="fa fa-phone"></em>
+            </span>
+            <span class="text-block">
+                Call Us -
+                <a href="tel:+123456789">(123) 4567-890</a>
+            </span>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Four</title>
+            <identifier>et_header_contact_info_four</identifier>
+            <content><![CDATA[<div class="header-contact-block">
+	<div class="item">
+		<span class="icon-block">
+            <img src="{{media url='etrend/home/call-image.png'}}" alt="call-image" />
+        </span>
+        <span class="text-block">
+            Call and Order in
+            <a href="tel:+123456789">+123 456 789</a>
+        </span>
+	</div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Five</title>
+            <identifier>et_header_contact_info_five</identifier>
+            <content><![CDATA[<div class="header-contact-block">
+    Call 24/7 - <a href="tel:+(028)1234565523">(028) 123 456 5523 </a>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Six</title>
+            <identifier>et_header_contact_info_six</identifier>
+            <content><![CDATA[<div class="header-contact-block contact-six">
+    <div class="item">
+        <span class="icon-block">
+            <em class="fa fa-phone"></em>
+        </span>
+        <span class="text-block">
+            Contact Us
+            <a href="tel:+123456789">+123456789</a>
+        </span>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Seven</title>
+            <identifier>et_header_contact_info_seven</identifier>
+            <content><![CDATA[<div class="header-contact-block contact-seven">
+    <a href="tel:+(028)1234565523">(028) 123 456 5523</a>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Contact Info Eight</title>
+            <identifier>et_header_contact_info_eight</identifier>
+            <content><![CDATA[<div class="header-contact-block contact-eight">
+    <div class="item">
+        <span class="icon-block">
+            <em class="fa fa-map-marker"></em>
+        </span>
+        <span class="text-block">
+            <a href="#">Location</a>
+        </span>
+    </div>
+    <div class="item">
+        <span class="icon-block">
+            <em class="fa fa-envelope"></em>
+        </span>
+        <span class="text-block">
+            <a href="mailto:mail@example.com">Email</a>
+        </span>
+    </div>
+    <div class="item">
+        <span class="icon-block">
+            <em class="fa fa-phone"></em>
+        </span>
+        <span class="text-block">
+            <a href="tel:+123456789">Contact</a>
+        </span>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Service Info</title>
+            <identifier>et_header_service_info</identifier>
+            <content><![CDATA[<div class="header-servives-block">
+    <div class="services-main">
+        <div class="item">
+            <div class="item-inner">
+                <img src="{{media url='etrend/home/image41.png'}}" alt="Free worldwide shipping">
+            </div>
+            <div class="text-content">
+                <strong> Free Shipping Order Over $1000 </strong>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-inner">
+                <img src="{{media url='etrend/home/image42.png'}}" alt="24/7 Online Support">
+            </div>
+            <div class="text-content">
+                <strong> We Support - 27/7 </strong>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Top Promotion Block</title>
+            <identifier>et_top_header_promotion</identifier>
+            <content><![CDATA[Etrend - The #1 Responsive Magento 2 Theme.<a href="http://demo4techies.com/etrend/mage/demo" class="action primary">Check Now</a>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Header Top Contact Block</title>
+            <identifier>et_header_top_contact_block</identifier>
+            <content><![CDATA[<div class="header-top-contact">
+    <div class="header-info">
+        <p>Welcome - Sign Up Now &amp; Get 25% Off</p>
+    </div>
+    <div class="header-callus">
+        <div class="callus">
+            Call The Expert - <a href="tel:+(123)456-7890">(123) 456-7890</a>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Navigation Menu Before Links</title>
+            <identifier>et_nav_menu_before</identifier>
+            <content><![CDATA[<li class="ui-menu-item level0 classic parent">
+    <div class="open-children-toggle"></div>
+    <a href="#" class="level-top">
+        <span>Pages</span>
+    </a>
+    <div class="level0 submenu">
+        <div class="row">
+            <ul class="subchildmenu ">
+                <li class="ui-menu-item level1">
+                    <a href="{{store url='et-about'}}">
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="ui-menu-item level1">
+                    <a href="{{store url='et-faq'}}">
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li class="ui-menu-item level1">
+                    <a href="{{store url='et-no-route'}}">
+                        <span>404</span>
+                    </a>
+                </li>
+                <li class="ui-menu-item level1">
+                    <a href="{{store url='et-pricing'}}">
+                        <span>Pricing</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Navigation Menu After Links</title>
+            <identifier>et_nav_menu_after</identifier>
+            <content><![CDATA[<li class="level0 level-top">
+    <a href="{{store url='contact'}}" class="level-top">
+        <span>Contact Us</span>
+    </a>
+</li>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services</title>
+            <identifier>et_home_services</identifier>
+            <content><![CDATA[<div class="home-services">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/online-support.png'}}" alt="24/7 Online Support" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained stufs are ready to help 24/7
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/money-back.png'}}" alt="Money Back Guarantee" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Money Back Guarantee
+                        </strong>
+                        <p>
+                            100% money back guarantee
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/free-shipping.png'}}" alt="Free Shipping & Return" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping & Return
+                        </strong>
+                        <p>
+                            Free shipping on all orders over $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Two</title>
+            <identifier>et_home_services_two</identifier>
+            <content><![CDATA[<div class="home-services-two">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="services-content">
+                        <span class="service-tag">Questions?</span> 
+                        <strong> 24/7 Online Support </strong>
+                        <p>Trained staffs are ready to online support 24 hours a day</p>
+                        <a href="#" class="service-btn">Get it now</a>
+                    </div>
+                    <div class="services-icon">
+                        <img src="{{media url='etrend/home/service-1.png'}}" alt="24/7 Online Support" />
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="services-content">
+                        <span class="service-tag">Secure</span> 
+                        <strong> Money Back Guarantee </strong>
+                        <p>100% money back guarantee under 5 working days</p>
+                        <a href="#" class="service-btn">Get it now</a>
+                    </div>
+                    <div class="services-icon">
+                        <img src="{{media url='etrend/home/service-2.png'}}" alt="Money Back Guarantee" />
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="services-content">
+                        <span class="service-tag">Worldwide</span> 
+                        <strong> Free Shipping & Return </strong>
+                        <p>Free shipping on all orders over $100 - 7 days a week</p>
+                        <a href="#" class="service-btn">Get it now</a>
+                    </div>
+                    <div class="services-icon">
+                        <img src="{{media url='etrend/home/service-3.png'}}" alt="Free Shipping & Return" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Three</title>
+            <identifier>et_home_services_three</identifier>
+            <content><![CDATA[<div class="home-services-three">
+	<div class="page-main">
+		<div class="item-row">
+			<div class="item">
+				<div class="item-inner">
+					<div class="icon">
+						<img src="{{media url='etrend/home/service-4.jpg'}}" alt="24/7 Online Support" />
+					</div>
+					<div class="text">
+						<strong> 
+							24/7 Online Support 
+						</strong>
+						<p>
+							Trained stufs are ready to online support
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-inner">
+					<div class="icon">
+						<img src="{{media url='etrend/home/service-5.jpg'}}" alt="Money Back Guarantee" />
+					</div>
+					<div class="text">
+						<strong> 
+							100% Money Back 
+						</strong>
+						<p>
+							100% money back guarantee under 7 days
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-inner">
+					<div class="icon">
+						<img src="{{media url='etrend/home/service-6.jpg'}}" alt="Free Shipping & Return" />
+					</div>
+					<div class="text">
+						<strong> 
+							Free Shipping 
+						</strong>
+						<p>
+							Free shipping on all orders over $100
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Four</title>
+            <identifier>et_home_services_four</identifier>
+            <content><![CDATA[<div class="home-services-four" style="background-image: url({{media url='etrend/home/service-bg.jpg'}});">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-7.png'}}" alt="Instant Fast Delivery" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Instant Fast Delivery
+                        </strong>
+                        <p>
+                            Superfast delivery for food delivered fresh & on time
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-8.png'}}" alt="Pay via Card/Cash" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Pay via Card/Cash
+                        </strong>
+                        <p>
+                            Simply pay Online by card or Cash On Delivery
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-9.png'}}" alt="Live Order Tracking" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Live Order Tracking
+                        </strong>
+                        <p>
+                            Know where your order is at all times
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Five</title>
+            <identifier>et_home_services_five</identifier>
+            <content><![CDATA[<div class="home-services-five">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-10.png'}}" alt="24/7 Online Support" />
+                    </div>
+                    <div class="text-content">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained staffs are ready to help 24/7
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-11.png'}}" alt="Secure Payments" />
+                    </div>
+                    <div class="text-content">
+                        <strong>
+                            Secure Payments
+                        </strong>
+                        <p>
+                            We ensure secure payment with PEV
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-12.png'}}" alt="Refund Policy" />
+                    </div>
+                    <div class="text-content">
+                        <strong>
+                            Refund Policy
+                        </strong>
+                        <p>
+                            Simply return within 30 days for an exchange
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-13.png'}}" alt="Free Shipping" />
+                    </div>
+                    <div class="text-content">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            Free shipping on all US order above $200
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Six</title>
+            <identifier>et_home_services_six</identifier>
+            <content><![CDATA[<div class="home-services-six">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-14.png'}}" alt="24/7 Online Support" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Online Support
+                        </strong>
+                        <p>
+                            24 hours a day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-15.png'}}" alt="Secure Payments" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Secure Payments
+                        </strong>
+                        <p>
+                            secure payment with PEV
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-16.png'}}" alt="Refund Policy" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Refund Policy
+                        </strong>
+                        <p>
+                            return within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-17.png'}}" alt="Free Shipping & Return" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            On all US order above $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Seven</title>
+            <identifier>et_home_services_seven</identifier>
+            <content><![CDATA[<div class="home-services-seven">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-18.png'}}" alt="Free Delivery" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Delivery
+                        </strong>
+                        <p>
+                            For all orders over $120
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-19.png'}}" alt="Safe Payment" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Safe Payment
+                        </strong>
+                        <p>
+                            100% secure payment
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-20.png'}}" alt="24/7 Help Center" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Help Center
+                        </strong>
+                        <p>
+                            Dedicated 24/4 support
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-21.png'}}" alt="Friendly Services" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Friendly Services
+                        </strong>
+                        <p>
+                            30 day guarantee
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Eight</title>
+            <identifier>et_home_services_eight</identifier>
+            <content><![CDATA[<div class="home-services-eight">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Our <i>Services</i></span>
+            <p class="service-text">Electric Motorized Power Fitness Machine Perfect for Home <br /> Use "DIY Installation with video call assistance".</p>
+        </div>
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-22.png'}}" alt="Free Shipping" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            Free delivery option and excludes other delivery options such as one-day delivery
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-23.png'}}" alt="Secure Payment" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Secure Payment
+                        </strong>
+                        <p>
+                            The webpage where credit card number are<br/> entered is secured via secure sockets layer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-24.png'}}" alt="24/7 Help Center" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            5 Years Warranty
+                        </strong>
+                        <p>
+                            5 year motor warranty, 1 year part<br/> warranty, life time frame
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Nine</title>
+            <identifier>et_home_services_nine</identifier>
+            <content><![CDATA[<div class="home-services-nine">
+    <div class="page-main">
+        <div class="item-wrapper">
+            <div class="item-row">
+                <div class="item">
+                    <div class="item-inner">
+                        <div class="icon">
+                            <img src="{{media url='etrend/home/service-25.png'}}" alt="Secure Payment" />
+                        </div>
+                        <div class="text">
+                            <strong>
+                                Secure Payment
+                            </strong>
+                            <p>
+                                secure payment with PEV
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <div class="icon">
+                            <img src="{{media url='etrend/home/service-26.png'}}" alt="Refund Policy" />
+                        </div>
+                        <div class="text">
+                            <strong>
+                                Refund Policy
+                            </strong>
+                            <p>
+                                return within 30 days
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <div class="icon">
+                            <img src="{{media url='etrend/home/service-27.png'}}" alt="Online Support" />
+                        </div>
+                        <div class="text">
+                            <strong>
+                                Online Support
+                            </strong>
+                            <p>
+                                24 hours a day
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <div class="icon">
+                            <img src="{{media url='etrend/home/service-28.png'}}" alt="Free Shipping & Return" />
+                        </div>
+                        <div class="text">
+                            <strong>
+                                Free Shipping
+                            </strong>
+                            <p>
+                                On all US order above $100
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Ten</title>
+            <identifier>et_home_services_ten</identifier>
+            <content><![CDATA[<div class="home-services-ten">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-29.png'}}" alt="service-29" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained staffs are ready to online support 24 hours a day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-30.png'}}" alt="service-30" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Money Back Guarantee
+                        </strong>
+                        <p>
+                            100% money back guarantee, if a buyer is not satisfied with a product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-31.png'}}" alt="service-31" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping & Return
+                        </strong>
+                        <p>
+                            We provide free shipping worldwide & return items within 7 days.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Eleven</title>
+            <identifier>et_home_services_eleven</identifier>
+            <content><![CDATA[<div class="home-services-eleven">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-32.png'}}" alt="Free Shipping" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            On all US order above $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-33.png'}}" alt="Secure Payment" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Secure Payment
+                        </strong>
+                        <p>
+                            Secure payment with PEV
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-34.png'}}" alt="Refund Policy" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Refund Policy
+                        </strong>
+                        <p>
+                            Return within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Twelve</title>
+            <identifier>et_home_services_twelve</identifier>
+            <content><![CDATA[<div class="home-services-twelve">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-35.png'}}" alt="24/7 Online Support" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained staff are ready to help
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-36.png'}}" alt="Money Back Guarantee" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Money Back Guarantee
+                        </strong>
+                        <p>
+                            100% money back guarantee
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-37.png'}}" alt="Free Shipping & Return" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping & Return
+                        </strong>
+                        <p>
+                            Free shipping on orders over $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Thirteen</title>
+            <identifier>et_home_services_thirteen</identifier>
+            <content><![CDATA[<div class="home-services-thirteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-38.png'}}" alt="service-38" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Auto Loan Facility
+                        </strong>
+                        <p>
+                            Easy Finance
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-39.png'}}" alt="service-39" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Documentation
+                        </strong>
+                        <p>
+                            No Hidden Charges
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-40.png'}}" alt="service-40" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Customer Support
+                        </strong>
+                        <p>
+                            24/7 Online Support
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-41.png'}}" alt="service-41" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Quality Warranty
+                        </strong>
+                        <p>
+                            5 Year Warranty
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Fourteen</title>
+            <identifier>et_home_services_fourteen</identifier>
+            <content><![CDATA[<div class="home-services-fourteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-42.png'}}" alt="service-42" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Online Support
+                        </strong>
+                        <p>
+                            24 hours a day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-43.png'}}" alt="service-43" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Secure Payments
+                        </strong>
+                        <p>
+                            secure payment with PEV
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-44.png'}}" alt="service-44" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Refund Policy
+                        </strong>
+                        <p>
+                            return within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-45.png'}}" alt="service-45" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            On all US order above $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Fifteen</title>
+            <identifier>et_home_services_fifteen</identifier>
+            <content><![CDATA[<div class="home-services-fifteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-46.png'}}" alt="service-46" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained staffs are ready to help 24/7
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-47.png'}}" alt="service-47" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Money Back Guarantee
+                        </strong>
+                        <p>
+                            100% money back guarantee
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-48.png'}}" alt="service-48" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping & Return
+                        </strong>
+                        <p>
+                            Free shipping on all orders over $100
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Services Sixteen</title>
+            <identifier>et_home_services_sixteen</identifier>
+            <content><![CDATA[<div class="home-services-sixteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-49.png'}}" alt="service-49" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            24/7 Online Support
+                        </strong>
+                        <p>
+                            Trained Staff are ready to online
+                            support 24 hours a day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-50.png'}}" alt="service-50" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Secure Payments
+                        </strong>
+                        <p>
+                            We ensure secure payment with 
+                            PEV
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-51.png'}}" alt="service-51" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Refund Policy
+                        </strong>
+                        <p>
+                            Simply return within 30 days
+                            for an exchange
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <div class="icon">
+                        <img src="{{media url='etrend/home/service-52.png'}}" alt="service-52" />
+                    </div>
+                    <div class="text">
+                        <strong>
+                            Free Shipping
+                        </strong>
+                        <p>
+                            Free shipping on all US order 
+                            above $200
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Blogs</title>
+            <identifier>et_home_blogs</identifier>
+            <content><![CDATA[<div class="blogs-wrapper">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Latest <i>Blogs</i></span>
+        </div>
+        <div class="content-main">
+            <div class="item-row">
+                <div id="home-blogslider" class="items owl-carousel owl-theme">
+                    <div class="item" style="display: none;">
+                        <div class="item-inner">
+                            <div class="img-block">
+                                <a href="#">
+                                    <img src="{{media url='etrend/blog/blog-1.png'}}" alt="">
+                                </a>
+                                <div class="post-date">
+                                    <span>July 30, 2020</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="post-title">
+                                    <a class="post-item-link" href="#">
+                                        Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+                                    </a>
+                                </div>
+                                <div class="post-text">
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.
+                                    </p>
+                                </div>
+                                <a class="action primary" href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="display: none;">
+                        <div class="item-inner">
+                            <div class="img-block">
+                                <a href="#">
+                                    <img src="{{media url='etrend/blog/blog-2.png'}}" alt="#">
+                                </a>
+                                <div class="post-date">
+                                    <span>July 22, 2020</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="post-title">
+                                    <a class="post-item-link" href="#">
+                                        Ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    </a>
+                                </div>
+                                <div class="post-text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <a class="action primary" href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="display: none;">
+                        <div class="item-inner">
+                            <div class="img-block">
+                                <a href="#">
+                                    <img src="{{media url='etrend/blog/blog-3.png'}}" alt="">
+                                </a>
+                                <div class="post-date">
+                                    <span>July 22, 2020</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="post-title">
+                                    <a class="post-item-link" href="#">
+                                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                                    </a>
+                                </div>
+                                <div class="post-text">
+                                    <p>
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                    </p>
+                                </div>
+                                <a class="action primary" href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" style="display: none;">
+                        <div class="item-inner">
+                            <div class="img-block">
+                                <a href="#">
+                                    <img src="{{media url='etrend/blog/blog-1.png'}}" alt="">
+                                </a>
+                                <div class="post-date">
+                                    <span>July 14, 2020</span>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="post-title">
+                                    <a class="post-item-link" href="#">
+                                        Ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    </a>
+                                </div>
+                                <div class="post-text">
+                                    <p>
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    </p>
+                                </div>
+                                <a class="action primary" href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Home Brand Slider</title>
+            <identifier>et_brand_slider</identifier>
+            <content><![CDATA[<div class="brands-wrapper">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Shop By <i>Brand</i></span>
+        </div>
+        <div class="content-main">
+            <div class="brands-slider owl-carousel owl-theme">
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand1.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand2.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand3.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand4.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand5.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand1.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="{{media url='etrend/brand/brand2.png'}}" alt="brand-image" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block One</title>
+            <identifier>et_promotion_one</identifier>
+            <content><![CDATA[<div class="promotion-one">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image1.jpg'}}" alt="image" />
+                    <div class="text-content">
+                        <p>
+                            Only <span>Three</span><br/>
+                            <strong>DAYS LEFT</strong><br/>
+                            on Fashion<br/>
+                            Weeks sale!
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image2.jpg'}}" alt="image" />
+                    <div class="text-content">
+                        <p>
+                            Get <span>Winter</span><br/>
+                            <strong>LOOKBOOK</strong><br/>
+                            with online<br/>
+                            purchase
+                        </p>
+                        <a class="action primary" href="#">
+                            Get Your Copy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Two</title>
+            <identifier>et_promotion_two</identifier>
+            <content><![CDATA[<div class="promotion-two" style="background-image: url({{media url='etrend/home/paralex-bg.jpg'}});">
+    <div class="page-main">
+        <div class="content-main">
+            <h3>
+                Summer Lookbook is out now!
+            </h3>
+            <a class="link-btn" href="#">
+                <span>Get your copy</span>
+            </a>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Three</title>
+            <identifier>et_promotion_three</identifier>
+            <content><![CDATA[<div class="promotion-three">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image3.jpg'}}" alt="ad-block 3">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image4.jpg'}}" alt="ad-block 4">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image5.jpg'}}" alt="ad-block 5">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Four</title>
+            <identifier>et_promotion_four</identifier>
+            <content><![CDATA[<div class="promotion-four">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image6.jpg'}}" alt="ad-block 6">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image7.jpg'}}" alt="ad-block 7">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image8.jpg'}}" alt="ad-block 8">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image9.jpg'}}" alt="ad-block 9">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image10.jpg'}}" alt="ad-block 10">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Five</title>
+            <identifier>et_promotion_five</identifier>
+            <content><![CDATA[<div class="promotion-five">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="promotion-wrapper">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image11.jpg'}}" alt="ad-block 1">
+                        <div class="text-content">
+                            <span>Low Prices Guarantee</span>
+                            <p>
+                                <strong>Interior <span>Parts</span></strong>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item middle">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image12.jpg'}}" alt="ad-block 2">
+                        <div class="text-content">
+                            <span>Best Selling Item</span>
+                            <p>
+                                <strong>Exhaust Gas <span>System</span></strong>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image13.jpg'}}" alt="ad-block 3">
+                        <div class="text-content">
+                            <span>Next Level Collection</span>
+                            <p>
+                                <strong>Wheels & <span>Tires</span></strong>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Six</title>
+            <identifier>et_promotion_six</identifier>
+            <content><![CDATA[<div class="promotion-six">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image14.jpg'}}" alt="ad-block 4" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Engine <span>Oils</span></strong>
+                            Save upto <span>50%</span> off<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image15.jpg'}}" alt="ad-block 5" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Custom & <span>Headlights</span></strong>
+                            Save upto <span>35%</span> off<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Seven</title>
+            <identifier>et_promotion_seven</identifier>
+            <content><![CDATA[<div class="promotion-seven">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="content-main">
+                <a class="item-inner" href="#">
+                    <img src="{{media url='etrend/home/image16.jpg'}}" alt="Advert Block One">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Eight</title>
+            <identifier>et_promotion_eight</identifier>
+            <content><![CDATA[<div class="promotion-eight">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="home-images-block-above">
+                <div class="item left">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image17.jpg'}}" alt="Advert Block One">
+                        </a>
+                    </div>
+                </div>
+                <div class="item right">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image18.jpg'}}" alt="Advert Block Two">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-images-block-below">
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image19.jpg'}}" alt="Advert Block Three">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image20.jpg'}}" alt="Advert Block Four">
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image21.jpg'}}" alt="Advert Block Five">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Nine</title>
+            <identifier>et_promotion_nine</identifier>
+            <content><![CDATA[<div class="promotion-nine">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image22.jpg'}}" alt="ad-block 22">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            Trendy<br/>
+                            <strong>Winter Collection</strong><br/>
+                            For <span>Trendy Kids</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item middle">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image23.jpg'}}" alt="ad-block 23">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            Sunglasses<br/>
+                            <strong>Get 30%</strong>Off<br/>
+                            On <span>Mega Sell</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image24.jpg'}}" alt="ad-block 24">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            Up to<br/>
+                            <strong>40% Discount</strong><br/>
+                            On <span>Winter Sell</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Ten</title>
+            <identifier>et_promotion_ten</identifier>
+            <content><![CDATA[<div class="promotion-ten">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image25.jpg'}}" alt="ad-block 25">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            A Moment<br/>
+                            <span>of</span> Trending Style
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image26.jpg'}}" alt="ad-block 26">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            More Wisdom<br/>
+                            <span>for</span> Your Baby
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image27.jpg'}}" alt="ad-block 27">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            Get 30% Off<br/>
+                            <span>on</span> School Bag
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image28.jpg'}}" alt="ad-block 28">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            RC Helicopter<br/>
+                            <span>for</span> Kids
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Eleven</title>
+            <identifier>et_promotion_eleven</identifier>
+            <content><![CDATA[<div class="promotion-eleven">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item first">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image29.jpg'}}" alt="ad-block 29">
+                    <div class="text-content">
+                        <p>
+                            <span>30%</span> Off<br/>
+                            <strong>Luxury With</strong><br/>
+                            Perfume<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item second">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image30.jpg'}}" alt="ad-block 30">
+                    <div class="text-content">
+                        <p>
+                            <span>40%</span> Off<br/>
+                            <strong>Great Deals &</strong><br/>
+                            Discount<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twelve</title>
+            <identifier>et_promotion_twelve</identifier>
+            <content><![CDATA[<div class="promotion-twelve">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item-wrapper-top">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image31.jpg'}}" alt="ad-block 31">
+                        <div class="text-content">
+                            <p>
+                                <span>Popular perfume</span><br/>
+                                <strong>Use the code</strong><br/>
+                                "PERFUME04"<br/>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image32.jpg'}}" alt="ad-block 32">
+                        <div class="text-content">
+                            <p>
+                                <span>Women perfume</span><br/>
+                                <strong>Discount Perfume</strong><br/>
+                                Up to 80% off<br/>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrapper-below">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image33.jpg'}}" alt="ad-block 33">
+                        <div class="text-content">
+                            <p>
+                                Up to 75% off on fashion<br/>
+                                <strong>Looking fashion</strong><span>Style in smell</span><br/>
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirteen</title>
+            <identifier>et_promotion_thirteen</identifier>
+            <content><![CDATA[<div class="promotion-thirteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="home-image-above">
+                <div class="item small-width">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image34.jpg'}}" alt="ad-block 34">
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <strong>Sofa & Armchair on sale</strong><br/>
+                                20% off on selected items<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item large-width">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image35.jpg'}}" alt="ad-block 35">
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <strong>Flat sale on office furniture</strong><br/>
+                                Get the best deal today!<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-image-below">
+                <div class="item large-width">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image36.jpg'}}" alt="ad-block 36">
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <strong>Bed room furniture</strong><br/>
+                                30% off on selected items<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item small-width">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image37.jpg'}}" alt="ad-block 37">
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <strong>Home office solutions</strong><br/>
+                                Up to 50% off today!!<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fourteen</title>
+            <identifier>et_promotion_fourteen</identifier>
+            <content><![CDATA[<div class="promotion-fourteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image38.jpg'}}" alt="ad-block 38">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Christmas sale on armchair</strong><br/>
+                            20% off on selected items<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item middle">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image39.jpg'}}" alt="ad-block 39">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Low cost designer dining</strong><br/>
+                            get the best deal today!<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image40.jpg'}}" alt="ad-block 40">
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Office space solutions</strong><br/>
+                            get expert opinion for furniture<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fifteen</title>
+            <identifier>et_promotion_fifteen</identifier>
+            <content><![CDATA[<div class="promotion-fifteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image43.jpg'}}" alt="image 43" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Free shipping worldwide</strong><br/>
+                            on order over $500<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image44.jpg'}}" alt="image 44" />
+                    <div class="text-content">
+                        <p>
+                            <strong>20% off all products</strong><br/>
+                            on all weekend sale<br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Sixteen</title>
+            <identifier>et_promotion_sixteen</identifier>
+            <content><![CDATA[<div class="promotion-sixteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image45.jpg'}}" alt="image 45" /></a>
+                    <div class="text-content">
+                        <p>
+                            Best <br/>
+                            <strong>Wine Tasting</strong><br/>
+                            <span>sale up to 30% off</span><br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image46.jpg'}}" alt="image 46" />
+                    <div class="text-content">
+                        <p>
+                            Extra <br/>
+                            <strong>Red Wine</strong><br/>
+                            <span>up to 20% off all wine</span><br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image47.jpg'}}" alt="image 47" />
+                    <div class="text-content">
+                        <p>
+                            Online <br/>
+                            <strong>Order Wine</strong><br/>
+                            <span>get 50% discount</span><br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Seventeen</title>
+            <identifier>et_promotion_seventeen</identifier>
+            <content><![CDATA[<div class="promotion-seventeen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image48.jpg'}}" alt="image 48" />
+                    <div class="text-content">
+                        <p>
+                            Super sale<br/>
+                            <strong>N95 Face Mask</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image49.jpg'}}" alt="image 49" />
+                    <div class="text-content">
+                        <p>
+                            Lab Surgery<br/>
+                            <strong>Surgical Gloves</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Eighteen</title>
+            <identifier>et_promotion_eighteen</identifier>
+            <content><![CDATA[<div class="promotion-eighteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image50.jpg'}}" alt="image 50" />
+                    <div class="text-content">
+                        <p>Super Sale</p>
+                        <strong>Blood Pressure Meter</strong>
+                        <div class="offer-text">15%<span>off</span></div>
+                    </div>
+                    <a class="action primary" href="#">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+            <div class="item middle">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image51.jpg'}}" alt="image 51" />
+                    <div class="text-content">
+                        <p>Covid 19</p>
+                        <strong>Hand Sanitizer</strong>
+                        <div class="offer-text">10%<span>off</span></div>
+                    </div>
+                    <a class="action primary" href="#">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image52.jpg'}}" alt="image 52" />
+                    <div class="text-content">
+                        <p>Special Offer</p>
+                        <strong>Hand Gloves</strong>
+                        <div class="offer-text">25%<span>off</span></div>
+                    </div>
+                    <a class="action primary" href="#">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Nineteen</title>
+            <identifier>et_promotion_nineteen</identifier>
+            <content><![CDATA[<div class="promotion-nineteen">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image53.jpg'}}" alt="image 53" />
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Flat 50% Off</strong><br/>
+                            On Order above $20
+                        </p>
+                        <div class="code">
+                            <p><span class="code-button">Use Code</span></p>
+                            <div class="code-btn">PIZZA21</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#">
+                        <img src="{{media url='etrend/home/image54.jpg'}}" alt="image 54" />
+                    </a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Up To 15% Off</strong><br/>
+                            Minimum Order of $10
+                        </p>
+                        <div class="code">
+                            <p><span class="code-button">Use Code</span></p>
+                            <div class="code-btn">BIGSAVE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twenty</title>
+            <identifier>et_promotion_twenty</identifier>
+            <content><![CDATA[<div class="promotion-twenty">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image55.jpg'}}" alt="image 55" />
+                    <div class="text-content">
+                        <p>
+                            We Guarantee <br/>
+                            <span>30 </span><strong>Minutes <br/> delivery!</strong>
+                        </p>
+                        <a class="action primary" href="#">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentyone</title>
+            <identifier>et_promotion_twentyone</identifier>
+            <content><![CDATA[<div class="promotion-twentyone">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item left">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image56.jpg'}}" alt="image 56" />
+                    <div class="text-content">
+                        <p>
+                            Discount<br/>
+                            <strong>50% Off</strong><br/>
+                            Women<br/>
+                            Collection
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item right">
+                <div class="item-inner above">
+                    <img src="{{media url='etrend/home/image57.jpg'}}" alt="image 57" />
+                    <div class="text-content">
+                        <p>
+                            Up to<br/>
+                            <strong>15% Off</strong><br/>
+                            Trendy<br/>
+                            Fashhion
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+                <div class="item-inner below">
+                    <img src="{{media url='etrend/home/image58.jpg'}}" alt="image 58" />
+                    <div class="text-content">
+                        <p>
+                            Flat<br/>
+                            <strong>30% Off</strong><br/>
+                            Stylish<br/>
+                            Jacket
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentytwo</title>
+            <identifier>et_promotion_twentytwo</identifier>
+            <content><![CDATA[<div class="promotion-twentytwo">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image59.jpg'}}" alt="image 59" /></a>
+                    <div class="text-content">
+                        <p>
+                            <span>30% Discount</span><br/>
+                            Women Special<br/>
+                            Collection
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image60.jpg'}}" alt="image 60" /></a>
+                    <div class="text-content">
+                        <p>
+                            <span>50% Discount</span><br/>
+                            Best Summer<br/>
+                            Collection
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image61.jpg'}}" alt="image 61" /></a>
+                    <div class="text-content">
+                        <p>
+                            <span>15% Discount</span><br/>
+                            Trens Fashhion<br/>
+                            Sale Offer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentythree</title>
+            <identifier>et_promotion_twentythree</identifier>
+            <content><![CDATA[<div class="promotion-twentythree">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image62.jpg'}}" alt="image62" />
+                    <div class="text-content">
+                        <p>
+                            <span>up to 30% off</span><br/>
+                            <strong>Home Pod<br/>
+                            Mini 3</strong>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image63.jpg'}}" alt="image63" />
+                    <div class="text-content">
+                        <p>
+                            <span>flat 20% off</span><br/>
+                            <strong>Laptop &<br/>
+                            Computer</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentyfour</title>
+            <identifier>et_promotion_twentyfour</identifier>
+            <content><![CDATA[<div class="promotion-twentyfour">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image64.jpg'}}" alt="image64" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Amazing<br/>
+                            Airpods</strong><br/>
+                            <span>new wireless option</span>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image65.jpg'}}" alt="image65" />
+                    <div class="text-content">
+                        <p>
+                            <strong>X-Box<br/>
+                            controler</strong><br/>
+                            <span>the best products</span>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image66.jpg'}}" alt="image66" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Camera<br/>
+                            & Video</strong><br/>
+                            <span>30% off buy online</span>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentyfive</title>
+            <identifier>et_promotion_twentyfive</identifier>
+            <content><![CDATA[<div class="promotion-twentyfive">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image67.jpg'}}" alt="image 67" />
+                    <div class="text-content">
+                        <p>
+                            Trending Now<br/>
+                            <strong>Fruits Organic</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image68.jpg'}}" alt="image 68" />
+                    <div class="text-content">
+                        <p>
+                            Trending Now<br/>
+                            <strong>Protein Powder</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentysix</title>
+            <identifier>et_promotion_twentysix</identifier>
+            <content><![CDATA[<div class="promotion-twentysix">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image69.jpg'}}" alt="image 69" />
+                    <div class="text-content">
+                        <p>
+                            Up to <span>25%</span> Off<br/>
+                            <strong>Multivitamin Gummies</strong><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentyseven</title>
+            <identifier>et_promotion_twentyseven</identifier>
+            <content><![CDATA[<div class="promotion-twentyseven" style="background-image: url({{media url='etrend/home/gym-parallax-bg.jpg'}});">
+    <div class="page-main">
+        <div class="content-main">
+            <h3>
+                Workout from home?
+            </h3>
+            <p>
+                We've got plenty of training programs available in our store.<br/>
+                Updated weekly, start your fitness from home.
+            </p>
+            <a class="action primary" href="#">
+                Join now
+            </a>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentyeight</title>
+            <identifier>et_promotion_twentyeight</identifier>
+            <content><![CDATA[<div class="promotion-twentyeight">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item-wrapper left">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image70.jpg'}}" alt="image 70" />
+                        <div class="text-content">
+                            <h3>Dumbbell</h3>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image71.jpg'}}" alt="image 71" />
+                        <div class="text-content">
+                            <h3>Exercise Ball</h3>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="item-wrapper">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image72.jpg'}}" alt="image 72" />
+                        <div class="text-content">
+                            <h3>Push Up</h3>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrapper right">
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image73.jpg'}}" alt="image 73" />
+                        <div class="text-content">
+                            <h3>Skipping Rope</h3>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <img src="{{media url='etrend/home/image74.jpg'}}" alt="image 74" />
+                        <div class="text-content">
+                            <h3>Deadlift</h3>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Twentynine</title>
+            <identifier>et_promotion_twentynine</identifier>
+            <content><![CDATA[<div class="promotion-twentynine">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image75.jpg'}}" alt="image 75" />
+                    <div class="text-content">
+                        <p>
+                            <span>#restock</span><br/>
+                            Facewash & Shampoo<br/>
+                            <strong>Up To 20% Off</strong>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image76.jpg'}}" alt="image 76" />
+                    <div class="text-content">
+                        <p>
+                            <span>#summer</span><br/>
+                            Cosmetics Ever<br/>
+                            <strong>Discount 20% Off</strong>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirty</title>
+            <identifier>et_promotion_twentythirty</identifier>
+            <content><![CDATA[<div class="promotion-thirty">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image77.jpg'}}" alt="image 75" />
+                    <div class="text-content">
+                        <p>
+                            Exfoliate your way<br/>
+                            To smooth skin!<br/>
+                            <span>Peels. Refines. Softnes.</span>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtyone</title>
+            <identifier>et_promotion_thirtyone</identifier>
+            <content><![CDATA[<div class="promotion-thirtyone">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item left">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image78.jpg'}}" alt="image 78" />
+                    <div class="text-content">
+                        <p>
+                            Best Selling Books<br/>
+                            <span>Starting at $21</span><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item right">
+                <div class="item-inner above">
+                    <img src="{{media url='etrend/home/image79.jpg'}}" alt="image 79" />
+                    <div class="text-content">
+                        <p>
+                            Children Books<br/>
+                            <span>20% Off</span><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+                <div class="item-inner below">
+                    <img src="{{media url='etrend/home/image80.jpg'}}" alt="image 80" />
+                    <div class="text-content">
+                        <p>
+                            Business Books<br/>
+                            <span>New Arrivals</span><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtytwo</title>
+            <identifier>et_promotion_thirtytwo</identifier>
+            <content><![CDATA[<div class="promotion-thirtytwo">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image81.jpg'}}" alt="image 81" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Sweet Afton</strong><br/>
+                            Author: Clent Moore<br/>
+                            $170.00 <span>$180.00</span><br/>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtythree</title>
+            <identifier>et_promotion_thirtythree</identifier>
+            <content><![CDATA[<div class="promotion-thirtythree">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item-wrapper-above">
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image82.jpg'}}" alt="image 82" />
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <span>New Design</span><br/>
+                                Wedding<br/>
+                                Rings
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image83.jpg'}}" alt="image 83" />
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <span>Stylish Design</span><br/>
+                                Stylish<br/>
+                                Earrings
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-wrapper-below">
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image84.jpg'}}" alt="image 84" />
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <span>Get Offer</span><br/>
+                                Pearl<br/>
+                                Necklaces
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-inner">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/image85.jpg'}}" alt="image 85" />
+                        </a>
+                        <div class="text-content">
+                            <p>
+                                <span>New Collection</span><br/>
+                                Diamond<br/>
+                                Bracelet
+                            </p>
+                            <a class="action primary" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtyfour</title>
+            <identifier>et_promotion_thirtyfour</identifier>
+            <content><![CDATA[<div class="promotion-thirtyfour" style="background-image: url({{media url='etrend/home/jwlry-paralex-bg.jpg'}});">
+    <div class="page-main">
+        <div class="content-main">
+            <p>
+                <span>Exclusive offer - 10% off this week</span><br/>
+                Jewelry Arrivals
+            </p>
+            <a class="action primary" href="#">
+                Shop now
+            </a>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtyfive</title>
+            <identifier>et_promotion_thirtyfive</identifier>
+            <content><![CDATA[<div class="promotion-thirtyfive">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image86.jpg'}}" alt="image 86" />
+                    <div class="text-content">
+                        <p>
+                            Pollution<br/>
+                            Free Ride
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image87.jpg'}}" alt="image 87" />
+                    <div class="text-content">
+                        <p>
+                            Rides Made<br/>
+                            Better
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtysix</title>
+            <identifier>et_promotion_thirtysix</identifier>
+            <content><![CDATA[<div class="promotion-thirtysix">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner" style="background-image: url({{media url='etrend/home/image88.jpg'}});">
+                    <div class="text-content">
+                        <p>
+                            <strong>Big <span>Sale</span></strong><br/>
+                            Get <span>30%</span> Off Your<br/>
+                            Order of $100
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtyseven</title>
+            <identifier>et_promotion_thirtyseven</identifier>
+            <content><![CDATA[<div class="promotion-thirtyseven">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image89.jpg'}}" alt="image 89" />
+                    <div class="text-content">
+                        <p>
+                            <strong>New Arrival Bike</strong><br/>
+                            <span>discount</span> Up To 20%
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image90.jpg'}}" alt="image 90" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Road Bike Electric</strong><br/>
+                            25% Big Offer <span>for repair bike</span>
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtyeight</title>
+            <identifier>et_promotion_thirtyeight</identifier>
+            <content><![CDATA[<div class="promotion-thirtyeight">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner" style="background-image: url({{media url='etrend/home/image91.jpg'}});">
+                    <div class="text-content">
+                        <p>
+                            <strong>30% Big Offer</strong><br/>
+                            The Bike that will change <br/>
+                            your life
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Thirtynine</title>
+            <identifier>et_promotion_thirtynine</identifier>
+            <content><![CDATA[<div class="promotion-thirtynine">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image92.jpg'}}" alt="image 92" /></a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Best Deal</strong><br/>
+                            Edge to edge full <br/>
+                            screen coverage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image93.jpg'}}" alt="image 93" /></a>
+                    <div class="text-content">
+                        <p>
+                            <strong>New Arrival</strong><br/>
+                            Best Carbon pollynet <br/>
+                            belt with smart dial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Forty</title>
+            <identifier>et_promotion_forty</identifier>
+            <content><![CDATA[<div class="promotion-forty">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image94.jpg'}}" alt="image 94" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Tempered glass</strong><br/>
+                            Make your life smart
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image95.jpg'}}" alt="image 95" />
+                    <div class="text-content">
+                        <p>
+                            <strong>New Brands</strong><br/>
+                            A sleek-and-chic touch
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image96.jpg'}}" alt="image 96" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Watch Case</strong><br/>
+                            Store your watch in cover
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fortyone</title>
+            <identifier>et_promotion_fortyone</identifier>
+            <content><![CDATA[<div class="promotion-fortyone">
+    <div class="page-main">
+        <div class="promotion-wrapper">
+            <div class="item-row">
+                <div class="block-right">
+                    <div class="img-block above-block">
+                        <div class="img-block-inner">
+                            <img src="{{media url='etrend/home/image97.jpg'}}" alt="image 97" />
+                            <div class="text-content t-left">
+                                <p>
+                                    <strong>Up To 20% Off</strong><br/>
+                                    On Sport Equipment
+                                </p>
+                                <a class="action primary" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-block below-block">
+                        <div class="img-block-inner">
+                            <img src="{{media url='etrend/home/image98.jpg'}}" alt="image 98" />
+                            <div class="text-content t-right">
+                                <p>
+                                    <strong>Flat 10% Off</strong><br/>
+                                    Badminton Racket
+                                </p>
+                                <a class="action primary" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-left">
+                    <div class="img-block">
+                        <div class="img-block-inner">
+                            <img src="{{media url='etrend/home/image99.jpg'}}" alt="image 99" />
+                            <div class="text-content t-right">
+                                <p>
+                                    <strong>Sale For a Week</strong><br/>
+                                    Kick Our Way In
+                                </p>
+                                <a class="action primary" href="#">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fortytwo</title>
+            <identifier>et_promotion_fortytwo</identifier>
+            <content><![CDATA[<div class="promotion-fortytwo">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image100.jpg'}}" alt="image 100" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Tennis, </strong>It's in my<br/>
+                            Blood
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image101.jpg'}}" alt="image 101" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Bowling </strong>Is right<br/>
+                            Up my alley
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image102.jpg'}}" alt="image 102" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Skippin' </strong>with<br/>
+                            My squad
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fortythree</title>
+            <identifier>et_promotion_fortythree</identifier>
+            <content><![CDATA[<div class="promotion-fortythree">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image103.jpg'}}" alt="image 103" /></a>
+                    <div class="text-content">
+                        <p>
+                            <strong>30% Off</strong><br/>
+                            Best Flowers. Lower Prices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image104.jpg'}}" alt="image 104" /></a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Flat 25% Off</strong><br/>
+                            Buds Grow As Your Love Grows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-inner">
+                    <a href="#"><img src="{{media url='etrend/home/image105.jpg'}}" alt="image 105" /></a>
+                    <div class="text-content">
+                        <p>
+                            <strong>Up To 40% Off</strong><br/>
+                            Feel The Power Of The Flower
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Promotion Block Fortyfour</title>
+            <identifier>et_promotion_fortyfour</identifier>
+            <content><![CDATA[<div class="promotion-fortyfour">
+    <div class="page-main">
+        <div class="item-row">
+            <div class="item">
+                <div class="item-inner">
+                    <img src="{{media url='etrend/home/image106.jpg'}}" alt="image 106" />
+                    <div class="text-content">
+                        <p>
+                            <strong>Surprise With Flowers</strong>
+                            Make someone smile with these instant mood-boosters.
+                        </p>
+                        <a class="action primary" href="#">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Social Icons</title>
+            <identifier>et_social_icons</identifier>
+            <content><![CDATA[<ul class="socials">
+    <li>
+        <a href="#">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-vimeo" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Social Icons Two</title>
+            <identifier>et_social_icons_two</identifier>
+            <content><![CDATA[<div class="title">
+    Follow Us
+</div>
+<div class="content">
+    <p>Follow us on social network and get the latest updates</p>
+    <ul class="socials-two">
+        <li>
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Logo, Info and Socials</title>
+            <identifier>et_footer_logo_info_social</identifier>
+            <content><![CDATA[<div class="footer-logo logo-info-socials">
+    <img src="{{media url='logo/default/vitamin-footer-logo.png'}}" title="Etrend Vitamin" alt="Etrend Vitamin" />
+</div>
+<div class="info-socials">
+    <p>Our products are freshly harvested, washed ready for box and finally delivered from our family farm right to your doostep.</p>
+    <ul class="socials">
+        <li>
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+                <title>Footer Logo and Info</title>
+                <identifier>et_footer_logo_info_block</identifier>
+                <content><![CDATA[<div class="footer-logo logo-info">
+                        <a href="#">
+                                <img src="{{media url='logo/default/health-footer-logo.png'}}" title="Etrend Health" alt="Etrend Health" />
+                        </a>
+        </div>
+        <div class="footer-logo-info">
+                <div class="add-item">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+        </div>]]></content>
+                <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Payment Icons</title>
+            <identifier>et_payment_icons</identifier>
+            <content><![CDATA[<ul class="payment-icons">
+    <li><img src="{{media url='etrend/payment/amex.png'}}" alt="Amex" /></li>
+    <li><img src="{{media url='etrend/payment/mastercard.png'}}" alt="Master Card" /></li>
+    <li><img src="{{media url='etrend/payment/paypal.png'}}" alt="Paypal" /></li>
+    <li><img src="{{media url='etrend/payment/visa.png'}}" alt="Visa" /></li>
+</ul>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter</title>
+            <identifier>et_footer_top_newsletter</identifier>
+            <content><![CDATA[<div class="top-newsletter">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Latest From <i>Etrend</i></span>
+        </div>
+        <div class="section-content">
+            <p>
+                Subscribe to our newsletter to get exclusive discounts and new theme launches right in your inbox.
+            </p>
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Two</title>
+            <identifier>et_footer_top_newsletter_two</identifier>
+            <content><![CDATA[<div class="top-newsletter">
+    <div class="page-main">
+        <div class="title">
+            <span>Enter your email & hit send to subscribe</span>
+        </div>
+        <div class="content">
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Three</title>
+            <identifier>et_footer_top_newsletter_three</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-three">
+	<div class="page-main">
+		<div class="content-main">
+			<div class="title">
+				<span>Subscribe to our newsletter to get exclusive discounts and new theme launches right in your inbox.</span>
+			</div>
+			<div class="content">
+				{{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+			</div>
+		</div>
+	</div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Four</title>
+            <identifier>et_footer_top_newsletter_four</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-four">
+    <div class="page-main">
+        <div class="title">
+            <span>Enter your email & hit send to subscribe</span>
+            <p>Enter your email address to receive new updates</p>
+        </div>
+        <div class="content">
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Five</title>
+            <identifier>et_footer_top_newsletter_five</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-five">
+    <div class="page-main">
+        <div class="title">
+            <span>Sign up to get latest updates</span>
+            <p>Enter your email address to receive new updates</p>
+        </div>
+        <div class="content">
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Six</title>
+            <identifier>et_footer_top_newsletter_six</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-six">
+	<div class="page-main">
+		<div class="content-main">
+			<div class="title">
+				<span>Subscibe today and get 100% off your first purchase</span>
+			</div>
+			<div class="content">
+				{{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+			</div>
+		</div>
+	</div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter Seven</title>
+            <identifier>et_footer_top_newsletter_seven</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-seven">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Subscribe to our <i>Newsletter</i></span>
+        </div>
+        <div class="section-content">
+            <p>
+                Promotions, new products and sales. Directly to your inbox.
+            </p>
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter With Social Media</title>
+            <identifier>et_footer_top_newsletter_social</identifier>
+            <content><![CDATA[<div class="top-newsletter newsletter-social">
+    <div class="page-main">
+        <div class="content-main">
+            <div class="title">
+                <span>Newsletter</span>
+            </div>
+            <div class="content">
+                {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+            </div>
+        </div>
+        <ul class="socials">
+            <li>
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter With Services</title>
+            <identifier>et_footer_top_newsletter_services</identifier>
+            <content><![CDATA[<div class="news-services">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_footer_top_newsletter_two"}}
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_home_services_five"}}</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Top Newsletter With Logo</title>
+            <identifier>et_footer_top_newsletter_logo</identifier>
+            <content><![CDATA[<div class="top-newsletter with-logo">
+    <div class="page-main">
+        <a href="{{store url=''}}" title="Etrend" class="ft-logo">
+            <img src="{{media url='etrend/footer/italy-footer-logo.png'}}" alt="Etrend" />
+        </a>
+        <div class="title">
+            <span>Enter your email & hit send to subscribe</span>
+        </div>
+        <div class="content">
+            {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Column Newsletter</title>
+            <identifier>et_footer_column_newsletter</identifier>
+            <content><![CDATA[<div class="title">
+    Subscribe
+</div>
+<div class="content">
+    <p>
+        Enter your email & hit send to subscribe & get latest news & updates
+    </p>
+    {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Column Newsletter One</title>
+            <identifier>et_footer_column_newsletter_one</identifier>
+            <content><![CDATA[<div class="title">
+    Subscribe
+</div>
+<div class="content one">
+    <p>
+        Enter your email & hit send to subscribe & get latest news & updates
+    </p>
+    {{block class="Magento\Newsletter\Block\Subscribe" name="theme.form.subscribe" as="theme.form.subscribe" template="Magento_Newsletter::subscribe.phtml"}}
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Get in Touch</title>
+            <identifier>et_footer_contact_info</identifier>
+            <content><![CDATA[<div class="title">
+    Get in Touch
+</div>
+<div class="content">
+    <div class="add-item">
+        <div class="icon">
+            <i class="fa fa-map-marker"></i>
+        </div>
+        <div class="text">
+            <strong>Address</strong>
+            <p>123 Street, City, London</p>
+        </div>
+    </div>
+    <div class="add-item">
+        <div class="icon">
+            <i class="fa fa-phone"></i>
+        </div>
+        <div class="text">
+            <strong>Phone</strong>
+            <p>(123) 456 7890</p>
+        </div>
+    </div>
+    <div class="add-item">
+        <div class="icon">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="text">
+            <strong>Mail Us</strong>
+            <p>mail@example.com</p>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer My Account</title>
+            <identifier>et_footer_my_account</identifier>
+            <content><![CDATA[<div class="title">
+    My Account
+</div>
+<div class="content">
+    <ul>
+        <li>
+            <a href="{{store url='customer/account'}}">My Account</a>
+        </li>
+        <li>
+            <a href="{{store url='customer/account'}}">Login</a>
+        </li>
+        <li>
+            <a href="{{store url='checkout/cart'}}">Shopping Cart</a>
+        </li>
+        <li>
+            <a href="{{store url='wishlist'}}">My Wishlist</a>
+        </li>
+        <li>
+            <a href="#">Track Order</a>
+        </li>
+        <li>
+            <a href="#">Return Policy</a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Company</title>
+            <identifier>et_footer_company</identifier>
+            <content><![CDATA[<div class="title">
+    Company
+</div>
+<div class="content">
+    <ul>
+        <li>
+            <a href="#">What We Do</a>
+        </li>
+        <li>
+            <a href="#">Available Services</a>
+        </li>
+        <li>
+            <a href="#">Latest Posts</a>
+        </li>
+        <li>
+            <a href="#">Advanced Search</a>
+        </li>
+        <li>
+            <a href="#">FAQs</a>
+        </li>
+        <li>
+            <a href="#">Contact Us</a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Customer Services</title>
+            <identifier>et_footer_customer_services</identifier>
+            <content><![CDATA[<div class="title">
+    Customer Services
+</div>
+<div class="content">
+    <ul>
+        <li>
+            <a href="tel:1234567890">Phone: +123-456-7890</a>
+        </li>
+        <li>
+            <a href="#">Live Chat</a>
+        </li>
+        <li>
+            <a href="#">About Us</a>
+        </li>
+        <li>
+            <a href="#">Terms & Condition</a>
+        </li>
+        <li>
+            <a href="#">Customer Relation</a>
+        </li>
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Instagram Images</title>
+            <identifier>et_footer_instagram_images</identifier>
+            <content><![CDATA[<div class="content">
+    <ul class="insta-imgs">
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-1.png'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-2.png'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-3.png'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-4.png'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-5.png'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-6.png'}}" alt="image" />
+            </a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Instagram Gallery Images</title>
+            <identifier>et_instagram_images</identifier>
+            <content><![CDATA[<div class="insta-images-two">
+    <div class="page-main">
+        <div class="section-title">
+            <span>Instagram <i>Gallery</i></span>
+        </div>
+        <div class="section-content">
+            <div class="item-row">
+                <ul class="insta-imgs items">
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-1.jpg'}}" alt="insta image 1" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-2.jpg'}}" alt="insta image 2" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-3.jpg'}}" alt="insta image 3" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-4.jpg'}}" alt="insta image 4" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-5.jpg'}}" alt="insta image 5" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <img src="{{media url='etrend/home/insta-6.jpg'}}" alt="insta image 6" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Instagram Images Block</title>
+            <identifier>footer_insta_image_block</identifier>
+            <content><![CDATA[<div class="instagram-images">
+    <ul class="insta-imgs">
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-7.jpg'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-8.jpg'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-9.jpg'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-10.jpg'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-11.jpg'}}" alt="image" />
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{media url='etrend/footer/insta-12.jpg'}}" alt="image" />
+            </a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Instagram Widget</title>
+            <identifier>et_footer_instagram_widget</identifier>
+            <content><![CDATA[{{widget type="ET\Instagram\Block\Footerinstagram" image_count="6"}}]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Quick Links</title>
+            <identifier>et_footer_quicklinks</identifier>
+            <content><![CDATA[<div class="title">
+    Quick Links
+</div>
+<div class="content">
+    <ul>
+        <li>
+            <a href="{{store url='privacy-policy-cookie-restriction-mode'}}">
+                Privacy and Cookie Policy
+            </a>
+        </li>
+        <li>
+            <a href="{{store url='search/term/popular'}}">
+                Search Terms
+            </a>
+        </li>
+        <li>
+            <a href="{{store url='contact'}}">
+                Contact Us
+            </a>
+        </li>
+        <li>
+            <a href="{{store url='sales/guest/form'}}">
+                Orders and Returns
+            </a>
+        </li>
+        <li>
+            <a href="{{store url='catalogsearch/advanced'}}" data-action="advanced-search">
+                Advanced Search
+            </a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Logo and Socials Content</title>
+            <identifier>et_footer_logo_socials</identifier>
+            <content><![CDATA[<div class="logo-socials align-center">
+    <img src="{{media url='logo/default/english-footer-logo.png'}}" title="Etrend" alt="Etrend" />
+    <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_social_icons"}}
+</div>
+]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Links and Socials Content</title>
+            <identifier>et_footer_links_socials</identifier>
+            <content><![CDATA[<div class="links-socials align-left">
+    <ul class="extra-links">
+        <li>
+            <a href="{{store url=''}}">Home</a>
+        </li>
+        <li>
+            <a href="#">Features</a>
+        </li>
+        <li>
+            <a href="#">Men</a>
+        </li>
+        <li>
+            <a href="#">Women</a>
+        </li>
+        <li>
+            <a href="#">Accessories</a>
+        </li>
+        <li>
+            <a href="#">Blog</a>
+        </li>
+        <li>
+            <a href="{{store url='contact'}}">Contact</a>
+        </li>
+        <br/>
+        <li>
+            <a href="#">Privacy</a>
+        </li>
+        <li>
+            <a href="#">Terms of use</a>
+        </li>
+    </ul>
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_social_icons"}}
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Contact Info and Socials</title>
+            <identifier>et_footer_contact_and_socials</identifier>
+            <content><![CDATA[<div class="info-socials">
+    <div class="contact-block">
+        <div class="inner-main">
+            <div class="icon">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+                <span>Need Help, Call Now:</span>
+                <a href="tel:1234567890">(123) 456 7890</a>
+            </div>
+        </div>
+    </div>
+    <div class="socials-block">
+        <div class="inner-main">
+            {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_social_icons"}}
+        </div>
+    </div>
+    <div class="email-block">
+        <div class="inner-main">
+            <div class="icon">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+                <span>Have Questions, Email:</span>
+                <a href="mailto:mail@example.com">mail@example.com</a>
+            </div>
+        </div>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Copyright Text</title>
+            <identifier>et_footer_copyright</identifier>
+            <content><![CDATA[<p class="copyright-text">Copyright &copy; Etrend 2020. All right reserved.</p>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Logo and Copyright Text</title>
+            <identifier>et_footer_logo_copyright</identifier>
+            <content><![CDATA[<div class="logo-copyright">
+    <span class="footer-logo"><img src="{{media url='etrend/footer/german-footer-logo.png'}}" title="Etrend" alt="Etrend" /></span>
+    <span class="copyright-text">Copyright &copy; Etrend 2020. All right reserved.</span>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Logo and Copyright Text Two</title>
+            <identifier>et_footer_logo_copyright_two</identifier>
+            <content><![CDATA[<div class="logo-copright-two">
+    <span class="footer-logo"><img src="{{media url='etrend/footer/spain-footer-logo.png'}}" title="Etrend" alt="Etrend" /></span>
+    <span class="copyright-text">Copyright &copy; Etrend 2020. All right reserved.</span>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Footer Socials, Payment Icons and Extra Links Block</title>
+            <identifier>et_footer_socials_payment_links</identifier>
+            <content><![CDATA[<div class="socials-payments-links">
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_social_icons"}}
+    {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="et_payment_icons"}}
+    <ul class="extra-links">
+        <li>
+            <a href="{{store url=''}}">Home</a>
+        </li>
+        <li>
+            <a href="#">Features</a>
+        </li>
+        <li>
+            <a href="#">Men</a>
+        </li>
+        <li>
+            <a href="#">Women</a>
+        </li>
+        <li>
+            <a href="#">Accessories</a>
+        </li>
+        <li>
+            <a href="#">Blog</a>
+        </li>
+        <li>
+            <a href="{{store url='contact'}}">Contact</a>
+        </li>
+    </ul>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Category Page Sidebar Block</title>
+            <identifier>et_category_page_sidebar</identifier>
+            <content><![CDATA[<a class="cat-promotion" href="#">
+    <img src="{{media url="etrend/sidebar/cat-sidebar-promotion.png"}}" alt="image" />
+</a>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Coupon - Product Page Offer Content</title>
+            <identifier>et_product_page_offer_content</identifier>
+            <content><![CDATA[<p><strong><i class="fa fa-star"></i> Special Offer!</strong></p>
+<p>Ut enim ad minim veniam quis nostrud laboris nisi 20% off. Sed aliquip do eiusmod tempor: <span>XYZ20</span></p>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Custom Tab 1</title>
+            <identifier>et_custom_tab1</identifier>
+            <content><![CDATA[<p><strong>Custom Tab Content</strong></p>
+<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,</p>
+<ul>
+<li>Similique sunt in culpa qui officia deserunt mollitia animi.</li>
+<li>Nam libero tempore cum soluta nobis est.</li>
+<li>Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis.</li>
+</ul>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Custom Tab 2</title>
+            <identifier>et_custom_tab2</identifier>
+            <content><![CDATA[<p><strong>Custom Tab Content</strong></p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+<p><img src="{{media url='etrend/tab-img.png'}}" alt="" /> </p>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Recently Viewed Products Float Content</title>
+            <identifier>et_recently_viewed_float</identifier>
+            <content><![CDATA[{{widget type="Magento\Catalog\Block\Widget\RecentlyViewed" uiComponent="widget_recently_viewed" page_size="10" show_attributes="name,image,price,learn_more" show_buttons="add_to_cart,add_to_compare,add_to_wishlist" template="product/widget/viewed/grid.phtml"}}]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Checkout Sidebar Content</title>
+            <identifier>et_checkout_sidebar_content</identifier>
+            <content><![CDATA[<div class="box-content">
+    <strong>Need Help?</strong>
+    <p>Any query about your order?<br/>We are here to help.</p>
+    <div class="contact-content">
+        <div class="item">
+            <a href="#">
+                <span class="icon">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                </span>
+                <span class="text">
+                    Start A Chat
+                </span>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <span class="icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </span>
+                <span class="text">
+                    Support Portal
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="secure-badge">
+    <i class="fa fa-lock" aria-hidden="true"></i>
+    SSL Secure Payment
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+        <cms_item>
+            <title>Checkout Bottom Content</title>
+            <identifier>et_checkout_bottom_content</identifier>
+            <content><![CDATA[<p style="color: red;font-weight: 600;font-size: 16px;margin-bottom: 20px;display: none;">Would you like to pay in INR? Please select INR from top currency switcher.</p>
+<div class="checkout-guarantee-content">
+    <div class="image-block">
+        <img src="{{media url='etrend/money-back.png'}}" />
+    </div>
+    <div class="text-block">
+        <strong>
+            Not happy with our products? No worries!
+        </strong>
+        <p>
+            Within 14 days of using our products on your website if you are not absolutely delighted,
+            we will return your money.
+        </p>
+    </div>
+</div>]]></content>
+            <is_active>1</is_active>
+        </cms_item>
+    </blocks>
+</root>

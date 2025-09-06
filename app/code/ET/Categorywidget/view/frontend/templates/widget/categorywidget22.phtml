@@ -1,0 +1,190 @@
+<?php
+$title = $this->getData('title');
+$showActualName = $this->getData('show_actual_name');
+$displaySubcat = $this->getData('display_subcat');
+$subcatCount = $this->getData('subcat_count');
+$customClass = $this->getData('custom_class');
+
+$enableSlider = $this->getData('enable_slider');
+$nav = $this->getData('nav');
+$dots = $this->getData('dots');
+$autoplay = $this->getData('autoplay');
+$stoponhover = $this->getData('stoponhover');
+$loop = $this->getData('loop');
+$mousedrag = $this->getData('mousedrag');
+$touchdrag = $this->getData('touchdrag');
+
+$itemDesktop = $this->getData('item_desktop');
+$itemSmallDesktop = $this->getData('item_small_desktop');
+$itemTablet = $this->getData('item_tablet');
+$itemSmallTablet = $this->getData('item_small_tablet');
+$itemMobile = $this->getData('item_mobile');
+$itemSmallMobile = $this->getData('item_small_mobile');
+$imgWidth = $this->getData('img_width');
+$imgHeight = $this->getData('img_height');
+$categoryIdsArry = array();
+$categoryIds = $this->getData('category_ids');
+if ($categoryIds != '') {
+    $categoryIdsArry = explode(',', $categoryIds);
+}
+
+$baseHelper = $this->helper('ET\Base\Helper\Data');
+$mediaUrl = $baseHelper->getMediaUrl();
+
+$helper = $this->helper('ET\Categorywidget\Helper\Data');
+$categories = $helper->getCategoryCollection(true, $categoryIdsArry);
+$countCat = 0;
+$countCat = count($categories);
+
+$randNum = rand(10, 1000);
+?>
+<?php if ($countCat > 0) { ?>
+    <div class="flwrshp-cat-slider fullwidth <?php if ($enableSlider == 1) { ?> slider-enabled <?php } ?>">
+        <div class="page-main">
+            <div class="section-title">
+                <span><?php echo htmlspecialchars_decode($title); ?></span>
+            </div>
+            <div class="section-content">
+                <div class="item-row">
+                    <ul id="catslider-<?php echo $randNum; ?>" class="items <?php if ($enableSlider == 1) { ?> flwrshp-slider-ul owl-carousel owl-theme <?php } ?>">
+                        <?php
+                        foreach ($categories as $category) {
+                            $catId = $category->getId();
+                            $categoryName = $category->getName();
+                            $displayName = $category->getDisplayName();
+                            $displayImage = $category->getThumbnail();
+                            // $displayImage = str_replace('/pub/media/', '', (string)$displayImage);
+                            if ($displayImage) {
+                            	$displayImage = str_replace('/media/', '', (string) $displayImage);
+                            	$displayImage = str_replace('/pub/media/', '', (string) $displayImage);
+                        	}
+                            $displayImageUrl = $mediaUrl . $displayImage;
+                            ?>
+                            <li class="item" <?php if ($enableSlider == 1) { ?> style="display: none;" <?php } ?>>
+                                <div class="item-inner">
+                                    <a href="<?php echo $category->getUrl(); ?>" title="<?php echo $categoryName; ?>">
+                                        <img src="<?php echo $displayImageUrl; ?>" alt="<?php echo $categoryName; ?>" width="<?php echo $imgWidth; ?>" height="<?php echo $imgHeight; ?>" />
+                                        <span class="flwrshp-title">
+                                            <?php
+                                            if ($showActualName) {
+                                                echo $categoryName;
+                                            } else {
+                                                echo $displayName;
+                                            }
+                                            ?>
+                                        </span>
+                                    </a>
+                                    <?php
+                                    if ($displaySubcat) {
+                                        $subCategories = $helper->getSubCategoryCollection($catId, $subcatCount);
+                                        if (count($subCategories) > 0) {
+                                            ?>
+                                            <ul class="subcat-items">
+                                                <?php foreach ($subCategories AS $subCat) { ?>
+                                                    <?php
+                                                    $name = $subCat['name'];
+                                                    $url = $subCat['url'];
+                                                    ?>
+                                                    <li>
+                                                        <a href="<?php echo $url; ?>" title="<?php echo $name; ?>">
+                                                            <?php echo $name; ?>
+                                                        </a>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php if ($enableSlider == 1) { ?>
+        <script>
+            require(['jquery', 'baseowlcarousel'], function () {
+                jQuery(document).ready(function () {
+                    jQuery('#catslider-<?php echo $randNum; ?>').owlCarousel({
+                        items: <?php echo $itemDesktop; ?>,
+                        responsive: {
+                            0: {
+                                items: <?php echo $itemSmallMobile; ?>
+                            },
+                            479: {
+                                items: <?php echo $itemMobile; ?>
+                            },
+                            639: {
+                                items: <?php echo $itemSmallTablet; ?>
+                            },
+                            767: {
+                                items: <?php echo $itemTablet; ?>
+                            },
+                            991: {
+                                items: <?php echo $itemSmallDesktop; ?>
+                            },
+                            1199: {
+                                items: <?php echo $itemDesktop; ?>
+                            }
+                        },
+                        loop: <?php echo ($loop) ? 'true' : 'false'; ?>,
+                        autoplay: <?php echo ($autoplay) ? 'true' : 'false'; ?>,
+                        autoplayHoverPause: <?php echo ($stoponhover) ? 'true' : 'false'; ?>,
+                        mouseDrag: <?php echo ($mousedrag) ? 'true' : 'false'; ?>,
+                        touchDrag: <?php echo ($touchdrag) ? 'true' : 'false'; ?>,
+                        dots: <?php echo ($dots) ? 'true' : 'false'; ?>,
+                        nav: <?php echo ($nav) ? 'true' : 'false'; ?>,
+                        navText: ['<div class="prev-arrow"></div>', '<div class="next-arrow"></div>']
+                    });
+                    jQuery('#catslider-<?php echo $randNum; ?> .item').show();
+                });
+            });
+        </script>
+    <?php } else { ?>
+        <style>
+        <?php if ($itemDesktop > 0) { ?>
+                .flwrshp-cat-slider .section-content .items .item {
+                    width: <?php echo 100 / $itemDesktop . '%'; ?>
+                }
+        <?php } ?>
+        <?php if ($itemDesktop > 0) { ?>
+                @media(max-width: 1199px) {
+                    .flwrshp-cat-slider .section-content .items .item {
+                        width: <?php echo 100 / $itemSmallDesktop . '%'; ?>
+                    }
+                }
+        <?php } ?>
+        <?php if ($itemDesktop > 0) { ?>
+                @media(max-width: 991px) {
+                    .flwrshp-cat-slider .section-content .items .item {
+                        width: <?php echo 100 / $itemTablet . '%'; ?>
+                    }
+                }
+        <?php } ?>
+        <?php if ($itemDesktop > 0) { ?>
+                @media(max-width: 767px) {
+                    .flwrshp-cat-slider .section-content .items .item {
+                        width: <?php echo 100 / $itemSmallTablet . '%'; ?>
+                    }
+                }
+        <?php } ?>
+        <?php if ($itemDesktop > 0) { ?>
+                @media(max-width: 639px) {
+                    .flwrshp-cat-slider .section-content .items .item {
+                        width: <?php echo 100 / $itemMobile . '%'; ?>
+                    }
+                }
+        <?php } ?>
+        <?php if ($itemDesktop > 0) { ?>
+                @media(max-width: 479px) {
+                    .flwrshp-cat-slider .section-content .items .item {
+                        width: <?php echo 100 / $itemSmallMobile . '%'; ?>
+                    }
+                }
+        <?php } ?>
+        </style>
+    <?php } ?>
+<?php } ?>

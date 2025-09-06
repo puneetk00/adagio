@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <facebookchatsection>
+            <generalgroup>
+                <enable>0</enable>
+                <fb_page_id></fb_page_id>
+                <fb_theme_color>#7646ff</fb_theme_color>
+                <fb_chat_minimized>1</fb_chat_minimized>
+            </generalgroup>
+        </facebookchatsection>
+    </default>
+</config>

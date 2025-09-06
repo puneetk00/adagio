@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="sales_order_item_renderers"/>
+    <update handle="sales_order_item_price"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Checkout\Block\Onepage\Success" name="et.checkout.success" template="ET_Orderfeedback::orderfeedback.phtml" cacheable="false" before="-" />
+        </referenceContainer>
+        <referenceContainer name="head.additional">
+            <block class="Magento\Checkout\Block\Onepage\Success" name="et.checkout.success.head" template="ET_Orderfeedback::head.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

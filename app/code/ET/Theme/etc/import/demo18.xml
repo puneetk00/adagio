@@ -1,0 +1,196 @@
+<root>
+    <config>
+        <web>
+            <default>
+                <cms_home_page>et_home_18</cms_home_page>
+            </default>
+        </web>
+        <cms>
+            <wysiwyg>
+                <enabled>hidden</enabled>
+            </wysiwyg>
+        </cms>
+        <design_section>
+            <general_settings>
+                <primary_color><![CDATA[#df453e]]></primary_color>
+                <primary_btn_bg_color_hover><![CDATA[#1c3e40]]></primary_btn_bg_color_hover>
+            </general_settings>
+        </design_section>
+        <theme_section>
+            <theme_layout>
+                <layout_type>fullwidth</layout_type>
+                <max_width>1170</max_width>
+            </theme_layout>
+            <font_family>
+                <use_custom_fonts>1</use_custom_fonts>
+                <google_font_family>Public Sans</google_font_family>
+            </font_family>
+            <cookie_policy>
+                <box_type>boxed</box_type>
+                <box_position>left</box_position>
+            </cookie_policy>
+            <page_messages>
+                <page_messages_toast>allpages</page_messages_toast>
+            </page_messages>
+            <scrolltop>
+                <enable>1</enable>
+            </scrolltop>
+            <addthis>
+                <enable>0</enable>
+                <pubid></pubid>
+            </addthis>
+            <install>
+                <overwrite_blocks>0</overwrite_blocks>
+                <overwrite_pages>0</overwrite_pages>
+            </install>
+        </theme_section>
+        <header_section>
+            <general>
+                <header_type>19</header_type>
+                <header_top_static_block></header_top_static_block>
+                <header_static_block>et_social_icons</header_static_block>
+                <display_icons>0</display_icons>
+            </general>
+            <megamenu>
+                <menu_before>et_nav_menu_before</menu_before>
+                <menu_after>et_nav_menu_after</menu_after>
+                
+                <menu_type>classic</menu_type>
+                <static_width>500px</static_width>
+                <max_level>0</max_level>
+                <show_home_link>1</show_home_link>
+                <show_home_icon>0</show_home_icon>
+                <home_icon></home_icon>
+                
+                <label1>New</label1>
+                <label2>Hot</label2>
+                <label3>Sale</label3>
+            </megamenu>
+        </header_section>
+        <footer_section>
+            <general>
+                <footer_type>21</footer_type>
+            </general>
+            <footer_top>
+                <enable>1</enable>
+                <static_block>footer_insta_image_block</static_block>
+            </footer_top>
+            <footer_middle>
+                <enable>1</enable>
+                <column_one_static_block>et_footer_contact_info</column_one_static_block>
+                <column_one_width>3</column_one_width>
+                <column_two_static_block>et_footer_my_account</column_two_static_block>
+                <column_two_width>3</column_two_width>
+                <column_three_static_block>et_footer_quicklinks</column_three_static_block>
+                <column_three_width>3</column_three_width>
+                <column_four_static_block>et_footer_column_newsletter_one</column_four_static_block>
+                <column_four_width>3</column_four_width>
+                <footer_middle_static_block></footer_middle_static_block>
+            </footer_middle>
+            <footer_bottom>
+                <enable>1</enable>
+                <left_static_block>et_footer_copyright</left_static_block>
+                <right_static_block>et_payment_icons</right_static_block>
+            </footer_bottom>
+        </footer_section>
+        <category_section>
+            <general>
+                <product_columns>4</product_columns>
+                <enable_rating>1</enable_rating>
+                <enable_new>1</enable_new>
+                <enable_featured>1</enable_featured>
+            </general>
+            <product_image>
+                <enable_alternate_image>0</enable_alternate_image>
+                <enable_aspect_ratio>0</enable_aspect_ratio>
+                <img_width>350</img_width>
+                <img_height>467</img_height>
+                <add_image_border>0</add_image_border>
+            </product_image>
+            <product_actions>
+                <enable_cart>1</enable_cart>
+                <display_only_icon>0</display_only_icon>
+                <move_cart>0</move_cart>
+                <enable_addto>1</enable_addto>
+                <move_addto>1</move_addto>
+            </product_actions>
+            <product_labels>
+                <show_new_label>1</show_new_label>
+                <show_sale_label>1</show_sale_label>
+            </product_labels>
+            <sidebar>
+                <sidebar_promotion_block>et_category_page_sidebar</sidebar_promotion_block>
+            </sidebar>
+            <recentliy_viewed>
+                <enabled>1</enabled>
+                <btn_text>Recently Viewed</btn_text>
+                <btn_position>left</btn_position>
+                <content_block>et_recently_viewed_float</content_block>
+            </recentliy_viewed>
+        </category_section>
+        <product_section>
+            <general>
+                <show_new_label>1</show_new_label>
+                <show_sale_label>1</show_sale_label>
+                <enable_addto>1</enable_addto>
+                <product_promotion_block>et_product_page_offer_content</product_promotion_block>
+            </general>
+            <countdown_timer>
+                <enabled>0</enabled>
+                <message_text><![CDATA[Hurry up! Grab your 10% OFF Now! Sale ends in:]]></message_text>
+                <message_color><![CDATA[#333333]]></message_color>
+                <timer_box_color><![CDATA[#333333]]></timer_box_color>
+                <timer_box_text_color><![CDATA[#FFFFFF]]></timer_box_text_color>
+                <timer_format><![CDATA[<div class="timer-wrapper">
+    <div class="time">%D</div>
+    <span class="text">Days</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%H</div>
+    <span class="text">Hrs</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%M</div>
+    <span class="text">Mins</span>
+</div>
+<div class="timer-wrapper">
+    <div class="time">%S</div>
+    <span class="text">Sec</span>
+</div>]]></timer_format>
+            </countdown_timer>
+            <custom_tabs>
+                <enable_tab_one>1</enable_tab_one>
+                <custom_tab_one_type>cmsblock</custom_tab_one_type>
+                <custom_tab_one_title>Custom Tab One</custom_tab_one_title>
+                <custom_tab_one_code>et_custom_tab1</custom_tab_one_code>
+                <enable_tab_two>1</enable_tab_two>
+                <custom_tab_two_type>cmsblock</custom_tab_two_type>
+                <custom_tab_two_title>Custom Tab Two</custom_tab_two_title>
+                <custom_tab_two_code>et_custom_tab2</custom_tab_two_code>
+            </custom_tabs>
+        </product_section>
+        <contact_section>
+            <content_blocks>
+                <top_block></top_block>
+                <bottom_block></bottom_block>
+            </content_blocks>
+            <contact_info>
+                <store_title><![CDATA[Etrend Store]]></store_title>
+                <store_phone><![CDATA[(123) 4567-890]]></store_phone>
+                <store_address><![CDATA[123 Street, City, London, 789AB]]></store_address>
+                <store_email><![CDATA[mail@example.com]]></store_email>
+                <addtional_info></addtional_info>
+            </contact_info>
+            <google_map>
+                <enabled>1</enabled>
+            </google_map>
+        </contact_section>
+        <checkout_section>
+            <general>
+                <enabled>1</enabled>
+                <checkout_sidebar>et_checkout_sidebar_content</checkout_sidebar>
+                <checkout_bottom>et_checkout_bottom_content</checkout_bottom>
+            </general>
+        </checkout_section>
+    </config>
+</root>
