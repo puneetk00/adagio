@@ -1,0 +1,166 @@
+<?php
+/**
+ * Product media data template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ * @var $escaper \Magento\Framework\Escaper
+ */
+?>
+
+<?php
+$images = $block->getGalleryImages()->getItems();
+$mainImage = current(array_filter($images, function ($img) use ($block) {
+    return $block->isMainImage($img);
+}));
+
+if (!empty($images) && empty($mainImage)) {
+    $mainImage = $block->getGalleryImages()->getFirstItem();
+}
+
+$helper = $block->getData('imageHelper');
+$mainImageData = $mainImage
+    ? $mainImage->getData('medium_image_url')
+    : $helper->getDefaultPlaceholderUrl('image');
+
+$imageWidth = $block->getImageAttribute('product_page_image_medium', 'width');
+$imageHeight = $block->getImageAttribute('product_page_image_medium', 'height');
+?>
+
+<!-- ================= MEDIA WRAPPER ================= -->
+<div class="product-media-wrapper">
+
+    <div class="media" id="media">
+        <div class="overlay" id="overlay"></div>
+
+        <div class="gallery-placeholder _block-content-loading"
+             data-gallery-role="gallery-placeholder">
+
+            <img
+                id="product-main-image"
+                alt="<?= $escaper->escapeHtmlAttr(__('Product image')) ?>"
+                class="gallery-placeholder__image"
+                src="<?= /* @noEscape */ $mainImageData ?>"
+                <?= $imageWidth ? 'width="' . $escaper->escapeHtmlAttr($imageWidth) . '"' : '' ?>
+                <?= $imageHeight ? 'height="' . $escaper->escapeHtmlAttr($imageHeight) . '"' : '' ?>
+            />
+            <link itemprop="image" href="<?= /* @noEscape */ $mainImageData ?>">
+        </div>
+    </div>
+
+    <!-- ================= COLOR SWATCHES ================= -->
+    <div class="swatches">
+        <div class="swatch" style="background:#777" data-action="reset"></div>
+        <div class="swatch" style="background:#000" data-action="bw"></div>
+        <div class="swatch" style="background:#ff005a" data-color="#ff005a"></div>
+        <div class="swatch" style="background:#1e5eff" data-color="#1e5eff"></div>
+    </div>
+
+</div>
+
+<!-- ================= MAGENTO GALLERY INIT ================= -->
+<script type="text/x-magento-init">
+{
+    "[data-gallery-role=gallery-placeholder]": {
+        "mage/gallery/gallery": {
+            "mixins":["magnifier/magnify"],
+            "magnifierOpts": <?= /* @noEscape */ $block->getMagnifier() ?>,
+            "data": <?= /* @noEscape */ $block->getGalleryImagesJson() ?>,
+            "options": <?= /* @noEscape */ $block->getGalleryOptions()->getOptionsJson() ?>,
+            "fullscreen": <?= /* @noEscape */ $block->getGalleryOptions()->getFSOptionsJson() ?>,
+            "breakpoints": <?= /* @noEscape */ $block->getBreakpoints() ?>
+        }
+    }
+}
+</script>
+
+<!-- ================= OVERLAY STYLES ================= -->
+<style>
+.product-media-wrapper {
+    max-width: 450px;
+    margin: auto;
+}
+
+.media {
+    position: relative;
+    overflow: hidden;
+}
+
+.media img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: filter 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Color mode */
+.media.color img {
+    filter: grayscale(1) contrast(1.05) brightness(1.05);
+}
+
+.media.color .overlay {
+    opacity: 0.85;
+    mix-blend-mode: color;
+}
+
+/* Black & White */
+.media.bw img {
+    filter: grayscale(1) contrast(1.1);
+}
+
+/* Swatches */
+.swatches {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.swatch {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+</style>
+
+<!-- ================= OVERLAY SCRIPT ================= -->
+<script>
+require(['jquery'], function ($) {
+    const media = document.getElementById('media');
+    const overlay = document.getElementById('overlay');
+
+    function reset() {
+        media.classList.remove('color', 'bw');
+        overlay.style.background = 'transparent';
+    }
+
+    $('.swatch').on('click', function () {
+        const color = $(this).data('color');
+        const action = $(this).data('action');
+
+        reset();
+
+        if (action === 'bw') {
+            media.classList.add('bw');
+        }
+
+        if (color) {
+            overlay.style.background = color;
+            media.classList.add('color');
+        }
+    });
+});
+</script>
+
