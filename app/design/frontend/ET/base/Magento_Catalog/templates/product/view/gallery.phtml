@@ -1,19 +1,19 @@
 <?php
 /**
- * Grid Gallery with Color Swatches (ALT-based Rectangles)
+ * Full Canvas Gallery with Color + Black & White
  * Magento 2.4.8
  *
  * @var $block \Magento\Catalog\Block\Product\View\Gallery
  * @var $escaper \Magento\Framework\Escaper
  */
 
-$helper  = $block->getData('imageHelper');
-$images  = $block->getGalleryImages()->getItems();
+$helper = $block->getData('imageHelper');
+$images = $block->getGalleryImages()->getItems();
 ?>
 
 <div class="product-media-wrapper">
 
-    <!-- Backend-only canvas -->
+    <!-- Hidden backend canvas -->
     <canvas id="imageCanvas" style="display:none;"></canvas>
 
     <!-- IMAGE GRID -->
@@ -23,7 +23,10 @@ $images  = $block->getGalleryImages()->getItems();
             $imageUrl = $image->getData('medium_image_url')
                 ?: $helper->getDefaultPlaceholderUrl('image');
 
-            // ALT contains rect info like: x=0.35;y=0.35;w=0.3;h=0.3
+            /**
+             * ALT FORMAT:
+             * x=0.35;y=0.35;w=0.3;h=0.3
+             */
             $alt = $image->getLabel() ?: 'x=0.35;y=0.35;w=0.3;h=0.3';
             ?>
             <div class="grid-item">
@@ -37,12 +40,13 @@ $images  = $block->getGalleryImages()->getItems();
         <?php endforeach; ?>
     </div>
 
-    <!-- COLOR SWATCHES -->
+    <!-- COLOR / BW SWATCHES -->
     <div class="swatches">
         <div class="swatch" data-color="#ff005a" style="background:#ff005a"></div>
         <div class="swatch" data-color="#1e5eff" style="background:#1e5eff"></div>
         <div class="swatch" data-color="#ffaa00" style="background:#ffaa00"></div>
         <div class="swatch" data-color="#00ff88" style="background:#00ff88"></div>
+        <div class="swatch" data-action="bw" title="Black & White" style="background:#000"></div>
         <div class="swatch" data-action="reset" title="Reset" style="background:#777"></div>
     </div>
 
@@ -60,7 +64,7 @@ $images  = $block->getGalleryImages()->getItems();
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 15px;
+    gap: 16px;
 }
 
 .grid-item {
@@ -76,7 +80,7 @@ $images  = $block->getGalleryImages()->getItems();
 /* Swatches */
 .swatches {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin: 20px 0;
     justify-content: center;
 }
@@ -103,10 +107,9 @@ require(['jquery'], function ($) {
     const canvas = document.getElementById('imageCanvas');
     const ctx = canvas.getContext('2d');
 
-    /* ========= Parse rect from ALT ========= */
+    /* ---------- Parse rectangle from ALT ---------- */
     function parseRect(alt) {
         const rect = { x: 0.35, y: 0.35, w: 0.3, h: 0.3 };
-
         if (!alt) return rect;
 
         alt.split(';').forEach(part => {
@@ -116,7 +119,6 @@ require(['jquery'], function ($) {
                 if (!isNaN(num)) rect[key] = num;
             }
         });
-
         return rect;
     }
 
@@ -127,7 +129,8 @@ require(['jquery'], function ($) {
         });
     }
 
-    function processImage(src, rect, color) {
+    /* ---------- Color rectangle processor ---------- */
+    function processColor(src, rect, color) {
         return new Promise(resolve => {
 
             const img = new Image();
@@ -135,51 +138,73 @@ require(['jquery'], function ($) {
             img.src = src.split('?')[0];
 
             img.onload = () => {
-
                 canvas.width = img.naturalWidth;
                 canvas.height = img.naturalHeight;
 
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.drawImage(img, 0, 0);
 
-                if (color) {
-                    ctx.globalCompositeOperation = 'multiply';
-                    ctx.globalAlpha = 0.7;
-                    ctx.fillStyle = color;
-                    ctx.fillRect(
-                        canvas.width * rect.x,
-                        canvas.height * rect.y,
-                        canvas.width * rect.w,
-                        canvas.height * rect.h
-                    );
-                    ctx.globalCompositeOperation = 'source-over';
-                    ctx.globalAlpha = 1;
-                }
+                ctx.globalCompositeOperation = 'multiply';
+                ctx.globalAlpha = 0.7;
+                ctx.fillStyle = color;
+                ctx.fillRect(
+                    canvas.width * rect.x,
+                    canvas.height * rect.y,
+                    canvas.width * rect.w,
+                    canvas.height * rect.h
+                );
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.globalAlpha = 1;
 
                 resolve(canvas.toDataURL('image/png'));
             };
         });
     }
 
-    /* ========= Apply color to ALL images ========= */
+    /* ---------- Full grayscale processor ---------- */
+    function processBW(src) {
+        return new Promise(resolve => {
+
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.src = src.split('?')[0];
+
+            img.onload = () => {
+                canvas.width = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+
+                ctx.drawImage(img, 0, 0);
+
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const d = imageData.data;
+
+                for (let i = 0; i < d.length; i += 4) {
+                    const avg = (d[i] + d[i + 1] + d[i + 2]) / 3;
+                    d[i] = d[i + 1] = d[i + 2] = avg;
+                }
+
+                ctx.putImageData(imageData, 0, 0);
+                resolve(canvas.toDataURL('image/png'));
+            };
+        });
+    }
+
+    /* ---------- Apply color to ALL images ---------- */
     async function applyColor(color) {
+        for (const img of document.querySelectorAll('.grid-image')) {
+            await waitForImage(img);
+            img.dataset.originalSrc ||= img.src;
+            const rect = parseRect(img.alt);
+            img.src = await processColor(img.dataset.originalSrc, rect, color);
+        }
+    }
 
-        const images = document.querySelectorAll('.grid-image');
-
-        for (const imgEl of images) {
-
-            await waitForImage(imgEl);
-
-            if (!imgEl.dataset.originalSrc) {
-                imgEl.dataset.originalSrc = imgEl.src;
-            }
-
-            const rect = parseRect(imgEl.alt);
-            imgEl.src = await processImage(
-                imgEl.dataset.originalSrc,
-                rect,
-                color
-            );
+    /* ---------- Apply BW to ALL images ---------- */
+    async function applyBW() {
+        for (const img of document.querySelectorAll('.grid-image')) {
+            await waitForImage(img);
+            img.dataset.originalSrc ||= img.src;
+            img.src = await processBW(img.dataset.originalSrc);
         }
     }
 
@@ -191,25 +216,18 @@ require(['jquery'], function ($) {
         });
     }
 
-    /* ========= Swatch click ========= */
+    /* ---------- Swatch click ---------- */
     $('.swatch').on('click', async function () {
-
         $('.swatch').removeClass('active');
         $(this).addClass('active');
 
         const action = $(this).data('action');
-        const color = $(this).data('color');
+        const color  = $(this).data('color');
 
-        if (action === 'reset') {
-            resetImages();
-            return;
-        }
-
-        if (color) {
-            await applyColor(color);
-        }
+        if (action === 'reset') return resetImages();
+        if (action === 'bw') return await applyBW();
+        if (color) await applyColor(color);
     });
 
 });
 </script>
-
