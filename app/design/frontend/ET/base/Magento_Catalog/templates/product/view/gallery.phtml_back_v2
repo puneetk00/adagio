@@ -1,12 +1,13 @@
 <?php
 /**
- * Grid Gallery with Color Swatches (ALT-based Rectangles)
+ * Grid Gallery with Per-Image Canvas Coordinates from ALT
  * Magento 2.4.8
  *
  * @var $block \Magento\Catalog\Block\Product\View\Gallery
  * @var $escaper \Magento\Framework\Escaper
  */
 
+$product = $block->getProduct();
 $helper  = $block->getData('imageHelper');
 $images  = $block->getGalleryImages()->getItems();
 ?>
@@ -17,20 +18,20 @@ $images  = $block->getGalleryImages()->getItems();
     <canvas id="imageCanvas" style="display:none;"></canvas>
 
     <!-- IMAGE GRID -->
-    <div class="image-grid">
+    <div class="image-grid" id="imageGrid">
         <?php foreach ($images as $image): ?>
             <?php
             $imageUrl = $image->getData('medium_image_url')
                 ?: $helper->getDefaultPlaceholderUrl('image');
 
-            // ALT contains rect info like: x=0.35;y=0.35;w=0.3;h=0.3
-            $alt = $image->getLabel() ?: 'x=0.35;y=0.35;w=0.3;h=0.3';
+            // ALT text = your coordinate storage
+            $altText = $image->getLabel() ?: 'x=0.35;y=0.35;w=0.3;h=0.3';
             ?>
             <div class="grid-item">
                 <img
                     class="grid-image"
                     src="<?= /* @noEscape */ $imageUrl ?>"
-                    alt="<?= $escaper->escapeHtmlAttr($alt) ?>"
+                    alt="<?= $escaper->escapeHtmlAttr($altText) ?>"
                     loading="eager"
                 />
             </div>
@@ -39,27 +40,27 @@ $images  = $block->getGalleryImages()->getItems();
 
     <!-- COLOR SWATCHES -->
     <div class="swatches">
+        <div class="swatch" data-action="reset" style="background:#777"></div>
         <div class="swatch" data-color="#ff005a" style="background:#ff005a"></div>
         <div class="swatch" data-color="#1e5eff" style="background:#1e5eff"></div>
         <div class="swatch" data-color="#ffaa00" style="background:#ffaa00"></div>
         <div class="swatch" data-color="#00ff88" style="background:#00ff88"></div>
-        <div class="swatch" data-action="reset" title="Reset" style="background:#777"></div>
     </div>
 
 </div>
 
-<!-- =====================
+<!-- =========================
      STYLES
-     ===================== -->
+     ========================= -->
 <style>
 .product-media-wrapper {
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
 }
 
@@ -73,11 +74,10 @@ $images  = $block->getGalleryImages()->getItems();
     display: block;
 }
 
-/* Swatches */
 .swatches {
     display: flex;
     gap: 10px;
-    margin: 20px 0;
+    margin-top: 20px;
     justify-content: center;
 }
 
@@ -94,25 +94,29 @@ $images  = $block->getGalleryImages()->getItems();
 }
 </style>
 
-<!-- =====================
-     CANVAS SCRIPT
-     ===================== -->
+<!-- =========================
+     CANVAS SCRIPT (ALT-BASED)
+     ========================= -->
 <script>
 require(['jquery'], function ($) {
 
     const canvas = document.getElementById('imageCanvas');
     const ctx = canvas.getContext('2d');
 
-    /* ========= Parse rect from ALT ========= */
-    function parseRect(alt) {
+    /* =========================
+       Parse RECT from ALT
+       ========================= */
+    function parseRectFromAlt(alt) {
+
+        // default fallback
         const rect = { x: 0.35, y: 0.35, w: 0.3, h: 0.3 };
 
         if (!alt) return rect;
 
-        alt.split(';').forEach(part => {
-            const [key, val] = part.split('=');
+        alt.split(';').forEach(pair => {
+            const [key, value] = pair.split('=');
             if (rect.hasOwnProperty(key)) {
-                const num = parseFloat(val);
+                const num = parseFloat(value);
                 if (!isNaN(num)) rect[key] = num;
             }
         });
@@ -135,7 +139,6 @@ require(['jquery'], function ($) {
             img.src = src.split('?')[0];
 
             img.onload = () => {
-
                 canvas.width = img.naturalWidth;
                 canvas.height = img.naturalHeight;
 
@@ -161,7 +164,6 @@ require(['jquery'], function ($) {
         });
     }
 
-    /* ========= Apply color to ALL images ========= */
     async function applyColor(color) {
 
         const images = document.querySelectorAll('.grid-image');
@@ -174,7 +176,7 @@ require(['jquery'], function ($) {
                 imgEl.dataset.originalSrc = imgEl.src;
             }
 
-            const rect = parseRect(imgEl.alt);
+            const rect = parseRectFromAlt(imgEl.alt);
             imgEl.src = await processImage(
                 imgEl.dataset.originalSrc,
                 rect,
@@ -191,14 +193,16 @@ require(['jquery'], function ($) {
         });
     }
 
-    /* ========= Swatch click ========= */
+    /* =========================
+       SWATCH CLICK
+       ========================= */
     $('.swatch').on('click', async function () {
 
         $('.swatch').removeClass('active');
         $(this).addClass('active');
 
         const action = $(this).data('action');
-        const color = $(this).data('color');
+        const color  = $(this).data('color');
 
         if (action === 'reset') {
             resetImages();

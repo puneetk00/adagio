@@ -1,0 +1,245 @@
+<?php
+/**
+ * Grid Gallery with Color Swatches + Live Rect Editor
+ * Magento 2.4.8
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ * @var $escaper \Magento\Framework\Escaper
+ */
+
+$helper  = $block->getData('imageHelper');
+$images  = $block->getGalleryImages()->getItems();
+?>
+
+<div class="product-media-wrapper">
+
+    <!-- Backend canvas (hidden) -->
+    <canvas id="imageCanvas" style="display:none;"></canvas>
+
+    <!-- IMAGE GRID -->
+    <div class="image-grid" id="imageGrid">
+        <?php foreach ($images as $index => $image): ?>
+            <?php
+            $imageUrl = $image->getData('medium_image_url')
+                ?: $helper->getDefaultPlaceholderUrl('image');
+            ?>
+            <div class="grid-item" data-index="<?= $index ?>">
+                <img
+                    class="grid-image"
+                    src="<?= /* @noEscape */ $imageUrl ?>"
+                    alt="<?= $escaper->escapeHtmlAttr($image->getLabel() ?: '') ?>"
+                    loading="eager"
+                />
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- =====================
+         COLOR SWATCHES
+         ===================== -->
+    <div class="swatches">
+        <div class="swatch active" data-color="#ff005a" style="background:#ff005a"></div>
+        <div class="swatch" data-color="#1e5eff" style="background:#1e5eff"></div>
+        <div class="swatch" data-color="#ffaa00" style="background:#ffaa00"></div>
+        <div class="swatch" data-color="#00ff88" style="background:#00ff88"></div>
+        <div class="swatch" data-action="reset" title="Reset" style="background:#777"></div>
+    </div>
+
+    <!-- =====================
+         LIVE RECT EDITOR
+         ===================== -->
+    <div class="rect-editor">
+
+        <label>
+            Image Index
+            <input type="number" id="imgIndex" value="0" min="0">
+        </label>
+
+        <label>
+            X
+            <input type="number" id="rectX" step="0.01" value="0.35">
+        </label>
+
+        <label>
+            Y
+            <input type="number" id="rectY" step="0.01" value="0.35">
+        </label>
+
+        <label>
+            W
+            <input type="number" id="rectW" step="0.01" value="0.3">
+        </label>
+
+        <label>
+            H
+            <input type="number" id="rectH" step="0.01" value="0.3">
+        </label>
+
+        <small>
+            Relative values (0 → 1).  
+            Save as ALT: <code>x=0.35;y=0.35;w=0.3;h=0.3</code>
+        </small>
+    </div>
+
+</div>
+
+<!-- =====================
+     STYLES
+     ===================== -->
+<style>
+.product-media-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.grid-image {
+    width: 100%;
+    display: block;
+}
+
+/* Swatches */
+.swatches {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.swatch {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.swatch.active {
+    border-color: #000;
+}
+
+/* Editor */
+.rect-editor {
+    padding: 15px;
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.rect-editor label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.rect-editor input {
+    padding: 6px;
+}
+
+.rect-editor small {
+    grid-column: 1 / -1;
+    color: #555;
+}
+</style>
+
+<!-- =====================
+     CANVAS + LIVE SCRIPT
+     ===================== -->
+<script>
+require(['jquery'], function ($) {
+
+    const canvas = document.getElementById('imageCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let activeColor = '#ff005a';
+
+    function waitForImage(img) {
+        return new Promise(resolve => {
+            if (img.complete && img.naturalWidth > 0) resolve();
+            else img.onload = resolve;
+        });
+    }
+
+    async function redraw() {
+
+        const index = parseInt($('#imgIndex').val(), 10);
+        const x = parseFloat($('#rectX').val());
+        const y = parseFloat($('#rectY').val());
+        const w = parseFloat($('#rectW').val());
+        const h = parseFloat($('#rectH').val());
+
+        const images = document.querySelectorAll('.grid-image');
+        if (!images[index]) return;
+
+        const imgEl = images[index];
+        await waitForImage(imgEl);
+
+        if (!imgEl.dataset.originalSrc) {
+            imgEl.dataset.originalSrc = imgEl.src;
+        }
+
+        const baseImg = new Image();
+        baseImg.crossOrigin = 'anonymous';
+        baseImg.src = imgEl.dataset.originalSrc.split('?')[0];
+
+        baseImg.onload = () => {
+
+            canvas.width = baseImg.naturalWidth;
+            canvas.height = baseImg.naturalHeight;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(baseImg, 0, 0);
+
+            if (activeColor) {
+                ctx.globalCompositeOperation = 'multiply';
+                ctx.globalAlpha = 0.7;
+                ctx.fillStyle = activeColor;
+                ctx.fillRect(
+                    canvas.width * x,
+                    canvas.height * y,
+                    canvas.width * w,
+                    canvas.height * h
+                );
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.globalAlpha = 1;
+            }
+
+            imgEl.src = canvas.toDataURL('image/png');
+        };
+    }
+
+    /* Live editor inputs */
+    $('#imgIndex, #rectX, #rectY, #rectW, #rectH').on('input', redraw);
+
+    /* Swatch click */
+    $('.swatch').on('click', function () {
+
+        $('.swatch').removeClass('active');
+        $(this).addClass('active');
+
+        const action = $(this).data('action');
+        const color = $(this).data('color');
+
+        if (action === 'reset') {
+            activeColor = null;
+        } else {
+            activeColor = color;
+        }
+
+        redraw();
+    });
+
+});
+</script>
+

@@ -1,0 +1,199 @@
+<?php
+/**
+ * Gallery with Backend Canvas Color Processing
+ * Magento 2.4.8
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ * @var $escaper \Magento\Framework\Escaper
+ */
+
+$product = $block->getProduct();
+$helper  = $block->getData('imageHelper');
+
+$images = $block->getGalleryImages()->getItems();
+$mainImage = current(array_filter($images, function ($img) use ($block) {
+    return $block->isMainImage($img);
+}));
+
+if (!$mainImage) {
+    $mainImage = $block->getGalleryImages()->getFirstItem();
+}
+
+$mainImageUrl = $mainImage
+    ? $mainImage->getData('medium_image_url')
+    : $helper->getDefaultPlaceholderUrl('image');
+?>
+
+<!-- =========================
+     PRODUCT MEDIA
+     ========================= -->
+<div class="product-media-wrapper">
+
+    <!-- Hidden canvas (backend only) -->
+    <canvas id="imageCanvas" style="display:none;"></canvas>
+
+    <div class="gallery-placeholder _block-content-loading"
+         data-gallery-role="gallery-placeholder">
+        <img
+            class="gallery-placeholder__image"
+            src="<?= /* @noEscape */ $mainImageUrl ?>"
+            alt="<?= $escaper->escapeHtmlAttr(__('Product image')) ?>"
+        />
+    </div>
+
+    <!-- COLOR CONTROLS -->
+    <div class="swatches">
+        <div class="swatch" data-action="reset" style="background:#777"></div>
+        <div class="swatch" data-color="#ff005a" style="background:#ff005a"></div>
+        <div class="swatch" data-color="#1e5eff" style="background:#1e5eff"></div>
+        <div class="swatch" data-color="#ffaa00" style="background:#ffaa00"></div>
+        <div class="swatch" data-color="#00ff88" style="background:#00ff88"></div>
+    </div>
+
+</div>
+
+<!-- =========================
+     MAGENTO GALLERY INIT
+     ========================= -->
+<script type="text/x-magento-init">
+{
+    "[data-gallery-role=gallery-placeholder]": {
+        "mage/gallery/gallery": {
+            "mixins": ["magnifier/magnify"],
+            "magnifierOpts": <?= /* @noEscape */ $block->getMagnifier() ?>,
+            "data": <?= /* @noEscape */ $block->getGalleryImagesJson() ?>,
+            "options": <?= /* @noEscape */ $block->getGalleryOptions()->getOptionsJson() ?>,
+            "fullscreen": <?= /* @noEscape */ $block->getGalleryOptions()->getFSOptionsJson() ?>,
+            "breakpoints": <?= /* @noEscape */ $block->getBreakpoints() ?>
+        }
+    }
+}
+</script>
+
+<!-- =========================
+     STYLES
+     ========================= -->
+<style>
+.product-media-wrapper {
+    max-width: 450px;
+    margin: auto;
+}
+
+.swatches {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.swatch.active {
+    border-color: #000;
+}
+</style>
+
+<!-- =========================
+     BACKEND CANVAS SCRIPT
+     ========================= -->
+<script>
+require(['jquery'], function ($) {
+
+    /* ===== Rectangle area (relative) ===== */
+    const RECT = { x: 0.35, y: 0.35, w: 0.3, h: 0.3 };
+
+    const canvas = document.getElementById('imageCanvas');
+    const ctx = canvas.getContext('2d');
+
+    /* ===== Draw image in canvas ===== */
+    function processImage(src, color) {
+        return new Promise(resolve => {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.src = src.split('?')[0]; // same-origin safety
+
+            img.onload = () => {
+                canvas.width  = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0);
+
+                if (color) {
+                    ctx.globalCompositeOperation = 'multiply';
+                    ctx.globalAlpha = 0.7;
+                    ctx.fillStyle = color;
+                    ctx.fillRect(
+                        canvas.width * RECT.x,
+                        canvas.height * RECT.y,
+                        canvas.width * RECT.w,
+                        canvas.height * RECT.h
+                    );
+                    ctx.globalCompositeOperation = 'source-over';
+                    ctx.globalAlpha = 1;
+                }
+
+                resolve(canvas.toDataURL('image/png'));
+            };
+        });
+    }
+
+    /* ===== Apply color to gallery images ===== */
+    async function applyColor(color) {
+
+        const images = document.querySelectorAll(
+            '.fotorama__stage__frame:not(.fotorama__frame--video) img.fotorama__img'
+        );
+
+        for (const imgEl of images) {
+
+            await new Promise(r => {
+                if (imgEl.complete && imgEl.naturalWidth) r();
+                else imgEl.onload = r;
+            });
+
+            if (!imgEl.dataset.originalSrc) {
+                imgEl.dataset.originalSrc = imgEl.src;
+            }
+
+            imgEl.src = await processImage(imgEl.dataset.originalSrc, color);
+        }
+    }
+
+    /* ===== Reset images ===== */
+    function resetImages() {
+        document.querySelectorAll('.fotorama__img').forEach(img => {
+            if (img.dataset.originalSrc) {
+                img.src = img.dataset.originalSrc;
+            }
+        });
+    }
+
+    /* ===== Swatch click ===== */
+    $('.swatch').on('click', async function () {
+
+        $('.swatch').removeClass('active');
+        $(this).addClass('active');
+
+        const action = $(this).data('action');
+        const color  = $(this).data('color');
+
+        if (action === 'reset') {
+            resetImages();
+            return;
+        }
+
+        if (color) {
+            await applyColor(color);
+        }
+    });
+
+});
+</script>
+
